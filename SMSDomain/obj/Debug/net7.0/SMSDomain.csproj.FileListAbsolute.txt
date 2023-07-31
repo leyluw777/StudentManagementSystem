@@ -1,0 +1,12 @@
+D:\Leia's files\source\FinalProject\StudentManagementSystem\SMSDomain\obj\Debug\net7.0\SMSDomain.csproj.AssemblyReference.cache
+D:\Leia's files\source\FinalProject\StudentManagementSystem\SMSDomain\obj\Debug\net7.0\SMSDomain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Leia's files\source\FinalProject\StudentManagementSystem\SMSDomain\obj\Debug\net7.0\SMSDomain.AssemblyInfoInputs.cache
+D:\Leia's files\source\FinalProject\StudentManagementSystem\SMSDomain\obj\Debug\net7.0\SMSDomain.AssemblyInfo.cs
+D:\Leia's files\source\FinalProject\StudentManagementSystem\SMSDomain\obj\Debug\net7.0\SMSDomain.csproj.CoreCompileInputs.cache
+D:\Leia's files\source\FinalProject\StudentManagementSystem\SMSDomain\bin\Debug\net7.0\SMSDomain.deps.json
+D:\Leia's files\source\FinalProject\StudentManagementSystem\SMSDomain\bin\Debug\net7.0\SMSDomain.dll
+D:\Leia's files\source\FinalProject\StudentManagementSystem\SMSDomain\bin\Debug\net7.0\SMSDomain.pdb
+D:\Leia's files\source\FinalProject\StudentManagementSystem\SMSDomain\obj\Debug\net7.0\SMSDomain.dll
+D:\Leia's files\source\FinalProject\StudentManagementSystem\SMSDomain\obj\Debug\net7.0\refint\SMSDomain.dll
+D:\Leia's files\source\FinalProject\StudentManagementSystem\SMSDomain\obj\Debug\net7.0\SMSDomain.pdb
+D:\Leia's files\source\FinalProject\StudentManagementSystem\SMSDomain\obj\Debug\net7.0\ref\SMSDomain.dll

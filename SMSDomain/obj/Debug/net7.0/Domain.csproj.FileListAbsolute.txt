@@ -1,0 +1,12 @@
+D:\Leia's files\source\FinalProject\StudentManagementSystem\SMSDomain\bin\Debug\net7.0\Domain.deps.json
+D:\Leia's files\source\FinalProject\StudentManagementSystem\SMSDomain\bin\Debug\net7.0\Domain.dll
+D:\Leia's files\source\FinalProject\StudentManagementSystem\SMSDomain\bin\Debug\net7.0\Domain.pdb
+D:\Leia's files\source\FinalProject\StudentManagementSystem\SMSDomain\obj\Debug\net7.0\Domain.csproj.AssemblyReference.cache
+D:\Leia's files\source\FinalProject\StudentManagementSystem\SMSDomain\obj\Debug\net7.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Leia's files\source\FinalProject\StudentManagementSystem\SMSDomain\obj\Debug\net7.0\Domain.AssemblyInfoInputs.cache
+D:\Leia's files\source\FinalProject\StudentManagementSystem\SMSDomain\obj\Debug\net7.0\Domain.AssemblyInfo.cs
+D:\Leia's files\source\FinalProject\StudentManagementSystem\SMSDomain\obj\Debug\net7.0\Domain.csproj.CoreCompileInputs.cache
+D:\Leia's files\source\FinalProject\StudentManagementSystem\SMSDomain\obj\Debug\net7.0\Domain.dll
+D:\Leia's files\source\FinalProject\StudentManagementSystem\SMSDomain\obj\Debug\net7.0\refint\Domain.dll
+D:\Leia's files\source\FinalProject\StudentManagementSystem\SMSDomain\obj\Debug\net7.0\Domain.pdb
+D:\Leia's files\source\FinalProject\StudentManagementSystem\SMSDomain\obj\Debug\net7.0\ref\Domain.dll
