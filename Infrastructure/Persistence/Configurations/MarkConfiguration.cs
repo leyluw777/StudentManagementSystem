@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Infrastructure.Persistence.Configurations
 {
-    public class MarkConfiguration : IEntityTypeConfiguration<Mark>
+    public class MarkConfiguration //: IEntityTypeConfiguration<Mark>
     {
         public void Configure(EntityTypeBuilder<Mark> builder)
         {
@@ -14,8 +14,8 @@ namespace Infrastructure.Persistence.Configurations
             builder.Property(x => x.Points).IsRequired();
             builder.Property(x => x.MaxPoints).IsRequired();
             builder.Property(x => x.OverallGrade).IsRequired();
-            builder.Property(x => x.FinalExam).IsRequired();
-            builder.Property(x => x.Student).IsRequired();
+            //builder.Property(x => x.FinalExam).IsRequired();
+            //builder.Property(x => x.Student).IsRequired();
 
             builder.HasOne(x => x.FinalExam)
                 .WithOne(x => x.Mark)

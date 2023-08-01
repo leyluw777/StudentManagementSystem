@@ -18,7 +18,7 @@ namespace SMSDomain.Entities
         public DateTime StartTime { get; set; } 
         public DateTime EndTime { get; set; }
 
-        public ICollection<Homework> Homeworks { get; set; }
-        public ICollection<Attendance> Attendances { get; set; }
+        public List<Homework> Homeworks { get; set; }
+        public List<Attendance> Attendances { get; set; }
     }
 }

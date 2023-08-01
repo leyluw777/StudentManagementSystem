@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Infrastructure.Persistence.Configurations
 {
-    public class StoppedStatusConfiguration : IEntityTypeConfiguration<StoppedStatus>
+    public class StoppedStatusConfiguration// : IEntityTypeConfiguration<StoppedStatus>
     {
         public void Configure(EntityTypeBuilder<StoppedStatus> builder)
         {

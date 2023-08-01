@@ -12,7 +12,7 @@ namespace SMSDomain.Entities
         public Lesson Lesson { get; set; } = null!;
         public int LessonId { get; set; }
         public Student Student { get; set; }
-        public int StudentId { get; set; }
+        public string StudentId { get; set; }
         public string? SharedNotes { get; set; }
         public string? InternalNotes { get; set; }
         public bool Status { get; set; }

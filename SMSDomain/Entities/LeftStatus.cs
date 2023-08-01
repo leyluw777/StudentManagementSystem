@@ -13,7 +13,7 @@ namespace SMSDomain.Entities
         public string? LeftMessage { get; set; }
        
         public Student Student { get; set; }
-        public int StudentId { get; set; }
+      
 
     }
 }

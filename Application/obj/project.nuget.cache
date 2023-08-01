@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "q3ICzFwkeIWV5e5l7xB31IZuQ84S3Oil97LLSJB7x1gnQy+J9ytyULkz+O4vUQWxbvGTyeMF2e1sDEwDxtV3QQ==",
+  "dgSpecHash": "AUUuDUMSsC9sNgDD+3XapAs9Myzopi9MkkBB+utWjX7wIXQIlyBJqKxcCVfRpeMbyzpOdRUPRTLKgA2X8R9wtA==",
   "success": true,
-  "projectFilePath": "D:\\Leia's files\\source\\FinalProject\\StudentManagementSystem\\Application\\Application.csproj",
+  "projectFilePath": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\Application\\Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Hp\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\Hp\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

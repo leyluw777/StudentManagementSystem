@@ -10,3 +10,15 @@ D:\Leia's files\source\FinalProject\StudentManagementSystem\SMSDomain\obj\Debug\
 D:\Leia's files\source\FinalProject\StudentManagementSystem\SMSDomain\obj\Debug\net7.0\refint\SMSDomain.dll
 D:\Leia's files\source\FinalProject\StudentManagementSystem\SMSDomain\obj\Debug\net7.0\SMSDomain.pdb
 D:\Leia's files\source\FinalProject\StudentManagementSystem\SMSDomain\obj\Debug\net7.0\ref\SMSDomain.dll
+C:\Users\Hp\Desktop\FinalProject\StudentManagementSystem\SMSDomain\bin\Debug\net7.0\SMSDomain.deps.json
+C:\Users\Hp\Desktop\FinalProject\StudentManagementSystem\SMSDomain\bin\Debug\net7.0\SMSDomain.dll
+C:\Users\Hp\Desktop\FinalProject\StudentManagementSystem\SMSDomain\bin\Debug\net7.0\SMSDomain.pdb
+C:\Users\Hp\Desktop\FinalProject\StudentManagementSystem\SMSDomain\obj\Debug\net7.0\SMSDomain.csproj.AssemblyReference.cache
+C:\Users\Hp\Desktop\FinalProject\StudentManagementSystem\SMSDomain\obj\Debug\net7.0\SMSDomain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Hp\Desktop\FinalProject\StudentManagementSystem\SMSDomain\obj\Debug\net7.0\SMSDomain.AssemblyInfoInputs.cache
+C:\Users\Hp\Desktop\FinalProject\StudentManagementSystem\SMSDomain\obj\Debug\net7.0\SMSDomain.AssemblyInfo.cs
+C:\Users\Hp\Desktop\FinalProject\StudentManagementSystem\SMSDomain\obj\Debug\net7.0\SMSDomain.csproj.CoreCompileInputs.cache
+C:\Users\Hp\Desktop\FinalProject\StudentManagementSystem\SMSDomain\obj\Debug\net7.0\SMSDomain.dll
+C:\Users\Hp\Desktop\FinalProject\StudentManagementSystem\SMSDomain\obj\Debug\net7.0\refint\SMSDomain.dll
+C:\Users\Hp\Desktop\FinalProject\StudentManagementSystem\SMSDomain\obj\Debug\net7.0\SMSDomain.pdb
+C:\Users\Hp\Desktop\FinalProject\StudentManagementSystem\SMSDomain\obj\Debug\net7.0\ref\SMSDomain.dll

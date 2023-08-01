@@ -13,8 +13,8 @@ namespace SMSDomain.Entities
         public Course Course { get; set; } = null!;
         public string Name { get; set; } = null!;
         public int TotalHours { get; set; }
-        public ICollection<Quiz> Quizzes { get; set; }
-        public ICollection<Lesson> Lessons { get; set; }
+        public List<Quiz> Quizzes { get; set; }
+        public List<Lesson> Lessons { get; set; }
 
     }
 }

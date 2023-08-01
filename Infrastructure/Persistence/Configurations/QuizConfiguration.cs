@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace Infrastructure.Persistence.Configurations
 {
-    public class QuizConfiguration : IEntityTypeConfiguration<Quiz>
+    public class QuizConfiguration// : IEntityTypeConfiguration<Quiz>
     {
         public void Configure(EntityTypeBuilder<Quiz> builder)
         {
             builder.ConfigureAuditableBaseEntity<Quiz>();
-            builder.Property(x => x.Module).IsRequired();
+            //builder.Property(x => x.Module).IsRequired();
             builder.Property(x => x.Name).IsRequired();
             builder.Property(x => x.TopicsCovered).IsRequired(false);
             builder.Property(x => x.QuizDate).IsRequired(false);
-            builder.Property(x => x.Mark).IsRequired();
+            //builder.Property(x => x.Mark).IsRequired();
 
 
             builder.HasOne(x=> x.Module).WithMany(x=>x.Quizzes)

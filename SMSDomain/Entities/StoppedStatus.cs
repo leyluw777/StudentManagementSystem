@@ -12,6 +12,8 @@ namespace SMSDomain.Entities
         public DateTime StoppedDate { get; set; }
         public string? StoppedMessage { get; set; }
         public DateTime ApproximateStartDate { get;set; }
+        public Student? Student { get; set; }
+
 
     }
 }

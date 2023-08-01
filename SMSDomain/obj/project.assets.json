@@ -776,11 +776,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Leia's files\\source\\FinalProject\\StudentManagementSystem\\SMSDomain\\SMSDomain.csproj",
+      "projectUniqueName": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\SMSDomain\\SMSDomain.csproj",
       "projectName": "SMSDomain",
-      "projectPath": "D:\\Leia's files\\source\\FinalProject\\StudentManagementSystem\\SMSDomain\\SMSDomain.csproj",
+      "projectPath": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\SMSDomain\\SMSDomain.csproj",
       "packagesPath": "C:\\Users\\Hp\\.nuget\\packages\\",
-      "outputPath": "D:\\Leia's files\\source\\FinalProject\\StudentManagementSystem\\SMSDomain\\obj\\",
+      "outputPath": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\SMSDomain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

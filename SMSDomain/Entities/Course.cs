@@ -15,11 +15,11 @@ namespace SMSDomain.Entities
         public int TotalHours { get; set; }
         public int FinalExamId { get;set; }
         public FinalExam FinalExam { get; set; } 
-        public ICollection<Student> Users { get; set; } = null!;
+        public List<Student> Users { get; set; } = null!;
         public ICollection<Module> Modules { get; set; }
-        public ICollection<Teacher> Teachers { get; set; }
+        public List<Teacher> Teachers { get; set; }
 
-        public ICollection<Coordinator> Coordinators { get; set; }
+        public List<Coordinator> Coordinators { get; set; }
 
     }
 }

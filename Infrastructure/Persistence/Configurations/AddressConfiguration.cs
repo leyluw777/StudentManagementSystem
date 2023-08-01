@@ -9,9 +9,9 @@ namespace Infrastructure.Persistence.Configurations
             builder.ConfigureAuditableBaseEntity();
             //builder.Property(c => c.Student).IsRequired();
             builder.Property(c => c.StreetAddress).IsRequired();
-            builder.Property(c => c.Country).IsRequired();
+            //builder.Property(c => c.Country).IsRequired();
             builder.Property(c => c.District).IsRequired();
-            builder.Property(c => c.City).IsRequired();
+            //builder.Property(c => c.City).IsRequired();
             builder.Property(c => c.HouseNo).IsRequired();
             builder.Property(c => c.ZipCode).IsRequired();
             builder.Property(c => c.HomeNumber).IsRequired();
@@ -34,16 +34,16 @@ namespace Infrastructure.Persistence.Configurations
                .HasForeignKey<Address>(x => x.CoordinatorId)
                .IsRequired(true);
 
-            builder.HasOne(h => h.Country)  //burda
-               .WithMany(x => x.Address)
-               .HasForeignKey(h => h.CountryId)
-               .IsRequired(true);
+            //builder.HasOne(h => h.Country)  //burda
+            //   .WithMany(x => x.Address)
+            //   .HasForeignKey(h => h.CountryId)
+            //   .IsRequired(true);
 
 
-            builder.HasOne(h => h.City)
-               .WithMany(x => x.Addresses)
-               .HasForeignKey(h => h.CityId)
-               .IsRequired(true);
+            //builder.HasOne(h => h.City)
+            //   .WithMany(x => x.Addresses)
+            //   .HasForeignKey(h => h.CityId)
+            //   .IsRequired(true);
         }
     }
 }

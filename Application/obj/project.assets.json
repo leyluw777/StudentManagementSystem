@@ -3882,11 +3882,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Leia's files\\source\\FinalProject\\StudentManagementSystem\\Application\\Application.csproj",
+      "projectUniqueName": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\Application\\Application.csproj",
       "projectName": "Application",
-      "projectPath": "D:\\Leia's files\\source\\FinalProject\\StudentManagementSystem\\Application\\Application.csproj",
+      "projectPath": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\Application\\Application.csproj",
       "packagesPath": "C:\\Users\\Hp\\.nuget\\packages\\",
-      "outputPath": "D:\\Leia's files\\source\\FinalProject\\StudentManagementSystem\\Application\\obj\\",
+      "outputPath": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\Application\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -3906,8 +3906,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "D:\\Leia's files\\source\\FinalProject\\StudentManagementSystem\\SMSDomain\\SMSDomain.csproj": {
-              "projectPath": "D:\\Leia's files\\source\\FinalProject\\StudentManagementSystem\\SMSDomain\\SMSDomain.csproj"
+            "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\SMSDomain\\SMSDomain.csproj": {
+              "projectPath": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\SMSDomain\\SMSDomain.csproj"
             }
           }
         }

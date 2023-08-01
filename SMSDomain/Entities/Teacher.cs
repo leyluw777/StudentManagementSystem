@@ -17,11 +17,11 @@ namespace SMSDomain.Entities
         
         public bool ActiveStatus { get; set; }
 
-        public int AddressId { get; set; }
+     //   public int AddressId { get; set; }
         public Address Address { get; set; }
-        public ICollection<PhoneNumber> PhoneNumbers { get; set; }
+        public List<PhoneNumber> PhoneNumbers { get; set; }
 
-        public ICollection<Course> Courses { get; set; }
+        public List<Course> Courses { get; set; }
 
 
     }

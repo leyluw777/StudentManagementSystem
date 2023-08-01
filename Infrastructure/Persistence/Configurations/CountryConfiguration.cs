@@ -12,8 +12,8 @@ namespace Infrastructure.Persistence.Configurations
         {
             builder.ConfigureAuditableBaseEntity<Country>();
             builder.Property(x => x .Name).IsRequired();    
-            builder.Property(x => x .Address).IsRequired();    
-            builder.Property(x => x .Cities).IsRequired();    
+            //builder.Property(x => x .Address).IsRequired();    
+            //builder.Property(x => x .Cities).IsRequired();    
         }
     }
 }

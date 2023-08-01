@@ -12,7 +12,7 @@ namespace SMSDomain.Entities
     {
         public DateTime GraduatedDate { get; set; }
         public Student Student { get; set; }
-        public int StudentId { get; set; }
+       
 
 
         // this is final grade, it is counted by using other marks in total. 

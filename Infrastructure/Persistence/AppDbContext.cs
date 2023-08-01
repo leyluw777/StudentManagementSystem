@@ -7,6 +7,7 @@ using SMSDomain.Entities;
 using SMSDomain.Identity;
 
 using System.Reflection;
+using System.Reflection.Emit;
 
 
 namespace Infrastructure.Persistence
@@ -68,8 +69,104 @@ namespace Infrastructure.Persistence
         protected override void OnModelCreating(ModelBuilder builder)
     {
         builder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
-        base.OnModelCreating(builder);
-    }
+            builder.Entity<Course>().HasOne(x => x.FinalExam)
+                                  .WithOne(x => x.Course)
+                                  .HasForeignKey<Course>(y => y.FinalExamId)
+                              .OnDelete(DeleteBehavior.Restrict)
+
+                                  .IsRequired();
+            builder.Entity<Mark>().HasOne(x => x.FinalExam)
+                                  .WithOne(x => x.Mark)
+                                  .HasForeignKey<Mark>(y => y.FinalExamId)
+                              .OnDelete(DeleteBehavior.Restrict)
+
+                                  .IsRequired();
+            builder.Entity<Student>().HasOne(x => x.GraduatedStatus)
+                                .WithOne(x => x.Student)
+                                .HasForeignKey<Student>(y => y.GraduatedStatusId)
+                              .OnDelete(DeleteBehavior.Restrict)
+
+                                .IsRequired();
+            builder.Entity<Student>().HasOne(x => x.LeftStatus)
+                               .WithOne(x => x.Student)
+                               .HasForeignKey<Student>(y => y.LeftStatusId)
+                              .OnDelete(DeleteBehavior.Restrict)
+
+                               .IsRequired();
+            builder.Entity<Address>().HasOne(x => x.Student)
+                              .WithOne(x => x.Address)
+                              .HasForeignKey<Address>(y => y.StudentId)
+                              .OnDelete(DeleteBehavior.Restrict)
+                              .IsRequired();
+            builder.Entity<City>().HasOne(x => x.Student)
+                         .WithOne(x => x.City)
+                         .HasForeignKey<City>(y => y.StudentId)
+                              .OnDelete(DeleteBehavior.Restrict)
+
+                         .IsRequired();
+            builder.Entity<Country>().HasOne(x => x.Student)
+                         .WithOne(x => x.Country)
+                         .HasForeignKey<Country>(y => y.StudentId)
+                              .OnDelete(DeleteBehavior.Restrict)
+
+                         .IsRequired();
+            builder.Entity<Address>().HasOne(x => x.Teacher)
+                              .WithOne(x => x.Address)
+                              .HasForeignKey<Address>(y => y.TeacherId)
+                              .OnDelete(DeleteBehavior.Restrict)
+                              .IsRequired();
+            builder.Entity<Address>().HasOne(x => x.Coordinator)
+                              .WithOne(x => x.Address)
+                              .HasForeignKey<Address>(y => y.CoordinatorId)
+                              .OnDelete(DeleteBehavior.Restrict);
+            builder.Entity<Student>().HasOne(x => x.StoppedStatus)
+                               .WithOne(x => x.Student)
+                               .HasForeignKey<Student>(y => y.StoppedStatusId)
+                              .OnDelete(DeleteBehavior.Restrict)
+
+                               .IsRequired();
+            //builder.Entity<Country>()
+            //    .HasOne(c => c.Address)
+            //    .WithMany()
+            //    .OnDelete(deleteBehavior:DeleteBehavior.Restrict);
+            //builder.Entity<City>()
+            //       .HasOne(s => s.Addresses)
+            //       .WithMany()
+            //       .OnDelete(deleteBehavior: DeleteBehavior.Restrict);
+            builder.Entity<City>().HasOne(x => x.Country)
+               .WithMany(h => h.Cities)
+               .HasForeignKey(x => x.CountryId)
+               .OnDelete(DeleteBehavior.Restrict)
+               .IsRequired();
+
+            builder.Entity<PhoneNumber>().HasOne(x => x.Student)
+     .WithMany(h => h.PhoneNumbers)
+     .HasForeignKey(x => x.StudentId)
+     .OnDelete(DeleteBehavior.Restrict)
+     .IsRequired();
+            builder.Entity<PhoneNumber>().HasOne(x => x.Teacher)
+  .WithMany(h => h.PhoneNumbers)
+  .HasForeignKey(x => x.TeacherId)
+  .OnDelete(DeleteBehavior.Restrict)
+  .IsRequired();
+            builder.Entity<PhoneNumber>().HasOne(x => x.Coordinator)
+  .WithMany(h => h.PhoneNumbers)
+  .HasForeignKey(x => x.CoordinatorId)
+  .OnDelete(DeleteBehavior.Restrict)
+  .IsRequired();
+            //builder.Entity<Address>().HasOne(h => h.Country)  //burda
+            //  .WithMany(x => x.Address)
+            //  .HasForeignKey(h => h.CountryId)
+            //  .IsRequired(true);
+
+
+            //builder.Entity<Address>().HasOne(h => h.City)
+            //   .WithMany(x => x.Addresses)
+            //   .HasForeignKey(h => h.CityId)
+
+            //   .IsRequired(true);
+            base.OnModelCreating(builder);
+        }
 
         /// <summary>
         /// Configures the options for the database context.

@@ -15,12 +15,12 @@ namespace SMSDomain.Entities
         public string OverallGrade { get; set; }
         public FinalExam  FinalExam { get; set; } = null!;
         public int FinalExamId { get; set; }
-        public ICollection<Quiz> Quizzes { get; set; } = null!;
-        public ICollection<Homework> Homeworks { get; set; } = null!;
+        public List<Quiz> Quizzes { get; set; } = null!;
+        public List<Homework> Homeworks { get; set; } = null!;
 
         public Student Student { get; set; } 
-        public int StudentId { get; set; }
-        public ICollection<Assessment> Assessments { get; set; } 
+        public string StudentId { get; set; }
+        public List<Assessment> Assessments { get; set; } 
 
         
       

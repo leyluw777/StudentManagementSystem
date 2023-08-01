@@ -6,13 +6,13 @@ namespace Infrastructure.Persistence.Configurations.Common
 {
     public static class ConfigurationExtensions
     {
-        public static EntityTypeBuilder<TEntity> ConfigureBaseEntity<TEntity>(this EntityTypeBuilder<TEntity> builder)
-      where TEntity : BaseEntity
-        {
-            builder.HasKey(e => e.Id);
-            builder.Property(e => e.Id).HasDefaultValueSql("NEWID()");
-            return builder;
-        }
+      //  public static EntityTypeBuilder<TEntity> ConfigureBaseEntity<TEntity>(this EntityTypeBuilder<TEntity> builder)
+      //where TEntity : BaseEntity
+      //  {
+      //      builder.HasKey(e => e.Id);
+      //      builder.Property(e => e.Id).HasDefaultValueSql("NEWID()");
+      //      return builder;
+      //  }
 
         /// <summary>
         /// Configures the auditable base entity type.
@@ -23,7 +23,7 @@ namespace Infrastructure.Persistence.Configurations.Common
         public static EntityTypeBuilder<TEntity> ConfigureAuditableBaseEntity<TEntity>(this EntityTypeBuilder<TEntity> builder)
             where TEntity : BaseAuditableEntity
         {
-            builder.ConfigureBaseEntity();
+           // builder.ConfigureBaseEntity();
        
             builder.Property(e => e.CreatedBy).HasMaxLength(200).IsRequired(false);
             builder.Property(e => e.CreatedDate).HasDefaultValueSql("Getutcdate()");

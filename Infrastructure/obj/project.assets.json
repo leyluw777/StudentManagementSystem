@@ -3657,11 +3657,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Leia's files\\source\\FinalProject\\StudentManagementSystem\\Infrastructure\\Infrastructure.csproj",
+      "projectUniqueName": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\Infrastructure\\Infrastructure.csproj",
       "projectName": "Infrastructure",
-      "projectPath": "D:\\Leia's files\\source\\FinalProject\\StudentManagementSystem\\Infrastructure\\Infrastructure.csproj",
+      "projectPath": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\Infrastructure\\Infrastructure.csproj",
       "packagesPath": "C:\\Users\\Hp\\.nuget\\packages\\",
-      "outputPath": "D:\\Leia's files\\source\\FinalProject\\StudentManagementSystem\\Infrastructure\\obj\\",
+      "outputPath": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -3681,8 +3681,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "D:\\Leia's files\\source\\FinalProject\\StudentManagementSystem\\Application\\Application.csproj": {
-              "projectPath": "D:\\Leia's files\\source\\FinalProject\\StudentManagementSystem\\Application\\Application.csproj"
+            "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\Application\\Application.csproj": {
+              "projectPath": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\Application\\Application.csproj"
             }
           }
         }

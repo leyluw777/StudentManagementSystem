@@ -13,9 +13,9 @@ namespace Infrastructure.Persistence.Configurations
             builder.Property(x => x.Description).IsRequired(false);
             builder.Property(x => x.Experience).IsRequired(false);
             builder.Property(x => x.ActiveStatus).IsRequired();
-            builder.Property(x => x.Address).IsRequired();
-            builder.Property(x => x.PhoneNumbers).IsRequired();
-            builder.Property(x => x.Courses).IsRequired();
+            //builder.Property(x => x.Address).IsRequired();
+            //builder.Property(x => x.PhoneNumbers).IsRequired();
+            //builder.Property(x => x.Courses).IsRequired();
         }
     }
 }
