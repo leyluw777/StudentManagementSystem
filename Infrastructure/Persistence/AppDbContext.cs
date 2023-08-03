@@ -3,6 +3,7 @@ using Infrastructure.Persistence.Interceptors;
 using MediatR;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Hosting;
 using SMSDomain.Entities;
 using SMSDomain.Identity;
 
@@ -23,27 +24,27 @@ namespace Infrastructure.Persistence
             _interceptor = interceptor;
         }
 
-        DbSet<Address> IApplicationDbContext.Addresses {get; set; }
-        DbSet<Assessment> IApplicationDbContext.Assessments {get; set; }
-        DbSet<Attendance> IApplicationDbContext.Attendances {get; set; }
-        DbSet<City> IApplicationDbContext.Cities {get; set; }
-        DbSet<Coordinator> IApplicationDbContext.Coordinators {get; set; }
-        DbSet<Country> IApplicationDbContext.Countries {get; set; }
-        DbSet<Course> IApplicationDbContext.Courses {get; set; }
-        DbSet<FinalExam> IApplicationDbContext.FinalExams {get; set; }
-        DbSet<GraduatedStatus> IApplicationDbContext.GraduatedStatuses {get; set; }
-        DbSet<Group> IApplicationDbContext.Groups {get; set; }
-        DbSet<Homework> IApplicationDbContext.Homeworks {get; set; }
-        DbSet<LeftStatus> IApplicationDbContext.LeftStatuses {get; set; }
-        DbSet<Lesson> IApplicationDbContext.Lessons {get; set; }
-        DbSet<Mark> IApplicationDbContext.Marks {get; set; }
-        DbSet<SMSDomain.Entities.Module> IApplicationDbContext.Modules {get; set; }
-        DbSet<NumberPrefix> IApplicationDbContext.NumberPrefixes {get; set; }
-        DbSet<PhoneNumber> IApplicationDbContext.PhoneNumbers {get; set; }
-        DbSet<Quiz> IApplicationDbContext.Quizzes {get; set; }
-        DbSet<StoppedStatus> IApplicationDbContext.StoppedStatuses {get; set; }
-        DbSet<Student> IApplicationDbContext.Students {get; set; }
-        DbSet<Teacher> IApplicationDbContext.Teachers {get; set; }
+        public DbSet<Address>  Addresses {get; set; }
+        public DbSet<Assessment>  Assessments {get; set; }
+        public DbSet<Attendance>  Attendances {get; set; }
+        public DbSet<City>  Cities {get; set; }
+        public DbSet<Coordinator>  Coordinators {get; set; }
+        public DbSet<Country>  Countries {get; set; }
+        public DbSet<Course>  Courses {get; set; }
+        public DbSet<FinalExam>  FinalExams {get; set; }
+        public DbSet<GraduatedStatus>  GraduatedStatuses {get; set; }
+        public DbSet<Group>  Groups {get; set; }
+        public DbSet<Homework>  Homeworks {get; set; }
+        public DbSet<LeftStatus>  LeftStatuses {get; set; }
+        public DbSet<Lesson>  Lessons {get; set; }
+        public DbSet<Mark>  Marks {get; set; }
+        public DbSet<SMSDomain.Entities.Module>  Modules {get; set; }
+        public DbSet<NumberPrefix>  NumberPrefixes {get; set; }
+        public DbSet<PhoneNumber> PhoneNumbers {get; set; }
+        public DbSet<Quiz>  Quizzes {get; set; }
+        public DbSet<StoppedStatus>  StoppedStatuses {get; set; }
+        public DbSet<Student>  Students {get; set; }
+        public DbSet<Teacher>  Teachers {get; set; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="AppDbContext"/> class.
@@ -85,14 +86,12 @@ namespace Infrastructure.Persistence
                                 .WithOne(x => x.Student)
                                 .HasForeignKey<Student>(y => y.GraduatedStatusId)
                               .OnDelete(DeleteBehavior.Restrict)
-
-                                .IsRequired();
+                              .IsRequired(false);
             builder.Entity<Student>().HasOne(x => x.LeftStatus)
                                .WithOne(x => x.Student)
                                .HasForeignKey<Student>(y => y.LeftStatusId)
                               .OnDelete(DeleteBehavior.Restrict)
-
-                               .IsRequired();
+                              .IsRequired(false);
             builder.Entity<Address>().HasOne(x => x.Student)
                               .WithOne(x => x.Address)
                               .HasForeignKey<Address>(y => y.StudentId)
@@ -123,8 +122,11 @@ namespace Infrastructure.Persistence
                                .WithOne(x => x.Student)
                                .HasForeignKey<Student>(y => y.StoppedStatusId)
                               .OnDelete(DeleteBehavior.Restrict)
-
-                               .IsRequired();
+                              .IsRequired(false); 
+            builder.Entity<Student>(x => x.ToTable("Students"));
+   
+            builder.Entity<Teacher>(x => x.ToTable("Teachers"));
+            builder.Entity<Coordinator>(x => x.ToTable("Coordinators"));
             //builder.Entity<Country>()
             //    .HasOne(c => c.Address)
             //    .WithMany()
@@ -165,6 +167,20 @@ namespace Infrastructure.Persistence
             //   .HasForeignKey(h => h.CityId)
 
             //   .IsRequired(true);
+
+            builder.Entity<Student>().HasData(
+new Student
+{
+    Name = "John",
+    Surname = "Doe",
+    FathersName = "Sam",
+    Email = "johndoe@gmail.com",
+    Fin = "4xk7hk9",
+    GraduatedStatusId = null,
+    LeftStatusId = null,
+    StoppedStatusId = null
+
+});
             base.OnModelCreating(builder);
         }
 
@@ -187,9 +203,5 @@ namespace Infrastructure.Persistence
         return await base.SaveChangesAsync(cancellationToken);
     }
 
-        Task<int> IApplicationDbContext.SaveChangesAsync(CancellationToken cancellationToken)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

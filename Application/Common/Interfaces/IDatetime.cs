@@ -8,6 +8,6 @@ namespace Application.Common.Interfaces
 {
     public interface IDatetime
     {
-       public DateTime Now { get; }
+        DateTime Now { get; }
     }
 }

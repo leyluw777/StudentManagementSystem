@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Infrastructure.Services;
+using MediatR;
 
 namespace Infrastructure
 {
@@ -30,6 +31,9 @@ namespace Infrastructure
             // Registers the AppDbContext as a service with the specified connection string
             services.AddDbContext<AppDbContext>(options =>
                 options.UseSqlServer(configuration.GetConnectionString("defaultConnectionString")));
+
+
+            services.AddMediatR(typeof(AppDbContext));
 
             // Registers IApplicationDbContext as a scoped service, using the AppDbContext implementation
             services.AddScoped<IApplicationDbContext>(provider => provider.GetRequiredService<AppDbContext>());

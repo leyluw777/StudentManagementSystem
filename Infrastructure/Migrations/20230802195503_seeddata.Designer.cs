@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infrastructure.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20230801112936_initialize")]
-    partial class initialize
+    [Migration("20230802195503_seeddata")]
+    partial class seeddata
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -282,7 +282,7 @@ namespace Infrastructure.Migrations
                     b.HasIndex("TeacherId")
                         .IsUnique();
 
-                    b.ToTable("Application.Common.Interfaces.IApplicationDbContext.Addresses");
+                    b.ToTable("Addresses");
                 });
 
             modelBuilder.Entity("SMSDomain.Entities.Assessment", b =>
@@ -315,7 +315,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("MarkId");
 
-                    b.ToTable("Application.Common.Interfaces.IApplicationDbContext.Assessments");
+                    b.ToTable("Assessments");
                 });
 
             modelBuilder.Entity("SMSDomain.Entities.Attendance", b =>
@@ -363,7 +363,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("StudentId");
 
-                    b.ToTable("Application.Common.Interfaces.IApplicationDbContext.Attendances");
+                    b.ToTable("Attendances");
                 });
 
             modelBuilder.Entity("SMSDomain.Entities.City", b =>
@@ -408,7 +408,7 @@ namespace Infrastructure.Migrations
                     b.HasIndex("StudentId")
                         .IsUnique();
 
-                    b.ToTable("Application.Common.Interfaces.IApplicationDbContext.Cities");
+                    b.ToTable("Cities");
                 });
 
             modelBuilder.Entity("SMSDomain.Entities.Country", b =>
@@ -448,7 +448,7 @@ namespace Infrastructure.Migrations
                     b.HasIndex("StudentId")
                         .IsUnique();
 
-                    b.ToTable("Application.Common.Interfaces.IApplicationDbContext.Countries");
+                    b.ToTable("Countries");
                 });
 
             modelBuilder.Entity("SMSDomain.Entities.Course", b =>
@@ -492,7 +492,7 @@ namespace Infrastructure.Migrations
                     b.HasIndex("FinalExamId")
                         .IsUnique();
 
-                    b.ToTable("Application.Common.Interfaces.IApplicationDbContext.Courses");
+                    b.ToTable("Courses");
                 });
 
             modelBuilder.Entity("SMSDomain.Entities.FinalExam", b =>
@@ -533,7 +533,7 @@ namespace Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Application.Common.Interfaces.IApplicationDbContext.FinalExams");
+                    b.ToTable("FinalExams");
                 });
 
             modelBuilder.Entity("SMSDomain.Entities.GraduatedStatus", b =>
@@ -561,7 +561,7 @@ namespace Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Application.Common.Interfaces.IApplicationDbContext.GraduatedStatuses");
+                    b.ToTable("GraduatedStatuses");
                 });
 
             modelBuilder.Entity("SMSDomain.Entities.Group", b =>
@@ -600,7 +600,7 @@ namespace Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Application.Common.Interfaces.IApplicationDbContext.Groups");
+                    b.ToTable("Groups");
                 });
 
             modelBuilder.Entity("SMSDomain.Entities.Homework", b =>
@@ -652,7 +652,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("MarkId");
 
-                    b.ToTable("Application.Common.Interfaces.IApplicationDbContext.Homeworks");
+                    b.ToTable("Homeworks");
                 });
 
             modelBuilder.Entity("SMSDomain.Entities.LeftStatus", b =>
@@ -683,7 +683,7 @@ namespace Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Application.Common.Interfaces.IApplicationDbContext.LeftStatuses");
+                    b.ToTable("LeftStatuses");
                 });
 
             modelBuilder.Entity("SMSDomain.Entities.Lesson", b =>
@@ -732,7 +732,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("ModuleId");
 
-                    b.ToTable("Application.Common.Interfaces.IApplicationDbContext.Lessons");
+                    b.ToTable("Lessons");
                 });
 
             modelBuilder.Entity("SMSDomain.Entities.Mark", b =>
@@ -779,7 +779,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("StudentId");
 
-                    b.ToTable("Application.Common.Interfaces.IApplicationDbContext.Marks");
+                    b.ToTable("Marks");
                 });
 
             modelBuilder.Entity("SMSDomain.Entities.Module", b =>
@@ -816,7 +816,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("CourseId");
 
-                    b.ToTable("Application.Common.Interfaces.IApplicationDbContext.Modules");
+                    b.ToTable("Modules");
                 });
 
             modelBuilder.Entity("SMSDomain.Entities.NumberPrefix", b =>
@@ -850,7 +850,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("PhoneNumberId");
 
-                    b.ToTable("Application.Common.Interfaces.IApplicationDbContext.NumberPrefixes");
+                    b.ToTable("NumberPrefixes");
                 });
 
             modelBuilder.Entity("SMSDomain.Entities.PhoneNumber", b =>
@@ -897,7 +897,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("TeacherId");
 
-                    b.ToTable("Application.Common.Interfaces.IApplicationDbContext.PhoneNumbers");
+                    b.ToTable("PhoneNumbers");
                 });
 
             modelBuilder.Entity("SMSDomain.Entities.Quiz", b =>
@@ -942,7 +942,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("ModuleId");
 
-                    b.ToTable("Application.Common.Interfaces.IApplicationDbContext.Quizzes");
+                    b.ToTable("Quizzes");
                 });
 
             modelBuilder.Entity("SMSDomain.Entities.StoppedStatus", b =>
@@ -976,7 +976,7 @@ namespace Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Application.Common.Interfaces.IApplicationDbContext.StoppedStatuses");
+                    b.ToTable("StoppedStatuses");
                 });
 
             modelBuilder.Entity("SMSDomain.Identity.AppUser", b =>
@@ -995,10 +995,6 @@ namespace Infrastructure.Migrations
 
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Discriminator")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Email")
@@ -1079,9 +1075,7 @@ namespace Infrastructure.Migrations
 
                     b.ToTable("AspNetUsers", (string)null);
 
-                    b.HasDiscriminator<string>("Discriminator").HasValue("AppUser");
-
-                    b.UseTphMappingStrategy();
+                    b.UseTptMappingStrategy();
                 });
 
             modelBuilder.Entity("SMSDomain.Entities.Coordinator", b =>
@@ -1091,13 +1085,7 @@ namespace Infrastructure.Migrations
                     b.Property<bool>("ActiveStatus")
                         .HasColumnType("bit");
 
-                    b.ToTable("AspNetUsers", t =>
-                        {
-                            t.Property("ActiveStatus")
-                                .HasColumnName("Coordinator_ActiveStatus");
-                        });
-
-                    b.HasDiscriminator().HasValue("Coordinator");
+                    b.ToTable("Coordinators", (string)null);
                 });
 
             modelBuilder.Entity("SMSDomain.Entities.Student", b =>
@@ -1107,19 +1095,19 @@ namespace Infrastructure.Migrations
                     b.Property<double>("AverageGrade")
                         .HasColumnType("float");
 
-                    b.Property<int>("GraduatedStatusId")
+                    b.Property<int?>("GraduatedStatusId")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("LastLoginDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("LeftStatusId")
+                    b.Property<int?>("LeftStatusId")
                         .HasColumnType("int");
 
                     b.Property<int>("Status")
                         .HasColumnType("int");
 
-                    b.Property<int>("StoppedStatusId")
+                    b.Property<int?>("StoppedStatusId")
                         .HasColumnType("int");
 
                     b.HasIndex("GraduatedStatusId")
@@ -1134,7 +1122,32 @@ namespace Infrastructure.Migrations
                         .IsUnique()
                         .HasFilter("[StoppedStatusId] IS NOT NULL");
 
-                    b.HasDiscriminator().HasValue("Student");
+                    b.ToTable("Students", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = "8cad6191-d152-4560-adb0-9a651a23c651",
+                            AccessFailedCount = 0,
+                            Age = 0,
+                            BirthDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ConcurrencyStamp = "7eb6f459-4571-49dc-b031-65be9267eb49",
+                            Email = "johndoe@gmail.com",
+                            EmailConfirmed = false,
+                            FathersName = "Sam",
+                            Fin = "4xk7hk9",
+                            Gender = (byte)0,
+                            JoinedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            LockoutEnabled = false,
+                            Name = "John",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "139b8e4d-989a-4e37-9b2d-35c72a282ca5",
+                            Surname = "Doe",
+                            TwoFactorEnabled = false,
+                            AverageGrade = 0.0,
+                            LastLoginDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Status = 0
+                        });
                 });
 
             modelBuilder.Entity("SMSDomain.Entities.Teacher", b =>
@@ -1150,7 +1163,7 @@ namespace Infrastructure.Migrations
                     b.Property<string>("Experience")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasDiscriminator().HasValue("Teacher");
+                    b.ToTable("Teachers", (string)null);
                 });
 
             modelBuilder.Entity("CoordinatorCourse", b =>
@@ -1479,31 +1492,52 @@ namespace Infrastructure.Migrations
                     b.Navigation("Module");
                 });
 
+            modelBuilder.Entity("SMSDomain.Entities.Coordinator", b =>
+                {
+                    b.HasOne("SMSDomain.Identity.AppUser", null)
+                        .WithOne()
+                        .HasForeignKey("SMSDomain.Entities.Coordinator", "Id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("SMSDomain.Entities.Student", b =>
                 {
                     b.HasOne("SMSDomain.Entities.GraduatedStatus", "GraduatedStatus")
                         .WithOne("Student")
                         .HasForeignKey("SMSDomain.Entities.Student", "GraduatedStatusId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.Restrict);
+
+                    b.HasOne("SMSDomain.Identity.AppUser", null)
+                        .WithOne()
+                        .HasForeignKey("SMSDomain.Entities.Student", "Id")
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("SMSDomain.Entities.LeftStatus", "LeftStatus")
                         .WithOne("Student")
                         .HasForeignKey("SMSDomain.Entities.Student", "LeftStatusId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.Restrict);
 
                     b.HasOne("SMSDomain.Entities.StoppedStatus", "StoppedStatus")
                         .WithOne("Student")
                         .HasForeignKey("SMSDomain.Entities.Student", "StoppedStatusId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.Restrict);
 
                     b.Navigation("GraduatedStatus");
 
                     b.Navigation("LeftStatus");
 
                     b.Navigation("StoppedStatus");
+                });
+
+            modelBuilder.Entity("SMSDomain.Entities.Teacher", b =>
+                {
+                    b.HasOne("SMSDomain.Identity.AppUser", null)
+                        .WithOne()
+                        .HasForeignKey("SMSDomain.Entities.Teacher", "Id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("SMSDomain.Entities.Country", b =>
@@ -1567,7 +1601,8 @@ namespace Infrastructure.Migrations
 
             modelBuilder.Entity("SMSDomain.Entities.StoppedStatus", b =>
                 {
-                    b.Navigation("Student");
+                    b.Navigation("Student")
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("SMSDomain.Entities.Coordinator", b =>

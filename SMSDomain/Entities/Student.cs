@@ -37,11 +37,11 @@ namespace SMSDomain.Entities
         public Status Status { get; set; }
       
         public GraduatedStatus? GraduatedStatus { get; set; }
-        public int GraduatedStatusId { get; set; }
+        public int? GraduatedStatusId { get; set; }
         public LeftStatus? LeftStatus { get; set; }
-        public int LeftStatusId { get; set; }
+        public int? LeftStatusId { get; set; }
         public StoppedStatus? StoppedStatus { get; set; }
-        public int StoppedStatusId { get; set; }
+        public int? StoppedStatusId { get; set; }
 
         [NotMapped]
         public bool FirstTimeLogin { get; set; } = false;
