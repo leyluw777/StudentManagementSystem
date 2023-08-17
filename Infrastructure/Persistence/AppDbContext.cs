@@ -1,14 +1,9 @@
 ﻿using Application.Common.Interfaces;
 using Infrastructure.Persistence.Interceptors;
-using MediatR;
+using Infrastructure.SeedData;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Hosting;
-using SMSDomain.Entities;
 using SMSDomain.Identity;
-
 using System.Reflection;
-using System.Reflection.Emit;
 
 
 namespace Infrastructure.Persistence
@@ -18,10 +13,10 @@ namespace Infrastructure.Persistence
 
     private readonly AuditableEntitySaveChangesInterceptor _interceptor;
 
+
         public AppDbContext(DbContextOptions options, AuditableEntitySaveChangesInterceptor interceptor) : base(options)
         {
-           
-            _interceptor = interceptor;
+            _interceptor = interceptor;         
         }
 
         public DbSet<Address>  Addresses {get; set; }
@@ -38,50 +33,72 @@ namespace Infrastructure.Persistence
         public DbSet<LeftStatus>  LeftStatuses {get; set; }
         public DbSet<Lesson>  Lessons {get; set; }
         public DbSet<Mark>  Marks {get; set; }
-        public DbSet<SMSDomain.Entities.Module>  Modules {get; set; }
-        public DbSet<NumberPrefix>  NumberPrefixes {get; set; }
+        public DbSet<SMSDomain.Entities.Module> Modules { get; set; }
         public DbSet<PhoneNumber> PhoneNumbers {get; set; }
         public DbSet<Quiz>  Quizzes {get; set; }
         public DbSet<StoppedStatus>  StoppedStatuses {get; set; }
         public DbSet<Student>  Students {get; set; }
         public DbSet<Teacher>  Teachers {get; set; }
 
-        /// <summary>
-        /// Initializes a new instance of the <see cref="AppDbContext"/> class.
-        /// </summary>
-        /// <param name="options">The options for configuring the database context.</param>
-        /// <param name="interceptor">The interceptor for automatically updating auditable entities.</param>
-        /// <param name="mediator">The mediator for handling events and commands.</param>
-        //public AppDbContext(
-        //                DbContextOptions<AppDbContext> options,
-        //                AuditableEntitySaveChangesInterceptor interceptor
-        //                )
-        //                : base(options)
-        //{
-        //    _interceptor = interceptor;
-           
-        //}
+        public DbSet<CourseStudent> CourseStudent { get; set ; }
+        public DbSet<GroupStudent> GroupStudent { get; set; }
+		public DbSet<FirstLogin> FirstLogins { get; set; }
 
 
-        /// <summary>
-        /// Configures the model for the database context.
-        /// </summary>
-        /// <param name="builder">The model builder instance to be configured.</param>
-        protected override void OnModelCreating(ModelBuilder builder)
+		//public void SeedRoles()
+		//{
+		//    if (!Roles.Any())
+		//    {
+		//        var roles = new List<AppRole>
+		//{
+		//    new AppRole { Name = "Admin", NormalizedName = "ADMIN" },
+		//    new AppRole { Name = "Student", NormalizedName = "STUDENT" },
+		//    new AppRole { Name = "Teacher", NormalizedName = "TEACHER" },
+		//    new AppRole { Name = "Coordinator", NormalizedName = "COORDINATOR" }
+
+		//    // Add more roles as needed
+		//};
+		//        foreach (var role in roles)
+		//        {
+		//            _roleManager.CreateAsync(role).Wait();
+		//        }
+		//    }
+		//}
+
+		/// <summary>
+		/// Initializes a new instance of the <see cref="AppDbContext"/> class.
+		/// </summary>
+		/// <param name="options">The options for configuring the database context.</param>
+		/// <param name="interceptor">The interceptor for automatically updating auditable entities.</param>
+		/// <param name="mediator">The mediator for handling events and commands.</param>
+		//public AppDbContext(
+		//                DbContextOptions<AppDbContext> options,
+		//                AuditableEntitySaveChangesInterceptor interceptor
+		//                )
+		//                : base(options)
+		//{
+		//    _interceptor = interceptor;
+
+		//}
+
+
+		/// <summary>
+		/// Configures the model for the database context.
+		/// </summary>
+		/// <param name="builder">The model builder instance to be configured.</param>
+		protected override void OnModelCreating(ModelBuilder builder)
     {
         builder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
             builder.Entity<Course>().HasOne(x => x.FinalExam)
                                   .WithOne(x => x.Course)
                                   .HasForeignKey<Course>(y => y.FinalExamId)
-                              .OnDelete(DeleteBehavior.Restrict)
+                              .OnDelete(DeleteBehavior.Restrict);
 
-                                  .IsRequired();
             builder.Entity<Mark>().HasOne(x => x.FinalExam)
                                   .WithOne(x => x.Mark)
                                   .HasForeignKey<Mark>(y => y.FinalExamId)
-                              .OnDelete(DeleteBehavior.Restrict)
+                              .OnDelete(DeleteBehavior.Restrict);
 
-                                  .IsRequired();
             builder.Entity<Student>().HasOne(x => x.GraduatedStatus)
                                 .WithOne(x => x.Student)
                                 .HasForeignKey<Student>(y => y.GraduatedStatusId)
@@ -95,36 +112,40 @@ namespace Infrastructure.Persistence
             builder.Entity<Address>().HasOne(x => x.Student)
                               .WithOne(x => x.Address)
                               .HasForeignKey<Address>(y => y.StudentId)
-                              .OnDelete(DeleteBehavior.Restrict)
-                              .IsRequired();
-            builder.Entity<City>().HasOne(x => x.Student)
-                         .WithOne(x => x.City)
-                         .HasForeignKey<City>(y => y.StudentId)
-                              .OnDelete(DeleteBehavior.Restrict)
+                              .OnDelete(DeleteBehavior.Restrict);
 
-                         .IsRequired();
-            builder.Entity<Country>().HasOne(x => x.Student)
-                         .WithOne(x => x.Country)
-                         .HasForeignKey<Country>(y => y.StudentId)
-                              .OnDelete(DeleteBehavior.Restrict)
+            builder.Entity<Student>().HasOne(x => x.Country)
+                         .WithMany(x => x.Students)
+                         .HasForeignKey(y => y.CountryId)
+                              .OnDelete(DeleteBehavior.Restrict);
 
-                         .IsRequired();
+
+            builder.Entity<Student>().HasOne(x => x.City)
+                     .WithMany(x => x.Students)
+                     .HasForeignKey(y => y.CityId)
+                          .OnDelete(DeleteBehavior.Restrict);
+
+
             builder.Entity<Address>().HasOne(x => x.Teacher)
                               .WithOne(x => x.Address)
                               .HasForeignKey<Address>(y => y.TeacherId)
-                              .OnDelete(DeleteBehavior.Restrict)
-                              .IsRequired();
+                              .OnDelete(DeleteBehavior.Restrict);
+
             builder.Entity<Address>().HasOne(x => x.Coordinator)
                               .WithOne(x => x.Address)
                               .HasForeignKey<Address>(y => y.CoordinatorId)
-                              .OnDelete(DeleteBehavior.Restrict);
+                              .OnDelete(DeleteBehavior.Restrict)
+                              .IsRequired(false);
             builder.Entity<Student>().HasOne(x => x.StoppedStatus)
                                .WithOne(x => x.Student)
                                .HasForeignKey<Student>(y => y.StoppedStatusId)
                               .OnDelete(DeleteBehavior.Restrict)
                               .IsRequired(false); 
             builder.Entity<Student>(x => x.ToTable("Students"));
-   
+            builder.Entity<Student>().Property(x => x.LastLoginDate).IsRequired(false);
+            
+
+
             builder.Entity<Teacher>(x => x.ToTable("Teachers"));
             builder.Entity<Coordinator>(x => x.ToTable("Coordinators"));
             //builder.Entity<Country>()
@@ -138,24 +159,60 @@ namespace Infrastructure.Persistence
             builder.Entity<City>().HasOne(x => x.Country)
                .WithMany(h => h.Cities)
                .HasForeignKey(x => x.CountryId)
-               .OnDelete(DeleteBehavior.Restrict)
-               .IsRequired();
+               .OnDelete(DeleteBehavior.Restrict);
+            
 
             builder.Entity<PhoneNumber>().HasOne(x => x.Student)
      .WithMany(h => h.PhoneNumbers)
      .HasForeignKey(x => x.StudentId)
      .OnDelete(DeleteBehavior.Restrict)
-     .IsRequired();
+  .IsRequired(false);
+
+
             builder.Entity<PhoneNumber>().HasOne(x => x.Teacher)
   .WithMany(h => h.PhoneNumbers)
   .HasForeignKey(x => x.TeacherId)
   .OnDelete(DeleteBehavior.Restrict)
-  .IsRequired();
+  .IsRequired(false);
             builder.Entity<PhoneNumber>().HasOne(x => x.Coordinator)
   .WithMany(h => h.PhoneNumbers)
   .HasForeignKey(x => x.CoordinatorId)
   .OnDelete(DeleteBehavior.Restrict)
-  .IsRequired();
+  .IsRequired(false);
+
+            builder.Entity<CourseStudent>()
+                .HasKey(cs => new { cs.CourseId, cs.StudentId });
+
+            // Configure the relationship between Course and CourseStudent
+            builder.Entity<CourseStudent>()
+                .HasOne(cs => cs.Course)
+                .WithMany(c => c.CourseStudents)
+                .HasForeignKey(cs => cs.CourseId);
+
+            // Configure the relationship between Student and CourseStudent
+            builder.Entity<CourseStudent>()
+                .HasOne(cs => cs.Student)
+                .WithMany(s => s.CourseStudents)
+                .HasForeignKey(cs => cs.StudentId);
+
+
+            builder.Entity<GroupStudent>()
+                .HasKey(cs => new { cs.GroupId, cs.StudentId });
+
+            // Configure the relationship between Course and CourseStudent
+            builder.Entity<GroupStudent>()
+                .HasOne(cs => cs.Group)
+                .WithMany(c => c.GroupStudents)
+                .HasForeignKey(cs => cs.GroupId);
+
+            // Configure the relationship between Student and CourseStudent
+            builder.Entity<GroupStudent>()
+                .HasOne(cs => cs.Student)
+                .WithMany(s => s.GroupStudents)
+                .HasForeignKey(cs => cs.StudentId);
+
+
+
             //builder.Entity<Address>().HasOne(h => h.Country)  //burda
             //  .WithMany(x => x.Address)
             //  .HasForeignKey(h => h.CountryId)
@@ -168,19 +225,65 @@ namespace Infrastructure.Persistence
 
             //   .IsRequired(true);
 
-            builder.Entity<Student>().HasData(
-new Student
-{
-    Name = "John",
-    Surname = "Doe",
-    FathersName = "Sam",
-    Email = "johndoe@gmail.com",
-    Fin = "4xk7hk9",
-    GraduatedStatusId = null,
-    LeftStatusId = null,
-    StoppedStatusId = null
+            //            builder.Entity<Student>().HasData(
+            //new Student
+            //{
+            //    Name = "John",
+            //    Surname = "Doe",
+            //    FathersName = "Sam",
+            //    Email = "johndoe@gmail.com",
+            //    Fin = "4xk7hk9",
+            //    GraduatedStatusId = null,
+            //    LeftStatusId = null,
+            //    StoppedStatusId = null
 
-});
+            //});
+
+            builder.Entity<Course>().HasData(
+            new Course
+            {
+                Id = 1,
+                Name = "Front-end development",
+                TotalHours = 360,
+                TotalModules = 5,
+
+
+
+            });
+        builder.Entity<Group>().HasData(
+           new Group
+           {
+               Id = 1,
+              Name = "FRONT102",
+              Description = "New front-end group",
+              StartDate  = new DateTime(2019, 05, 09, 09, 15, 00),
+              EndDate = new DateTime(2020, 05, 09, 09, 15, 00)
+
+           });
+
+          
+
+            //    builder.Entity<Teacher>().HasData(
+            //new Teacher
+            //{
+            //    Description = "Teacher with 5 year of experience",
+            //    Experience = "5 years",
+            //    ActiveStatus = true,
+            //    PhoneNumber = 
+
+
+            //});
+            builder.AddCountriesData();
+            builder.AddCitiesData();
+            builder.Entity<AppRole>().HasData(
+                        new AppRole { Name = "Admin", NormalizedName = "ADMIN" },
+                        new AppRole { Name = "Student", NormalizedName = "STUDENT" },
+                        new AppRole { Name = "Teacher", NormalizedName = "TEACHER" },
+                        new AppRole { Name = "Coordinator", NormalizedName = "COORDINATOR" }
+                );
+
+
+
             base.OnModelCreating(builder);
         }
 
@@ -191,6 +294,7 @@ new Student
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         optionsBuilder.AddInterceptors(_interceptor);
+        
     }
 
     /// <summary>

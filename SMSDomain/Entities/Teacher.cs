@@ -23,6 +23,7 @@ namespace SMSDomain.Entities
 
         public List<Course> Courses { get; set; }
 
+       
 
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Application.Students.Commands;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -26,6 +27,11 @@ namespace Application.Common.Results
         public SuccessDataResult()
             : base(default, true)
         {
+        }
+
+        public static implicit operator SuccessDataResult<T>(CreateStudentResponseCommand v)
+        {
+            throw new NotImplementedException();
         }
     }
 

@@ -12,6 +12,8 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Infrastructure.Services;
 using MediatR;
+using Application.Common.JWT;
+using Microsoft.AspNetCore.Identity;
 
 namespace Infrastructure
 {
@@ -29,17 +31,19 @@ namespace Infrastructure
             services.AddScoped<AuditableEntitySaveChangesInterceptor>();
 
             // Registers the AppDbContext as a service with the specified connection string
-            services.AddDbContext<AppDbContext>(options =>
+            services.AddDbContext<IApplicationDbContext, AppDbContext>(options =>
                 options.UseSqlServer(configuration.GetConnectionString("defaultConnectionString")));
 
 
-            services.AddMediatR(typeof(AppDbContext));
+            services.AddMediatR(typeof(IApplicationDbContext));
 
             // Registers IApplicationDbContext as a scoped service, using the AppDbContext implementation
-            services.AddScoped<IApplicationDbContext>(provider => provider.GetRequiredService<AppDbContext>());
+            //services.AddScoped<IApplicationDbContext>(provider => provider.GetRequiredService<AppDbContext>());
 
             // Configures identity services using AppUser and AppRole, with AppDbContext as the store
             services.AddIdentity<AppUser, AppRole>().AddEntityFrameworkStores<AppDbContext>();
+
+            services.AddScoped<ITokenHandler, TokenHandler>();
 
             // Adds the AppDbContextInitialiser as a scoped service
             services.AddScoped<AppDbContextInitialiser>();
@@ -51,26 +55,30 @@ namespace Infrastructure
             //services.AddScoped<IEmailService, EmailService>();
             //services.AddScoped<ITelegramService, TelegramService>();
             services.AddScoped<ICurrentUser, CurrentUserService>();
+			//services.AddIdentity<AppUser, AppRole>();
+			
+
+			
 
 
-            //services.AddAuthentication(options =>
-            //{
-            //    options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
-            //    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-            //    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-            //}).AddJwtBearer(option =>
-            //{
-            //    option.TokenValidationParameters = new TokenValidationParameters
-            //    {
-            //        ValidAudience = configuration.GetSection("TokenOptions:Audience").Value,
-            //        ValidIssuer = configuration.GetSection("TokenOptions:Issuer").Value,
-            //        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration.GetSection("TokenOptions:SecurityKey").Value)),
-            //        ClockSkew = TimeSpan.Zero,
-            //        ValidateIssuerSigningKey = true,
-            //    };
-            //});
+			//services.AddAuthentication(options =>
+			//{
+			//    options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+			//    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+			//    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+			//}).AddJwtBearer(option =>
+			//{
+			//    option.TokenValidationParameters = new TokenValidationParameters
+			//    {
+			//        ValidAudience = configuration.GetSection("TokenOptions:Audience").Value,
+			//        ValidIssuer = configuration.GetSection("TokenOptions:Issuer").Value,
+			//        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration.GetSection("TokenOptions:SecurityKey").Value)),
+			//        ClockSkew = TimeSpan.Zero,
+			//        ValidateIssuerSigningKey = true,
+			//    };
+			//});
 
-            return services;
+			return services;
         }
     }
 }

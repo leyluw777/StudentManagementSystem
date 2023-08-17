@@ -11,13 +11,13 @@ namespace SMSDomain.Entities
     {
         public string Number { get;set ; }
 
-        public Student Student { get; set; } = null!;
-        public string StudentId { get; set; } 
-        public Teacher Teacher { get; set; }
-        public string TeacherId { get;set; }
-        public Coordinator Coordinator { get; set; }
-        public string CoordinatorId { get; set; }  
+        public Student? Student { get; set; } 
+        public string? StudentId { get; set; } 
+        public Teacher? Teacher { get; set; }
+        public string? TeacherId { get;set; }
+        public Coordinator? Coordinator { get; set; }
+        public string? CoordinatorId { get; set; }  
          
-        public List<NumberPrefix> NumberPrefixes { get; set; }
+        //public List<NumberPrefix>? NumberPrefixes { get; set; }
     }
 }

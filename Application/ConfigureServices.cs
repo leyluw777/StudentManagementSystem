@@ -1,4 +1,5 @@
-﻿using FluentValidation;
+﻿using Application.Common.JWT;
+using FluentValidation;
 using MediatR;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;

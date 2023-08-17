@@ -15,26 +15,28 @@ namespace SMSDomain.Entities
     {
         
 
-        public DateTime LastLoginDate { get; set; }
-        public double AverageGrade { get; set; }
+        public DateTime? LastLoginDate { get; set; }
+        public double? AverageGrade { get; set; }
 
 
        
       //  public int AddressId { get; set; }
-        public Address Address { get; set; }
+        public Address? Address { get; set; }
 
-        public Country Country { get; set; }
-        public City City { get; set; }
-        public List<PhoneNumber> PhoneNumbers { get; set; } 
-        public List<Course> Courses { get; set; }
+        public Country? Country { get; set; }
+        public int? CountryId { get; set; }
+        public City? City { get; set; }
+        public int? CityId { get; set; } 
+        public List<PhoneNumber>? PhoneNumbers { get; set; }
+        public List<CourseStudent>? CourseStudents { get; }
 
 
-        public List<Attendance> Attendances { get; set; }
+        public List<Attendance>? Attendances { get; set; }
        
-        public List<Group> Groups { get; set; } = null!;
-        public List<Mark> Marks { get; set; }
+        public List<GroupStudent>? GroupStudents { get; set; } 
+        public List<Mark>? Marks { get; set; }
 
-        public Status Status { get; set; }
+        public Status? Status { get; set; }
       
         public GraduatedStatus? GraduatedStatus { get; set; }
         public int? GraduatedStatusId { get; set; }
@@ -42,10 +44,6 @@ namespace SMSDomain.Entities
         public int? LeftStatusId { get; set; }
         public StoppedStatus? StoppedStatus { get; set; }
         public int? StoppedStatusId { get; set; }
-
-        [NotMapped]
-        public bool FirstTimeLogin { get; set; } = false;
-
-
+    
     }
 }

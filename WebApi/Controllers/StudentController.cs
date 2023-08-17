@@ -1,13 +1,16 @@
-﻿using Application.Students;
+﻿using Application.Common.Results;
+using Application.Students;
 using Application.Students.Commands;
 using Application.Students.Handlers;
 using Application.Students.Queries;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WebApi.Controllers
 {
     [Route("api/[controller]/[action]")]
+    [Authorize(Roles = "Admin", AuthenticationSchemes = "Bearer")]
     [ApiController]
     public class StudentController : ControllerBase
     {
@@ -25,15 +28,15 @@ namespace WebApi.Controllers
             return Ok(allStudents.Students);
         }
 
-        [HttpGet]
-            public async Task<IActionResult> GetById(string id)
+        [HttpGet("{id}")]
+            public async Task<IActionResult> GetById([FromRoute] string id)
             {
           
             GetStudentByIdQueryRequest studentReq   = new GetStudentByIdQueryRequest(id);
             
             GetStudentByIdQueryResponse getStudent = await _mediator.Send(studentReq);
             
-                return Ok(getStudent);
+            return Ok(getStudent);
             }
 
         [HttpPost]
@@ -43,7 +46,32 @@ namespace WebApi.Controllers
            
             return Ok(createStudentResponse);
         }
+
+
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteStudent([FromRoute] string id)
+        {
+            DeleteStudentRequestCommand deleteStudentReq = new DeleteStudentRequestCommand();
+            deleteStudentReq.Id = id;
+            IDataResult<DeleteStudentRequestCommand> deleteStudentResponse = await _mediator.Send(deleteStudentReq);
+
+            return Ok(deleteStudentResponse);
+        }
+
+
+
+        [HttpPut]
+        public async Task<IActionResult> UpdateStudent(UpdateStudentRequestCommand updateStudentReq) //[FromRoute]
+        {
+          
+            
+            IDataResult<UpdateStudentRequestCommand> updateStudentResponse = await _mediator.Send(updateStudentReq);
+            return Ok(updateStudentResponse);
+        }
+
     }
+
 }
 
 /*

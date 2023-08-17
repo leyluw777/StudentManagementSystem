@@ -14,15 +14,15 @@ namespace Application.Students.Commands
     {
         private string _number;
         private string _prefix;
-        public string Name { get; set; } = null!;
-        public string Surname { get; set; } = null!;
-        public string Email { get; set; } = null!;
-        public string FathersName { get; set; } = null!;
+        public string Name { get; set; }
+        public string Surname { get; set; }
+        public string Email { get; set; } 
+        public string FathersName { get; set; } 
         public int Age { get; set; }
         public DateTime BirthDate { get; set; }
         public byte Gender { get; set; }
-        public string? Image { get; set; }
-        public string Fin { get; set; } = null!;
+       // public string? Image { get; set; }
+        public string Fin { get; set; } 
 
 
        
@@ -38,16 +38,16 @@ namespace Application.Students.Commands
 
         public string Countryname { get; set; }
         public string Cityname { get; set; }
-        public string Phonenumber { get; set; }
-        public string NumberPrefix { get; set; }
+        public List<string> Phonenumber { get; set; }
+     
 
-        public string Number { get; set; }
-
-
-        public List<Course> Courses { get; set; }
+        //public string Number { get; set; }
 
 
+        public string CourseName { get; set; }
 
+
+        public string GroupName { get; set; }   
         //public List<Group> Groups { get; set; } = null!;
 
         public int Status { get; set; }

@@ -23,13 +23,15 @@ namespace Application.Students.Handlers
     {
         private readonly IApplicationDbContext _appDbContext;
         private readonly IMapper _mapper;
-        private readonly UserManager<AppUser> _userManager;
+        private readonly UserManager<SMSDomain.Identity.AppUser> _userManager;
+        private readonly RoleManager<AppRole> _roleManager;
 
-        public CreateStudentHandler(IApplicationDbContext appDbContext, IMapper mapper, UserManager<AppUser> userManager)
+        public CreateStudentHandler(IApplicationDbContext appDbContext, IMapper mapper, UserManager<SMSDomain.Identity.AppUser> userManager, RoleManager<AppRole> roleManager)
         {
             _appDbContext = appDbContext;
             _mapper = mapper;
             _userManager = userManager;
+            _roleManager = roleManager;
         }
 
         public string GenerateUniqueUsername(CreateStudentRequestCommand request)
@@ -44,25 +46,27 @@ namespace Application.Students.Handlers
             var random = new Random();
 
             var password = new char[10];
-            for (int i = 0; i < password.Length; i++)
+            for (int i = 0; i < password.Length-1; i++)
             {
                 password[i] = chars[random.Next(chars.Length)];
             }
+            password[9] = '!';
             return new string(password);
         }
 
         public async Task<CreateStudentResponseCommand> Handle(CreateStudentRequestCommand request, CancellationToken cancellationToken)
         {
                 
-            string username = GenerateUniqueUsername(request);
+            string username =  GenerateUniqueUsername(request);
             string password = GenerateRandomPassword();
             if (await _userManager.Users.AnyAsync(student => student.Fin == request.Fin))
             {
                 throw new Exception("A user with the same FIN already exists.");
-               
+
             }
             else
             {
+                //var studentCity = _appDbContext.Cities.Include(x => x.Id).FirstOrDefaultAsync(c => c.Name == request.Cityname); 
                 Student newStudent = new Student()
                 {
                     Name = request.Name,
@@ -74,8 +78,32 @@ namespace Application.Students.Handlers
                     Gender = request.Gender,
                     Fin = request.Fin,
                     Status = (SMSDomain.Enums.Status)request.Status,
-                    
+                    CityId = _appDbContext.Cities.FirstOrDefault(x => x.Name == request.Cityname).Id,
+                    CountryId =  _appDbContext.Countries.FirstOrDefault(c => c.Name == request.Countryname).Id,
+                    AverageGrade = 0.0,
+                    UserName = username,
+                  
                 };
+                //await _appDbContext.Students.AddAsync(newStudent);
+                //await _appDbContext.SaveChangesAsync(cancellationToken);
+                 var a = await _userManager.CreateAsync(newStudent, password);
+
+                await _userManager.AddToRoleAsync(newStudent, "Student");
+
+
+
+                FirstLogin firstLogin = new()
+                {
+                    UserId = newStudent.Id,
+                };
+
+                await _appDbContext.FirstLogins.AddAsync(firstLogin);
+                //await _userManager.AddPasswordAsync(newStudent, password);
+
+
+
+
+
                 Address studentAddress = new Address()
                 {
                     StudentId = newStudent.Id,
@@ -83,46 +111,86 @@ namespace Application.Students.Handlers
                     StreetAddress = request.StreetAddress,
                     ZipCode = request.ZipCode,
                     HomeNumber = request.HomeNumber,
+                    HouseNo = request.HouseNo,
                 };
-                Country studentCountry = new Country()
+                await _appDbContext.Addresses.AddAsync(studentAddress);
+                await _appDbContext.SaveChangesAsync(cancellationToken);
+
+
+                //City studentCity = new City()
+                //{
+                //    StudentId = newStudent.Id,
+                //    Name = request.Cityname
+                //};
+           
+                //['050', '070', '055']
+                //['03434343450', '073434340', '0553434434343']
+
+                var phoneNumbers = new List<PhoneNumber>();
+                foreach (var number in request.Phonenumber)
                 {
-                    StudentId = newStudent.Id,
-                    Name = request.Countryname
-                };
-                City studentCity = new City()
-                {
-                    StudentId = newStudent.Id,
-                    Name = request.Cityname
-                };
-                PhoneNumber studentNumber = new PhoneNumber()
-                {
-                    StudentId = newStudent.Id,
-                    Number = request.Phonenumber
-                };
-                NumberPrefix studentNumberPrefix = new NumberPrefix()
-                {
-                    PhoneNumberId = studentNumber.Id,
-                    Prefix = request.NumberPrefix
-                };
-                foreach(var course in request.Courses)
-                {
-                   
+                  
+                    phoneNumbers.Add(new PhoneNumber { Number = number, StudentId = newStudent.Id }) ;
                 }
-               // qaldi kurs i qrup, qalani normal iwleyir 
+               await _appDbContext.PhoneNumbers.AddRangeAsync(phoneNumbers);
+
+                await _appDbContext.SaveChangesAsync(cancellationToken);
+
+             //   await _appDbContext.NumberPrefixes.AddAsync(studentNumberPrefix);
+                await _appDbContext.SaveChangesAsync(cancellationToken);
+
+
+                List<Course> courses = await _appDbContext.Courses.Where(c => c.Name == request.CourseName).ToListAsync();
+                foreach(var course in courses)
+                {
+                    CourseStudent studentCourse = new CourseStudent()
+                    {
+                        StudentId = newStudent.Id,
+                        CourseId = course.Id
+
+                    };
+
+
+
+                    await _appDbContext.CourseStudent.AddAsync(studentCourse);
+                    await _appDbContext.SaveChangesAsync(cancellationToken);
+
+
+                }
+
+
+                List<Group> groups = await _appDbContext.Groups.Where(c => c.Name == request.GroupName).ToListAsync();
+                foreach (var group in groups)
+                {
+                    GroupStudent studentGroup = new GroupStudent()
+                    {
+                        StudentId = newStudent.Id,
+                        GroupId = group.Id
+
+                    };
+
+
+
+                    await _appDbContext.GroupStudent.AddAsync(studentGroup);
+                    await _appDbContext.SaveChangesAsync(cancellationToken);
+
+
+                }
+
                 //Student newStudent = _mapper.Map<Student>(request);
 
-                await _appDbContext.Students.AddAsync(newStudent);
-                await _appDbContext.Addresses.AddAsync(studentAddress);
-                await _appDbContext.Countries.AddAsync(studentCountry);
-                await _appDbContext.Cities.AddAsync(studentCity);
-               // await _appDbContext.Students.AddAsync(newStudent);
+
+                //await _appDbContext.Countries.AddAsync(studentCountry);
+                //await _appDbContext.Cities.AddAsync(studentCity);
+
+                //await _appDbContext.Courses.AddAsync(courseStudent);
                 await _appDbContext.SaveChangesAsync(cancellationToken);
 
                 return new CreateStudentResponseCommand()
                 {
                     Username = username,
                     Password = password,
-                    Id = Guid.NewGuid(),
+                    Id = newStudent.Id,
                     // DataResult = SuccessDataResult<CreateStudentRequestCommand>(request, "New student added successfully")
                 };
             }

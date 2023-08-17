@@ -25,13 +25,15 @@ namespace Application.Common.Interfaces
         public DbSet<Lesson> Lessons { get; set; }
         public DbSet<Mark> Marks { get; set; }
         public DbSet<SMSDomain.Entities.Module> Modules { get; set; }
-        public DbSet<NumberPrefix> NumberPrefixes { get; set; }
         public DbSet<PhoneNumber> PhoneNumbers { get; set; }
         public DbSet<Quiz> Quizzes { get; set; }
         public DbSet<StoppedStatus> StoppedStatuses { get; set; }
         public DbSet<Student> Students { get; set; }
         public DbSet<Teacher> Teachers { get; set; }
-        
+        public DbSet<CourseStudent> CourseStudent { get; set; }
+        public DbSet<GroupStudent> GroupStudent { get; set; }
+        public DbSet<FirstLogin> FirstLogins { get; set; }
+      
         Task<int> SaveChangesAsync(CancellationToken cancellationToken = default);
     }
 }

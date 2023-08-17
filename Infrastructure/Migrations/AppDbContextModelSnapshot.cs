@@ -37,21 +37,6 @@ namespace Infrastructure.Migrations
                     b.ToTable("CoordinatorCourse");
                 });
 
-            modelBuilder.Entity("CourseStudent", b =>
-                {
-                    b.Property<int>("CoursesId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("UsersId")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.HasKey("CoursesId", "UsersId");
-
-                    b.HasIndex("UsersId");
-
-                    b.ToTable("CourseStudent");
-                });
-
             modelBuilder.Entity("CourseTeacher", b =>
                 {
                     b.Property<int>("CoursesId")
@@ -67,21 +52,6 @@ namespace Infrastructure.Migrations
                     b.ToTable("CourseTeacher");
                 });
 
-            modelBuilder.Entity("GroupStudent", b =>
-                {
-                    b.Property<int>("GroupsId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("UsersId")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.HasKey("GroupsId", "UsersId");
-
-                    b.HasIndex("UsersId");
-
-                    b.ToTable("GroupStudent");
-                });
-
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
                 {
                     b.Property<string>("Id")
@@ -89,6 +59,10 @@ namespace Infrastructure.Migrations
 
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Discriminator")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
@@ -107,6 +81,10 @@ namespace Infrastructure.Migrations
                         .HasFilter("[NormalizedName] IS NOT NULL");
 
                     b.ToTable("AspNetRoles", (string)null);
+
+                    b.HasDiscriminator<string>("Discriminator").HasValue("IdentityRole");
+
+                    b.UseTphMappingStrategy();
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -224,7 +202,6 @@ namespace Infrastructure.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("CoordinatorId")
-                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("CreatedBy")
@@ -240,10 +217,12 @@ namespace Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("HomeNumber")
+                    b.Property<int?>("HomeNumber")
+                        .IsRequired()
                         .HasColumnType("int");
 
-                    b.Property<int>("HouseNo")
+                    b.Property<int?>("HouseNo")
+                        .IsRequired()
                         .HasColumnType("int");
 
                     b.Property<string>("ModifiedBy")
@@ -258,26 +237,28 @@ namespace Infrastructure.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("StudentId")
-                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("TeacherId")
-                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<int>("ZipCode")
+                    b.Property<int?>("ZipCode")
+                        .IsRequired()
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
                     b.HasIndex("CoordinatorId")
-                        .IsUnique();
+                        .IsUnique()
+                        .HasFilter("[CoordinatorId] IS NOT NULL");
 
                     b.HasIndex("StudentId")
-                        .IsUnique();
+                        .IsUnique()
+                        .HasFilter("[StudentId] IS NOT NULL");
 
                     b.HasIndex("TeacherId")
-                        .IsUnique();
+                        .IsUnique()
+                        .HasFilter("[TeacherId] IS NOT NULL");
 
                     b.ToTable("Addresses");
                 });
@@ -371,7 +352,7 @@ namespace Infrastructure.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("CountryId")
+                    b.Property<int?>("CountryId")
                         .HasColumnType("int");
 
                     b.Property<string>("CreatedBy")
@@ -394,18 +375,713 @@ namespace Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("StudentId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
                     b.HasKey("Id");
 
                     b.HasIndex("CountryId");
 
-                    b.HasIndex("StudentId")
-                        .IsUnique();
-
                     b.ToTable("Cities");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CountryId = 1,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Baku"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            CountryId = 1,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Dashkasan"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            CountryId = 1,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Ganja"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            CountryId = 1,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Goychay"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            CountryId = 1,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Ismayilli"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            CountryId = 1,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Lankaran"
+                        },
+                        new
+                        {
+                            Id = 7,
+                            CountryId = 1,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Naxchivan"
+                        },
+                        new
+                        {
+                            Id = 8,
+                            CountryId = 1,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Quba"
+                        },
+                        new
+                        {
+                            Id = 9,
+                            CountryId = 1,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Shusha"
+                        },
+                        new
+                        {
+                            Id = 10,
+                            CountryId = 1,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Sumgayit"
+                        },
+                        new
+                        {
+                            Id = 11,
+                            CountryId = 2,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Batumi"
+                        },
+                        new
+                        {
+                            Id = 12,
+                            CountryId = 2,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Gori"
+                        },
+                        new
+                        {
+                            Id = 13,
+                            CountryId = 2,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Kashuri"
+                        },
+                        new
+                        {
+                            Id = 14,
+                            CountryId = 2,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Kobuleti"
+                        },
+                        new
+                        {
+                            Id = 15,
+                            CountryId = 2,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Kutaisi"
+                        },
+                        new
+                        {
+                            Id = 16,
+                            CountryId = 2,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Poti"
+                        },
+                        new
+                        {
+                            Id = 17,
+                            CountryId = 2,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Rustavi"
+                        },
+                        new
+                        {
+                            Id = 18,
+                            CountryId = 2,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Senaki"
+                        },
+                        new
+                        {
+                            Id = 19,
+                            CountryId = 2,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Tbilisi"
+                        },
+                        new
+                        {
+                            Id = 20,
+                            CountryId = 2,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Zugdidi"
+                        },
+                        new
+                        {
+                            Id = 21,
+                            CountryId = 3,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Ashdod"
+                        },
+                        new
+                        {
+                            Id = 22,
+                            CountryId = 3,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Beersheba"
+                        },
+                        new
+                        {
+                            Id = 23,
+                            CountryId = 3,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Bene Beraq"
+                        },
+                        new
+                        {
+                            Id = 24,
+                            CountryId = 3,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Haifa"
+                        },
+                        new
+                        {
+                            Id = 25,
+                            CountryId = 3,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Holon"
+                        },
+                        new
+                        {
+                            Id = 26,
+                            CountryId = 3,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Jerusalim"
+                        },
+                        new
+                        {
+                            Id = 27,
+                            CountryId = 3,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Netanya"
+                        },
+                        new
+                        {
+                            Id = 28,
+                            CountryId = 3,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Petah Tigwa"
+                        },
+                        new
+                        {
+                            Id = 29,
+                            CountryId = 3,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Rishon LeZiyyon"
+                        },
+                        new
+                        {
+                            Id = 30,
+                            CountryId = 3,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Tel Aviv-Yafo"
+                        },
+                        new
+                        {
+                            Id = 31,
+                            CountryId = 4,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Aktau"
+                        },
+                        new
+                        {
+                            Id = 32,
+                            CountryId = 4,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Aktobe"
+                        },
+                        new
+                        {
+                            Id = 33,
+                            CountryId = 4,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Almaty"
+                        },
+                        new
+                        {
+                            Id = 34,
+                            CountryId = 4,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Astana"
+                        },
+                        new
+                        {
+                            Id = 35,
+                            CountryId = 4,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Karaganda"
+                        },
+                        new
+                        {
+                            Id = 36,
+                            CountryId = 4,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Oskemen"
+                        },
+                        new
+                        {
+                            Id = 37,
+                            CountryId = 4,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Pavlodar"
+                        },
+                        new
+                        {
+                            Id = 38,
+                            CountryId = 4,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Semey"
+                        },
+                        new
+                        {
+                            Id = 39,
+                            CountryId = 4,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Shymkent"
+                        },
+                        new
+                        {
+                            Id = 40,
+                            CountryId = 4,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Taraz"
+                        },
+                        new
+                        {
+                            Id = 41,
+                            CountryId = 5,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Chelyabinsk"
+                        },
+                        new
+                        {
+                            Id = 42,
+                            CountryId = 5,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Kazan"
+                        },
+                        new
+                        {
+                            Id = 43,
+                            CountryId = 5,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Krasnoyarsk"
+                        },
+                        new
+                        {
+                            Id = 44,
+                            CountryId = 5,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Moscow"
+                        },
+                        new
+                        {
+                            Id = 45,
+                            CountryId = 5,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Nizhny Novgorod"
+                        },
+                        new
+                        {
+                            Id = 46,
+                            CountryId = 5,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Novosibirsk"
+                        },
+                        new
+                        {
+                            Id = 47,
+                            CountryId = 5,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Rostov-on-Don"
+                        },
+                        new
+                        {
+                            Id = 48,
+                            CountryId = 5,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Saint Petersburg"
+                        },
+                        new
+                        {
+                            Id = 49,
+                            CountryId = 5,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Samara"
+                        },
+                        new
+                        {
+                            Id = 50,
+                            CountryId = 5,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Yekaterinburg"
+                        },
+                        new
+                        {
+                            Id = 51,
+                            CountryId = 6,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Bokhtar"
+                        },
+                        new
+                        {
+                            Id = 52,
+                            CountryId = 6,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Dushanbe"
+                        },
+                        new
+                        {
+                            Id = 53,
+                            CountryId = 6,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Isfara"
+                        },
+                        new
+                        {
+                            Id = 54,
+                            CountryId = 6,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Istaravshan"
+                        },
+                        new
+                        {
+                            Id = 55,
+                            CountryId = 6,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Khujand"
+                        },
+                        new
+                        {
+                            Id = 56,
+                            CountryId = 6,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Konibodom"
+                        },
+                        new
+                        {
+                            Id = 57,
+                            CountryId = 6,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Kulob"
+                        },
+                        new
+                        {
+                            Id = 58,
+                            CountryId = 6,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Panjakent"
+                        },
+                        new
+                        {
+                            Id = 59,
+                            CountryId = 6,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Tursunzoda"
+                        },
+                        new
+                        {
+                            Id = 60,
+                            CountryId = 6,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Vahdat"
+                        },
+                        new
+                        {
+                            Id = 61,
+                            CountryId = 7,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Adana"
+                        },
+                        new
+                        {
+                            Id = 62,
+                            CountryId = 7,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Ankara"
+                        },
+                        new
+                        {
+                            Id = 63,
+                            CountryId = 7,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Antalya"
+                        },
+                        new
+                        {
+                            Id = 64,
+                            CountryId = 7,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Bursa"
+                        },
+                        new
+                        {
+                            Id = 65,
+                            CountryId = 7,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Gazientep"
+                        },
+                        new
+                        {
+                            Id = 66,
+                            CountryId = 7,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Istanbul"
+                        },
+                        new
+                        {
+                            Id = 67,
+                            CountryId = 7,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Izmir"
+                        },
+                        new
+                        {
+                            Id = 68,
+                            CountryId = 7,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Kayseri"
+                        },
+                        new
+                        {
+                            Id = 69,
+                            CountryId = 7,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Konya"
+                        },
+                        new
+                        {
+                            Id = 70,
+                            CountryId = 7,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Mersin"
+                        },
+                        new
+                        {
+                            Id = 71,
+                            CountryId = 8,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Turkmenbashy"
+                        },
+                        new
+                        {
+                            Id = 72,
+                            CountryId = 8,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Anau"
+                        },
+                        new
+                        {
+                            Id = 73,
+                            CountryId = 8,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Ashgabat"
+                        },
+                        new
+                        {
+                            Id = 74,
+                            CountryId = 8,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Balkanabat"
+                        },
+                        new
+                        {
+                            Id = 75,
+                            CountryId = 8,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Bayramaly"
+                        },
+                        new
+                        {
+                            Id = 76,
+                            CountryId = 8,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Dashoguz"
+                        },
+                        new
+                        {
+                            Id = 77,
+                            CountryId = 8,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Gazojak"
+                        },
+                        new
+                        {
+                            Id = 78,
+                            CountryId = 8,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Gyzylarbat"
+                        },
+                        new
+                        {
+                            Id = 79,
+                            CountryId = 8,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Mary"
+                        },
+                        new
+                        {
+                            Id = 80,
+                            CountryId = 8,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Turkmenabat"
+                        },
+                        new
+                        {
+                            Id = 81,
+                            CountryId = 9,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Kryvyi Rih"
+                        },
+                        new
+                        {
+                            Id = 82,
+                            CountryId = 9,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Dnipro"
+                        },
+                        new
+                        {
+                            Id = 83,
+                            CountryId = 9,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Donetsk"
+                        },
+                        new
+                        {
+                            Id = 84,
+                            CountryId = 9,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Kharkiv"
+                        },
+                        new
+                        {
+                            Id = 85,
+                            CountryId = 9,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Kyiv"
+                        },
+                        new
+                        {
+                            Id = 86,
+                            CountryId = 9,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Lviv"
+                        },
+                        new
+                        {
+                            Id = 87,
+                            CountryId = 9,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Mykolaiv"
+                        },
+                        new
+                        {
+                            Id = 88,
+                            CountryId = 9,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Odesa"
+                        },
+                        new
+                        {
+                            Id = 89,
+                            CountryId = 9,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Sevastopol"
+                        },
+                        new
+                        {
+                            Id = 90,
+                            CountryId = 9,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Zaporizhzhia"
+                        },
+                        new
+                        {
+                            Id = 91,
+                            CountryId = 10,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Andijan"
+                        },
+                        new
+                        {
+                            Id = 92,
+                            CountryId = 10,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Bukhara"
+                        },
+                        new
+                        {
+                            Id = 93,
+                            CountryId = 10,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Fergana"
+                        },
+                        new
+                        {
+                            Id = 94,
+                            CountryId = 10,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Kokand"
+                        },
+                        new
+                        {
+                            Id = 95,
+                            CountryId = 10,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Margilan"
+                        },
+                        new
+                        {
+                            Id = 96,
+                            CountryId = 10,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Namangan"
+                        },
+                        new
+                        {
+                            Id = 97,
+                            CountryId = 10,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Nukus"
+                        },
+                        new
+                        {
+                            Id = 98,
+                            CountryId = 10,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Qarshi"
+                        },
+                        new
+                        {
+                            Id = 99,
+                            CountryId = 10,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Samarkand"
+                        },
+                        new
+                        {
+                            Id = 100,
+                            CountryId = 10,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Tashkent"
+                        });
                 });
 
             modelBuilder.Entity("SMSDomain.Entities.Country", b =>
@@ -436,16 +1112,71 @@ namespace Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("StudentId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
                     b.HasKey("Id");
 
-                    b.HasIndex("StudentId")
-                        .IsUnique();
-
                     b.ToTable("Countries");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Azerbaijan"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Georgia"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Israel"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Kazakhstan"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Russia"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Tajikistan"
+                        },
+                        new
+                        {
+                            Id = 7,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Turkey"
+                        },
+                        new
+                        {
+                            Id = 8,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Turkmenistan"
+                        },
+                        new
+                        {
+                            Id = 9,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Ukraine"
+                        },
+                        new
+                        {
+                            Id = 10,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Uzbekistan"
+                        });
                 });
 
             modelBuilder.Entity("SMSDomain.Entities.Course", b =>
@@ -462,7 +1193,7 @@ namespace Infrastructure.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("FinalExamId")
+                    b.Property<int?>("FinalExamId")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("JoinedDate")
@@ -487,9 +1218,36 @@ namespace Infrastructure.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("FinalExamId")
-                        .IsUnique();
+                        .IsUnique()
+                        .HasFilter("[FinalExamId] IS NOT NULL");
 
                     b.ToTable("Courses");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            JoinedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Front-end development",
+                            TotalHours = 360,
+                            TotalModules = 5
+                        });
+                });
+
+            modelBuilder.Entity("SMSDomain.Entities.CourseStudent", b =>
+                {
+                    b.Property<int>("CourseId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("StudentId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("CourseId", "StudentId");
+
+                    b.HasIndex("StudentId");
+
+                    b.ToTable("CourseStudent");
                 });
 
             modelBuilder.Entity("SMSDomain.Entities.FinalExam", b =>
@@ -512,7 +1270,7 @@ namespace Infrastructure.Migrations
                     b.Property<DateTime>("ExamDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("MarkId")
+                    b.Property<int?>("MarkId")
                         .HasColumnType("int");
 
                     b.Property<string>("ModifiedBy")
@@ -531,6 +1289,26 @@ namespace Infrastructure.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("FinalExams");
+                });
+
+            modelBuilder.Entity("SMSDomain.Entities.FirstLogin", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId")
+                        .IsUnique();
+
+                    b.ToTable("FirstLogins");
                 });
 
             modelBuilder.Entity("SMSDomain.Entities.GraduatedStatus", b =>
@@ -598,6 +1376,32 @@ namespace Infrastructure.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Groups");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Description = "New front-end group",
+                            EndDate = new DateTime(2020, 5, 9, 9, 15, 0, 0, DateTimeKind.Unspecified),
+                            Name = "FRONT102",
+                            StartDate = new DateTime(2019, 5, 9, 9, 15, 0, 0, DateTimeKind.Unspecified)
+                        });
+                });
+
+            modelBuilder.Entity("SMSDomain.Entities.GroupStudent", b =>
+                {
+                    b.Property<int>("GroupId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("StudentId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("GroupId", "StudentId");
+
+                    b.HasIndex("StudentId");
+
+                    b.ToTable("GroupStudent");
                 });
 
             modelBuilder.Entity("SMSDomain.Entities.Homework", b =>
@@ -816,40 +1620,6 @@ namespace Infrastructure.Migrations
                     b.ToTable("Modules");
                 });
 
-            modelBuilder.Entity("SMSDomain.Entities.NumberPrefix", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("CreatedBy")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("CreatedDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("ModifiedBy")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime?>("ModifiedDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int>("PhoneNumberId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Prefix")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("PhoneNumberId");
-
-                    b.ToTable("NumberPrefixes");
-                });
-
             modelBuilder.Entity("SMSDomain.Entities.PhoneNumber", b =>
                 {
                     b.Property<int>("Id")
@@ -859,7 +1629,6 @@ namespace Infrastructure.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("CoordinatorId")
-                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("CreatedBy")
@@ -879,11 +1648,9 @@ namespace Infrastructure.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("StudentId")
-                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("TeacherId")
-                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
@@ -984,10 +1751,10 @@ namespace Infrastructure.Migrations
                     b.Property<int>("AccessFailedCount")
                         .HasColumnType("int");
 
-                    b.Property<int>("Age")
+                    b.Property<int?>("Age")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("BirthDate")
+                    b.Property<DateTime?>("BirthDate")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("ConcurrencyStamp")
@@ -1010,13 +1777,13 @@ namespace Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<byte>("Gender")
+                    b.Property<byte?>("Gender")
                         .HasColumnType("tinyint");
 
                     b.Property<string>("Image")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("JoinedDate")
+                    b.Property<DateTime?>("JoinedDate")
                         .HasColumnType("datetime2");
 
                     b.Property<bool>("LockoutEnabled")
@@ -1075,6 +1842,39 @@ namespace Infrastructure.Migrations
                     b.UseTptMappingStrategy();
                 });
 
+            modelBuilder.Entity("SMSDomain.Identity.AppRole", b =>
+                {
+                    b.HasBaseType("Microsoft.AspNetCore.Identity.IdentityRole");
+
+                    b.HasDiscriminator().HasValue("AppRole");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = "cbe6c957-7635-40a8-9d5d-eab1739ca60e",
+                            Name = "Admin",
+                            NormalizedName = "ADMIN"
+                        },
+                        new
+                        {
+                            Id = "b7821238-a5f7-4b5d-a66d-c588138bccc8",
+                            Name = "Student",
+                            NormalizedName = "STUDENT"
+                        },
+                        new
+                        {
+                            Id = "91cc01bc-4fb0-45ae-9687-1fe04f834061",
+                            Name = "Teacher",
+                            NormalizedName = "TEACHER"
+                        },
+                        new
+                        {
+                            Id = "85ca276c-e835-44d3-9e41-b58e47cfdf1a",
+                            Name = "Coordinator",
+                            NormalizedName = "COORDINATOR"
+                        });
+                });
+
             modelBuilder.Entity("SMSDomain.Entities.Coordinator", b =>
                 {
                     b.HasBaseType("SMSDomain.Identity.AppUser");
@@ -1089,23 +1889,34 @@ namespace Infrastructure.Migrations
                 {
                     b.HasBaseType("SMSDomain.Identity.AppUser");
 
-                    b.Property<double>("AverageGrade")
+                    b.Property<double?>("AverageGrade")
+                        .IsRequired()
                         .HasColumnType("float");
+
+                    b.Property<int?>("CityId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("CountryId")
+                        .HasColumnType("int");
 
                     b.Property<int?>("GraduatedStatusId")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("LastLoginDate")
+                    b.Property<DateTime?>("LastLoginDate")
                         .HasColumnType("datetime2");
 
                     b.Property<int?>("LeftStatusId")
                         .HasColumnType("int");
 
-                    b.Property<int>("Status")
+                    b.Property<int?>("Status")
                         .HasColumnType("int");
 
                     b.Property<int?>("StoppedStatusId")
                         .HasColumnType("int");
+
+                    b.HasIndex("CityId");
+
+                    b.HasIndex("CountryId");
 
                     b.HasIndex("GraduatedStatusId")
                         .IsUnique()
@@ -1120,31 +1931,6 @@ namespace Infrastructure.Migrations
                         .HasFilter("[StoppedStatusId] IS NOT NULL");
 
                     b.ToTable("Students", (string)null);
-
-                    b.HasData(
-                        new
-                        {
-                            Id = "8cad6191-d152-4560-adb0-9a651a23c651",
-                            AccessFailedCount = 0,
-                            Age = 0,
-                            BirthDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ConcurrencyStamp = "7eb6f459-4571-49dc-b031-65be9267eb49",
-                            Email = "johndoe@gmail.com",
-                            EmailConfirmed = false,
-                            FathersName = "Sam",
-                            Fin = "4xk7hk9",
-                            Gender = (byte)0,
-                            JoinedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            LockoutEnabled = false,
-                            Name = "John",
-                            PhoneNumberConfirmed = false,
-                            SecurityStamp = "139b8e4d-989a-4e37-9b2d-35c72a282ca5",
-                            Surname = "Doe",
-                            TwoFactorEnabled = false,
-                            AverageGrade = 0.0,
-                            LastLoginDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Status = 0
-                        });
                 });
 
             modelBuilder.Entity("SMSDomain.Entities.Teacher", b =>
@@ -1178,21 +1964,6 @@ namespace Infrastructure.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("CourseStudent", b =>
-                {
-                    b.HasOne("SMSDomain.Entities.Course", null)
-                        .WithMany()
-                        .HasForeignKey("CoursesId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("SMSDomain.Entities.Student", null)
-                        .WithMany()
-                        .HasForeignKey("UsersId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
             modelBuilder.Entity("CourseTeacher", b =>
                 {
                     b.HasOne("SMSDomain.Entities.Course", null)
@@ -1204,21 +1975,6 @@ namespace Infrastructure.Migrations
                     b.HasOne("SMSDomain.Entities.Teacher", null)
                         .WithMany()
                         .HasForeignKey("TeachersId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("GroupStudent", b =>
-                {
-                    b.HasOne("SMSDomain.Entities.Group", null)
-                        .WithMany()
-                        .HasForeignKey("GroupsId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("SMSDomain.Entities.Student", null)
-                        .WithMany()
-                        .HasForeignKey("UsersId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
@@ -1279,20 +2035,17 @@ namespace Infrastructure.Migrations
                     b.HasOne("SMSDomain.Entities.Coordinator", "Coordinator")
                         .WithOne("Address")
                         .HasForeignKey("SMSDomain.Entities.Address", "CoordinatorId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.Restrict);
 
                     b.HasOne("SMSDomain.Entities.Student", "Student")
                         .WithOne("Address")
                         .HasForeignKey("SMSDomain.Entities.Address", "StudentId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.Restrict);
 
                     b.HasOne("SMSDomain.Entities.Teacher", "Teacher")
                         .WithOne("Address")
                         .HasForeignKey("SMSDomain.Entities.Address", "TeacherId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.Restrict);
 
                     b.Navigation("Coordinator");
 
@@ -1336,29 +2089,9 @@ namespace Infrastructure.Migrations
                     b.HasOne("SMSDomain.Entities.Country", "Country")
                         .WithMany("Cities")
                         .HasForeignKey("CountryId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.HasOne("SMSDomain.Entities.Student", "Student")
-                        .WithOne("City")
-                        .HasForeignKey("SMSDomain.Entities.City", "StudentId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.Restrict);
 
                     b.Navigation("Country");
-
-                    b.Navigation("Student");
-                });
-
-            modelBuilder.Entity("SMSDomain.Entities.Country", b =>
-                {
-                    b.HasOne("SMSDomain.Entities.Student", "Student")
-                        .WithOne("Country")
-                        .HasForeignKey("SMSDomain.Entities.Country", "StudentId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.Navigation("Student");
                 });
 
             modelBuilder.Entity("SMSDomain.Entities.Course", b =>
@@ -1366,10 +2099,58 @@ namespace Infrastructure.Migrations
                     b.HasOne("SMSDomain.Entities.FinalExam", "FinalExam")
                         .WithOne("Course")
                         .HasForeignKey("SMSDomain.Entities.Course", "FinalExamId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.Restrict);
 
                     b.Navigation("FinalExam");
+                });
+
+            modelBuilder.Entity("SMSDomain.Entities.CourseStudent", b =>
+                {
+                    b.HasOne("SMSDomain.Entities.Course", "Course")
+                        .WithMany("CourseStudents")
+                        .HasForeignKey("CourseId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("SMSDomain.Entities.Student", "Student")
+                        .WithMany("CourseStudents")
+                        .HasForeignKey("StudentId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Course");
+
+                    b.Navigation("Student");
+                });
+
+            modelBuilder.Entity("SMSDomain.Entities.FirstLogin", b =>
+                {
+                    b.HasOne("SMSDomain.Identity.AppUser", "User")
+                        .WithOne("FirstLogin")
+                        .HasForeignKey("SMSDomain.Entities.FirstLogin", "UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("SMSDomain.Entities.GroupStudent", b =>
+                {
+                    b.HasOne("SMSDomain.Entities.Group", "Group")
+                        .WithMany("GroupStudents")
+                        .HasForeignKey("GroupId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("SMSDomain.Entities.Student", "Student")
+                        .WithMany("GroupStudents")
+                        .HasForeignKey("StudentId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Group");
+
+                    b.Navigation("Student");
                 });
 
             modelBuilder.Entity("SMSDomain.Entities.Homework", b =>
@@ -1432,36 +2213,22 @@ namespace Infrastructure.Migrations
                     b.Navigation("Course");
                 });
 
-            modelBuilder.Entity("SMSDomain.Entities.NumberPrefix", b =>
-                {
-                    b.HasOne("SMSDomain.Entities.PhoneNumber", "PhoneNumber")
-                        .WithMany("NumberPrefixes")
-                        .HasForeignKey("PhoneNumberId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("PhoneNumber");
-                });
-
             modelBuilder.Entity("SMSDomain.Entities.PhoneNumber", b =>
                 {
                     b.HasOne("SMSDomain.Entities.Coordinator", "Coordinator")
                         .WithMany("PhoneNumbers")
                         .HasForeignKey("CoordinatorId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.Restrict);
 
                     b.HasOne("SMSDomain.Entities.Student", "Student")
                         .WithMany("PhoneNumbers")
                         .HasForeignKey("StudentId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.Restrict);
 
                     b.HasOne("SMSDomain.Entities.Teacher", "Teacher")
                         .WithMany("PhoneNumbers")
                         .HasForeignKey("TeacherId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.Restrict);
 
                     b.Navigation("Coordinator");
 
@@ -1500,6 +2267,16 @@ namespace Infrastructure.Migrations
 
             modelBuilder.Entity("SMSDomain.Entities.Student", b =>
                 {
+                    b.HasOne("SMSDomain.Entities.City", "City")
+                        .WithMany("Students")
+                        .HasForeignKey("CityId")
+                        .OnDelete(DeleteBehavior.Restrict);
+
+                    b.HasOne("SMSDomain.Entities.Country", "Country")
+                        .WithMany("Students")
+                        .HasForeignKey("CountryId")
+                        .OnDelete(DeleteBehavior.Restrict);
+
                     b.HasOne("SMSDomain.Entities.GraduatedStatus", "GraduatedStatus")
                         .WithOne("Student")
                         .HasForeignKey("SMSDomain.Entities.Student", "GraduatedStatusId")
@@ -1521,6 +2298,10 @@ namespace Infrastructure.Migrations
                         .HasForeignKey("SMSDomain.Entities.Student", "StoppedStatusId")
                         .OnDelete(DeleteBehavior.Restrict);
 
+                    b.Navigation("City");
+
+                    b.Navigation("Country");
+
                     b.Navigation("GraduatedStatus");
 
                     b.Navigation("LeftStatus");
@@ -1537,29 +2318,41 @@ namespace Infrastructure.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("SMSDomain.Entities.City", b =>
+                {
+                    b.Navigation("Students");
+                });
+
             modelBuilder.Entity("SMSDomain.Entities.Country", b =>
                 {
                     b.Navigation("Cities");
+
+                    b.Navigation("Students");
                 });
 
             modelBuilder.Entity("SMSDomain.Entities.Course", b =>
                 {
+                    b.Navigation("CourseStudents");
+
                     b.Navigation("Modules");
                 });
 
             modelBuilder.Entity("SMSDomain.Entities.FinalExam", b =>
                 {
-                    b.Navigation("Course")
-                        .IsRequired();
+                    b.Navigation("Course");
 
-                    b.Navigation("Mark")
-                        .IsRequired();
+                    b.Navigation("Mark");
                 });
 
             modelBuilder.Entity("SMSDomain.Entities.GraduatedStatus", b =>
                 {
                     b.Navigation("Student")
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("SMSDomain.Entities.Group", b =>
+                {
+                    b.Navigation("GroupStudents");
                 });
 
             modelBuilder.Entity("SMSDomain.Entities.LeftStatus", b =>
@@ -1591,37 +2384,33 @@ namespace Infrastructure.Migrations
                     b.Navigation("Quizzes");
                 });
 
-            modelBuilder.Entity("SMSDomain.Entities.PhoneNumber", b =>
-                {
-                    b.Navigation("NumberPrefixes");
-                });
-
             modelBuilder.Entity("SMSDomain.Entities.StoppedStatus", b =>
                 {
                     b.Navigation("Student")
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("SMSDomain.Identity.AppUser", b =>
+                {
+                    b.Navigation("FirstLogin");
+                });
+
             modelBuilder.Entity("SMSDomain.Entities.Coordinator", b =>
                 {
-                    b.Navigation("Address")
-                        .IsRequired();
+                    b.Navigation("Address");
 
                     b.Navigation("PhoneNumbers");
                 });
 
             modelBuilder.Entity("SMSDomain.Entities.Student", b =>
                 {
-                    b.Navigation("Address")
-                        .IsRequired();
+                    b.Navigation("Address");
 
                     b.Navigation("Attendances");
 
-                    b.Navigation("City")
-                        .IsRequired();
+                    b.Navigation("CourseStudents");
 
-                    b.Navigation("Country")
-                        .IsRequired();
+                    b.Navigation("GroupStudents");
 
                     b.Navigation("Marks");
 

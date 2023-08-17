@@ -10,11 +10,13 @@ namespace SMSDomain.Entities
 {
     public class Coordinator : AppUser
     {
-        public List<Course> Courses { get; set; }
+        public List<Course>? Courses { get; set; }
         public bool ActiveStatus { get; set; }
 
       
-        public Address Address { get; set; }
-        public List<PhoneNumber> PhoneNumbers { get; set; }
+        public Address? Address { get; set; }
+        public List<PhoneNumber>? PhoneNumbers { get; set; }
+     
+
     }
 }
