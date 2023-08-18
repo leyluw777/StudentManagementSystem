@@ -4403,42 +4403,40 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Hp\\.nuget\\packages\\": {},
+    "C:\\Users\\murat.vuranok\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebApi\\WebApi.csproj",
+      "projectUniqueName": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebApi\\WebApi.csproj",
       "projectName": "WebApi",
-      "projectPath": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebApi\\WebApi.csproj",
-      "packagesPath": "C:\\Users\\Hp\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebApi\\obj\\",
+      "projectPath": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebApi\\WebApi.csproj",
+      "packagesPath": "C:\\Users\\murat.vuranok\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\murat.vuranok\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
-      "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\sdk\\7.0.302\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
-        "https://api.nuget.org/v3/index.json": {}
-      },
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\Application\\Application.csproj": {
-              "projectPath": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\Application\\Application.csproj"
+            "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\Application\\Application.csproj": {
+              "projectPath": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\Application\\Application.csproj"
             },
-            "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\Infrastructure\\Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\Infrastructure\\Infrastructure.csproj"
+            "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\Infrastructure\\Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\Infrastructure\\Infrastructure.csproj"
             }
           }
         }
@@ -4497,7 +4495,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }

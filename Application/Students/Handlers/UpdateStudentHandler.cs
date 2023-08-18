@@ -128,8 +128,8 @@ namespace Application.Students.Handlers
                 studentUpdate.Address.HouseNo = request.HouseNo;
                 studentUpdate.Address.ZipCode = request.ZipCode;
                 studentUpdate.Address.HomeNumber = request.HomeNumber;
-                studentUpdate.CountryId = _dbContext.Countries.FirstOrDefault(c => c.Name == request.Countryname).Id;
-                studentUpdate.CityId = _dbContext.Cities.FirstOrDefault(c => c.Name == request.Cityname).Id;
+                studentUpdate.CountryId = _dbContext.Countries.FirstOrDefault(c => c.Name == request.Country).Id;
+                studentUpdate.CityId = _dbContext.Cities.FirstOrDefault(c => c.Name == request.City).Id;
                
                 
 
@@ -146,7 +146,7 @@ namespace Application.Students.Handlers
 
                 //List < CourseStudent > updateCourses = await _dbContext.CourseStudent.Where(c => c.StudentId == studentUpdate.Id).ToListAsync();
                 var courseStudents = new List<CourseStudent>();
-                foreach(var course in request.CourseName)
+                foreach(var course in request.Courses)
                 {
                     var courseId = _dbContext.Courses.FirstOrDefault(c => c.Name == course).Id;
                     courseStudents.Add(new CourseStudent { StudentId = request.Id, CourseId = courseId });
@@ -157,7 +157,7 @@ namespace Application.Students.Handlers
 
 
                 var groupStudents = new List<GroupStudent>();
-                foreach (var group in request.GroupName)
+                foreach (var group in request.Groups)
                 {
                     var groupId = _dbContext.Groups.FirstOrDefault(c => c.Name == group).Id;
                     groupStudents.Add(new GroupStudent { StudentId = request.Id, GroupId = groupId });

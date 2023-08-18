@@ -59,7 +59,7 @@
 						<form method="post" asp-action="Index" asp-controller="EditStudent">
 					<div class="card-body">
 						<div class="row">
-							<div class="col-xl-3 col-lg-4">
+							@* <div class="col-xl-3 col-lg-4">
 								<label class="form-label text-primary">Photo<span class="required">*</span></label>
 								<div class="avatar-upload">
 									<div class="avatar-preview">
@@ -72,31 +72,38 @@
 										<a href="~/javascript:void" class="btn btn-danger light remove-img ms-2 btn-sm">Remove</a>
 									</div>
 								</div>
-							</div>
+							</div> *@
 							
-							<div class="col-xl-9 col-lg-8">
+							<div class="col-xl-12 col-lg-12">
 								<div class="row">
 									<div class="col-xl-6 col-sm-6">
 										<div class="mb-3">
 											<label for="exampleFormControlInput1" class="form-label text-primary">First Name<span class="required">*</span></label>
-													<input type="text" class="form-control" id="exampleFormControlInput1" placeholder="John" name="Name" value="@Model.Name">
+													<input type="text" class="form-control" id="exampleFormControlInput1" placeholder="John" name="student.Name" value="@Model.Name">
 										</div>
 										<div class="mb-3">
 											<label class="form-label text-primary">Date of Birth<span class="required">*</span></label>
 											<div class="d-flex">
-														<input type="text" class="form-control" placeholder="2017-06-04" id="datepicker" name="Name" value="@Model.BirthDate">
+														<input type="text" class="form-control" placeholder="2017-06-04" id="datepicker" name="student.BirthDate" value="@Model.BirthDate">
+														<input type="hidden"  name="student.Id" value="@Model.Id">
 										
 											</div>
 										</div>
-										<div class="mb-3">
-											<label for="exampleFormControlInput3" class="form-label text-primary">Email<span class="required">*</span></label>
-													<input type="email" class="form-control" id="exampleFormControlInput3" placeholder="hello@example.com" name="Email" value="@Model.Email">
+										<div class="row"> 
+											<div class="mb-3 col-xl-4 col-sm-4">
+												<label for="exampleFormControlInput3" class="form-label text-primary">Email<span class="required">*</span></label>
+														<input type="email" class="form-control" id="exampleFormControlInput3" placeholder="hello@example.com" name="student.Email" value="@Model.Email">
+											</div>
+													<div class="mb-3 col-xl-2 col-sm-2">
+														<label for="exampleFormControlInput3" class="form-label text-primary">Fin ID<span class="required">*</span></label>
+														<input type="text" class="form-control" id="exampleFormControlInput3" placeholder="7sxa8q28" name="student.Fin" value="@Model.Fin">
+													</div>
 										</div>
 										<div class="mb-3">
 											<label for="exampleFormControlTextarea1" class="form-label text-primary">Country<span class="required">*</span></label>
 													
-													<select class="default-select  form-control wide" name="Country" >
-														<option value="@Model.Country">   Azerbaijan		</option>
+													<select class="default-select  form-control wide" name="student.Country" asp-for="Country">
+														<option value="@Model.Country" selected="selected">   Azerbaijan		</option>
 														<option value="Georgia">   Georgia			</option>
 														<option value="Israel">   Israel			</option>
 														<option value="Kazakhstan">   Kazakhstan		</option>
@@ -109,38 +116,186 @@
 													
 													</select>
 										</div>
+
+
+												<div class="row">
+													<div class="mb-3 col-md-4">
+														<label class="form-label">District</label>
+														<input type="text" class="form-control" name="student.District" value="@Model.District">
+													</div>
+													<div class="mb-3 col-md-4">
+														<label class="form-label">Street Address</label>
+														<input type="text" class="form-control" name="student.StreetAddress" value="@Model.StreetAddress">
+													</div>
+													<div class="mb-3 col-md-2">
+														<label class="form-label">House No</label>
+														<input type="number" class="form-control" name="student.HouseNo" value="@Model.HouseNo">
+													</div>
+													<div class="mb-3 col-md-2">
+														<label class="form-label">Zip</label>
+														<input type="number" class="form-control" name="student.ZipCode" value="@Model.ZipCode">
+													</div>
+												</div>
+
+
+
+										<div class="row">
+
+									
+												<div class="col-xl-5 col-sm-5">
+													@{
+														// var btnClicked = false;
+														for (int i = 0; i < Model.Courses.Count; i++)
+														{
+															<label for="exampleFormControlCourse" class="form-label text-primary">Course<span class="required">*</span></label>
+															<div class=" d-flex align-items-start justify-content-between w-100">
+
+																<div class="card">
+																	
+																	<div class="card-body">
+																		<div class="basic-form">
+
+																			<div class="mb-3">
+																				<div class="form-check mb-2">
+																					<input type="checkbox" class="form-check-input" id="check1" value="@Model.Courses[0]" name="student.Courses[0]">
+																					<label class="form-check-label" for="check1">Front-end development</label>
+																				</div>
+																				<div class="form-check mb-2">
+																					<input type="checkbox" class="form-check-input" id="check2" value="" name="">
+																					<label class="form-check-label" for="check2">Back-end development</label>
+																				</div>
+
+																			</div>
+
+																		</div>
+																	</div>
+																</div>
+															</div>
+
+
+														}
+													}
+												</div>
+											
+												<div class="col-xl-4 col-sm-4">
+													<label for="exampleFormControlTextarea1" class="form-label text-primary">Group Name<span class="required">*</span></label>
+													<select class="default-select  form-control wide" name="student.Groups[0]" asp-for="student.Groups[0]">
+														<option value="@Model.Groups[0]" selected="selected">  FRONT102		</option>
+
+													</select>
+
+												</div>
+													<div class="mb-3 col-xl-3 col-sm-3">
+													<label for="exampleFormControlGrade" class="form-label text-primary">Average grade <span class="required">*</span></label>
+														<input type="text" class="form-control" id="exampleFormControlGrade" name="student.AverageGrade" value="@Model.AverageGrade">
+													</div>
+
+												</div>
 									</div>
+
+
+
 									<div class="col-xl-6 col-sm-6">
+
+											
+
+
 										<div class="mb-3">
 											<label for="exampleFormControlInput4" class="form-label text-primary">Last Name<span class="required">*</span></label>
-											<input type="text" class="form-control" id="exampleFormControlInput4" placeholder="Doe" name="Surname" value="@Model.Surname">
+											<input type="text" class="form-control" id="exampleFormControlInput4" placeholder="Doe" name="student.Surname" value="@Model.Surname">
 										</div>
 										<div class="mb-3">
-											<label for="exampleFormControlInput5" class="form-label text-primary">Father's name' Name<span class="required">*</span></label>
-											<input type="text" class="form-control" id="exampleFormControlInput5" placeholder="Mana William" name="FathersName" value="@Model.FathersName">
+											<label for="exampleFormControlInput5" class="form-label text-primary">Father's name<span class="required">*</span></label>
+													<input type="text" class="form-control" id="exampleFormControlInput5" placeholder="Mana William" name="student.FathersName" value="@Model.FathersName">
 										</div>
-										<div class="mb-3">
-											<label for="exampleFormControlInput6" class="form-label text-primary">Phone Number<span class="required">*</span></label>
-													<input type="number" class="form-control" id="exampleFormControlInput6" placeholder="+123456789" name="PhoneNumbers" value="@Model.PhoneNumbers">
-										</div>
-												<div class="mb-3">
-													<label for="exampleFormControlInput6" class="form-label text-primary">FIN Id<span class="required">*</span></label>
-													<input type="text" class="form-control" id="exampleFormControlInput6" placeholder="+123456789" name="Fin" value="@Model.Fin">
+												<div >
+													@{
+
+														var btnClicked = false;
+														for (int i = 0; i < Model.PhoneNumbers.Count; i++)
+														{
+															<label for="exampleFormControlInput6" class="form-label text-primary">Phone Number<span class="required">*</span></label>
+															<div class=" d-flex align-items-start justify-content-between w-100">
+
+																<div class=" " id="numberDiv" style="width: 90%">
+
+																	<input type="number" class="form-control mb-3" id="exampleFormControlInput6" placeholder="+123456789" name="student.PhoneNumbers[@i]" value="@Model.PhoneNumbers[@i]">
+																</div>
+																<div class=" mx-2" style="width: 5%">
+																	<button class="btn btn-primary shadow btn-xs sharp me-1 mt-2" id="addNewNum" type="button"><i class="fa-solid fa-plus"></i></button>
+																</div>
+															</div>
+
+
+														}
+
+
+													}
 												</div>
 												<div class="mb-3">
 													<label for="exampleFormControlTextarea1" class="form-label text-primary">City<span class="required">*</span></label>
 
-													<select class="default-select  form-control wide" name="City" >
+													<select class="default-select  form-control wide" name="student.City" asp-for="City">
 
-														<option value="@Model.City"> Baku	</option>
+														<option value="@Model.City" selected="selected"> Baku	</option>
 
 													</select>
 												</div>
+												<div class="mb-3">
+													<label for="exampleFormControlHomeNum5" class="form-label text-primary">Home number<span class="required">*</span></label>
+													<input type="number" class="form-control" id="exampleFormControlHomeNum5" name="student.HomeNumber" value="@Model.HomeNumber">
+												</div>
+
+												<div class="mb-3">
+													<label for="exampleFormControlStatus" class="form-label text-primary">Current status<span class="required">*</span></label>
+													
+													<select class="default-select  form-control wide" name="student.Status" asp-for="Status">
+														
+														@if (Model.Status == 0)
+														{
+															<option value="0" selected="selected"> Active	</option>
+															<option value="1" >   Left		</option>
+															<option value="2" >   Temporary stopped	</option>
+															<option value="3" >   Graduated	</option>
+
+														}
+														@if (Model.Status == 1)
+														{
+															<option value="0" > Active	</option>
+															<option value="1" selected="selected">   Left		</option>
+															<option value="2">   Temporary stopped	</option>
+															<option value="3">   Graduated	</option>
+
+														}
+
+														@if (Model.Status == 2)
+														{
+															<option value="0"> Active	</option>
+															<option value="1" >   Left		</option>
+															<option value="2" selected="selected">   Temporary stopped	</option>
+															<option value="3">   Graduated	</option>
+
+														}
+														@if (Model.Status == 3)
+														{
+															<option value="0"> Active	</option>
+															<option value="1">   Left		</option>
+															<option value="2" >   Temporary stopped	</option>
+															<option value="3" selected="selected">   Graduated	</option>
+
+														}
+
+													</select>
+
+													
+												</div>
+
 
 												<div class="">
-													<button class="btn btn-outline-primary me-3" type="submit">Save as Draft</button>
+													
 													<button class="btn btn-primary" type="submit">Save</button>
 												</div>
+
 									</div>
 								</div>
 							</div>
@@ -159,6 +314,19 @@
 		
 	</div>
 </div>
+	<script defer> 
+
+		var addBtn = document.getElementById("addNewNum");
+		var mainDiv = document.getElementById("numberDiv");
+		addBtn.addEventListener("click", () => {
+			var input = document.createElement("input");
+			mainDiv.appendChild(input);
+			input.setAttribute("name", "student.PhoneNumbers[1]");
+			input.setAttribute("class", "form-control mb-2");
+			
+		})
+
+	</script>
 
 	<script src="~/vendor/global/global.min.js"></script>
 	<script src="~/vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
@@ -171,7 +339,6 @@
 	<script src="~/js/dlabnav-init.js"></script>
 	<script src="~/js/demo.js"></script>
 	<script src="~/js/styleSwitcher.js"></script>
-
 </body>
 
 <!-- Mirrored from akademi.dexignlab.com/xhtml/add-student.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 20 Jul 2023 19:29:26 GMT -->

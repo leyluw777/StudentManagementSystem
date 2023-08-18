@@ -1,1683 +1,1683 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\WebUI.bundle.scp.css",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\WebUI.bundle.scp.css",
       "PackagePath": "staticwebassets\\WebUI.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\ajax\\app-profile.html",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\ajax\\app-profile.html",
       "PackagePath": "staticwebassets\\ajax\\app-profile.html"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\ajax\\contacts.html",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\ajax\\contacts.html",
       "PackagePath": "staticwebassets\\ajax\\contacts.html"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\ajax\\images\\profile\\small\\pic1.html",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\ajax\\images\\profile\\small\\pic1.html",
       "PackagePath": "staticwebassets\\ajax\\images\\profile\\small\\pic1.html"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\ajax\\images\\profile\\small\\pic4.html",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\ajax\\images\\profile\\small\\pic4.html",
       "PackagePath": "staticwebassets\\ajax\\images\\profile\\small\\pic4.html"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\ajax\\message-content.html",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\ajax\\message-content.html",
       "PackagePath": "staticwebassets\\ajax\\message-content.html"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\ajax\\message.html",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\ajax\\message.html",
       "PackagePath": "staticwebassets\\ajax\\message.html"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\ajax\\recentactivity.html",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\ajax\\recentactivity.html",
       "PackagePath": "staticwebassets\\ajax\\recentactivity.html"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\css\\site.css",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\css\\style.css",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\css\\style.css",
       "PackagePath": "staticwebassets\\css\\style.css"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\favicon.ico",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\avasta\\css\\style.css",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\avasta\\css\\style.css",
       "PackagePath": "staticwebassets\\icons\\avasta\\css\\style.css"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\avasta\\fonts\\avasta.eot",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\avasta\\fonts\\avasta.eot",
       "PackagePath": "staticwebassets\\icons\\avasta\\fonts\\avasta.eot"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\avasta\\fonts\\avasta.svg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\avasta\\fonts\\avasta.svg",
       "PackagePath": "staticwebassets\\icons\\avasta\\fonts\\avasta.svg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\avasta\\fonts\\avasta.ttf",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\avasta\\fonts\\avasta.ttf",
       "PackagePath": "staticwebassets\\icons\\avasta\\fonts\\avasta.ttf"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\avasta\\fonts\\avasta.woff",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\avasta\\fonts\\avasta.woff",
       "PackagePath": "staticwebassets\\icons\\avasta\\fonts\\avasta.woff"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\avasta\\fonts\\avasta.woff2",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\avasta\\fonts\\avasta.woff2",
       "PackagePath": "staticwebassets\\icons\\avasta\\fonts\\avasta.woff2"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\bootstrap-icons\\font\\bootstrap-icons.css",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\bootstrap-icons\\font\\bootstrap-icons.css",
       "PackagePath": "staticwebassets\\icons\\bootstrap-icons\\font\\bootstrap-icons.css"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\bootstrap-icons\\font\\fonts\\bootstrap-iconse36a.woff",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\bootstrap-icons\\font\\fonts\\bootstrap-iconse36a.woff",
       "PackagePath": "staticwebassets\\icons\\bootstrap-icons\\font\\fonts\\bootstrap-iconse36a.woff"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\bootstrap-icons\\font\\fonts\\bootstrap-iconse36a.woff2",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\bootstrap-icons\\font\\fonts\\bootstrap-iconse36a.woff2",
       "PackagePath": "staticwebassets\\icons\\bootstrap-icons\\font\\fonts\\bootstrap-iconse36a.woff2"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\flaticon-1\\font\\flaticon-1.css",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\flaticon-1\\font\\flaticon-1.css",
       "PackagePath": "staticwebassets\\icons\\flaticon-1\\font\\flaticon-1.css"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\flaticon-1\\font\\flaticon-1882d.eot",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\flaticon-1\\font\\flaticon-1882d.eot",
       "PackagePath": "staticwebassets\\icons\\flaticon-1\\font\\flaticon-1882d.eot"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\flaticon-1\\font\\flaticon-1882d.svg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\flaticon-1\\font\\flaticon-1882d.svg",
       "PackagePath": "staticwebassets\\icons\\flaticon-1\\font\\flaticon-1882d.svg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\flaticon-1\\font\\flaticon-1882d.ttf",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\flaticon-1\\font\\flaticon-1882d.ttf",
       "PackagePath": "staticwebassets\\icons\\flaticon-1\\font\\flaticon-1882d.ttf"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\flaticon-1\\font\\flaticon-1882d.woff",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\flaticon-1\\font\\flaticon-1882d.woff",
       "PackagePath": "staticwebassets\\icons\\flaticon-1\\font\\flaticon-1882d.woff"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\flaticon-1\\font\\flaticon-1882d.woff2",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\flaticon-1\\font\\flaticon-1882d.woff2",
       "PackagePath": "staticwebassets\\icons\\flaticon-1\\font\\flaticon-1882d.woff2"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\flaticon\\Flaticon.eot",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\flaticon\\Flaticon.eot",
       "PackagePath": "staticwebassets\\icons\\flaticon\\Flaticon.eot"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\flaticon\\Flaticon.svg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\flaticon\\Flaticon.svg",
       "PackagePath": "staticwebassets\\icons\\flaticon\\Flaticon.svg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\flaticon\\Flaticon.ttf",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\flaticon\\Flaticon.ttf",
       "PackagePath": "staticwebassets\\icons\\flaticon\\Flaticon.ttf"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\flaticon\\Flaticon.woff",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\flaticon\\Flaticon.woff",
       "PackagePath": "staticwebassets\\icons\\flaticon\\Flaticon.woff"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\flaticon\\Flaticond41d.eot",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\flaticon\\Flaticond41d.eot",
       "PackagePath": "staticwebassets\\icons\\flaticon\\Flaticond41d.eot"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\flaticon\\flaticon.css",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\flaticon\\flaticon.css",
       "PackagePath": "staticwebassets\\icons\\flaticon\\flaticon.css"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\fontawesome\\css\\all.min.css",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\fontawesome\\css\\all.min.css",
       "PackagePath": "staticwebassets\\icons\\fontawesome\\css\\all.min.css"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\fontawesome\\webfonts\\fa-brands-400.ttf",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\fontawesome\\webfonts\\fa-brands-400.ttf",
       "PackagePath": "staticwebassets\\icons\\fontawesome\\webfonts\\fa-brands-400.ttf"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\fontawesome\\webfonts\\fa-brands-400.woff2",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\fontawesome\\webfonts\\fa-brands-400.woff2",
       "PackagePath": "staticwebassets\\icons\\fontawesome\\webfonts\\fa-brands-400.woff2"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\fontawesome\\webfonts\\fa-regular-400.ttf",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\fontawesome\\webfonts\\fa-regular-400.ttf",
       "PackagePath": "staticwebassets\\icons\\fontawesome\\webfonts\\fa-regular-400.ttf"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\fontawesome\\webfonts\\fa-regular-400.woff2",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\fontawesome\\webfonts\\fa-regular-400.woff2",
       "PackagePath": "staticwebassets\\icons\\fontawesome\\webfonts\\fa-regular-400.woff2"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\fontawesome\\webfonts\\fa-solid-900.ttf",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\fontawesome\\webfonts\\fa-solid-900.ttf",
       "PackagePath": "staticwebassets\\icons\\fontawesome\\webfonts\\fa-solid-900.ttf"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\fontawesome\\webfonts\\fa-solid-900.woff2",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\fontawesome\\webfonts\\fa-solid-900.woff2",
       "PackagePath": "staticwebassets\\icons\\fontawesome\\webfonts\\fa-solid-900.woff2"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\fontawesome\\webfonts\\fa-v4compatibility.ttf",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\fontawesome\\webfonts\\fa-v4compatibility.ttf",
       "PackagePath": "staticwebassets\\icons\\fontawesome\\webfonts\\fa-v4compatibility.ttf"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\fontawesome\\webfonts\\fa-v4compatibility.woff2",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\fontawesome\\webfonts\\fa-v4compatibility.woff2",
       "PackagePath": "staticwebassets\\icons\\fontawesome\\webfonts\\fa-v4compatibility.woff2"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\icomoon\\fonts\\icomoon.eot",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\icomoon\\fonts\\icomoon.eot",
       "PackagePath": "staticwebassets\\icons\\icomoon\\fonts\\icomoon.eot"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\icomoon\\fonts\\icomoon.svg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\icomoon\\fonts\\icomoon.svg",
       "PackagePath": "staticwebassets\\icons\\icomoon\\fonts\\icomoon.svg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\icomoon\\fonts\\icomoon.svg.readme",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\icomoon\\fonts\\icomoon.svg.readme",
       "PackagePath": "staticwebassets\\icons\\icomoon\\fonts\\icomoon.svg.readme"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\icomoon\\fonts\\icomoon.ttf",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\icomoon\\fonts\\icomoon.ttf",
       "PackagePath": "staticwebassets\\icons\\icomoon\\fonts\\icomoon.ttf"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\icomoon\\fonts\\icomoon.woff",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\icomoon\\fonts\\icomoon.woff",
       "PackagePath": "staticwebassets\\icons\\icomoon\\fonts\\icomoon.woff"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\icomoon\\icomoon.css",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\icomoon\\icomoon.css",
       "PackagePath": "staticwebassets\\icons\\icomoon\\icomoon.css"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\line-awesome\\css\\line-awesome.min.css",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\line-awesome\\css\\line-awesome.min.css",
       "PackagePath": "staticwebassets\\icons\\line-awesome\\css\\line-awesome.min.css"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\line-awesome\\fonts\\la-brands-400.eot",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\line-awesome\\fonts\\la-brands-400.eot",
       "PackagePath": "staticwebassets\\icons\\line-awesome\\fonts\\la-brands-400.eot"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\line-awesome\\fonts\\la-brands-400.svg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\line-awesome\\fonts\\la-brands-400.svg",
       "PackagePath": "staticwebassets\\icons\\line-awesome\\fonts\\la-brands-400.svg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\line-awesome\\fonts\\la-brands-400.ttf",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\line-awesome\\fonts\\la-brands-400.ttf",
       "PackagePath": "staticwebassets\\icons\\line-awesome\\fonts\\la-brands-400.ttf"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\line-awesome\\fonts\\la-brands-400.woff",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\line-awesome\\fonts\\la-brands-400.woff",
       "PackagePath": "staticwebassets\\icons\\line-awesome\\fonts\\la-brands-400.woff"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\line-awesome\\fonts\\la-brands-400.woff2",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\line-awesome\\fonts\\la-brands-400.woff2",
       "PackagePath": "staticwebassets\\icons\\line-awesome\\fonts\\la-brands-400.woff2"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\line-awesome\\fonts\\la-brands-400d41d.eot",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\line-awesome\\fonts\\la-brands-400d41d.eot",
       "PackagePath": "staticwebassets\\icons\\line-awesome\\fonts\\la-brands-400d41d.eot"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\line-awesome\\fonts\\la-regular-400.eot",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\line-awesome\\fonts\\la-regular-400.eot",
       "PackagePath": "staticwebassets\\icons\\line-awesome\\fonts\\la-regular-400.eot"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\line-awesome\\fonts\\la-regular-400.svg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\line-awesome\\fonts\\la-regular-400.svg",
       "PackagePath": "staticwebassets\\icons\\line-awesome\\fonts\\la-regular-400.svg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\line-awesome\\fonts\\la-regular-400.ttf",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\line-awesome\\fonts\\la-regular-400.ttf",
       "PackagePath": "staticwebassets\\icons\\line-awesome\\fonts\\la-regular-400.ttf"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\line-awesome\\fonts\\la-regular-400.woff",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\line-awesome\\fonts\\la-regular-400.woff",
       "PackagePath": "staticwebassets\\icons\\line-awesome\\fonts\\la-regular-400.woff"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\line-awesome\\fonts\\la-regular-400.woff2",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\line-awesome\\fonts\\la-regular-400.woff2",
       "PackagePath": "staticwebassets\\icons\\line-awesome\\fonts\\la-regular-400.woff2"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\line-awesome\\fonts\\la-regular-400d41d.eot",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\line-awesome\\fonts\\la-regular-400d41d.eot",
       "PackagePath": "staticwebassets\\icons\\line-awesome\\fonts\\la-regular-400d41d.eot"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\line-awesome\\fonts\\la-solid-900.eot",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\line-awesome\\fonts\\la-solid-900.eot",
       "PackagePath": "staticwebassets\\icons\\line-awesome\\fonts\\la-solid-900.eot"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\line-awesome\\fonts\\la-solid-900.svg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\line-awesome\\fonts\\la-solid-900.svg",
       "PackagePath": "staticwebassets\\icons\\line-awesome\\fonts\\la-solid-900.svg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\line-awesome\\fonts\\la-solid-900.ttf",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\line-awesome\\fonts\\la-solid-900.ttf",
       "PackagePath": "staticwebassets\\icons\\line-awesome\\fonts\\la-solid-900.ttf"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\line-awesome\\fonts\\la-solid-900.woff",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\line-awesome\\fonts\\la-solid-900.woff",
       "PackagePath": "staticwebassets\\icons\\line-awesome\\fonts\\la-solid-900.woff"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\line-awesome\\fonts\\la-solid-900.woff2",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\line-awesome\\fonts\\la-solid-900.woff2",
       "PackagePath": "staticwebassets\\icons\\line-awesome\\fonts\\la-solid-900.woff2"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\line-awesome\\fonts\\la-solid-900d41d.eot",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\line-awesome\\fonts\\la-solid-900d41d.eot",
       "PackagePath": "staticwebassets\\icons\\line-awesome\\fonts\\la-solid-900d41d.eot"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\material-design-iconic-font\\css\\materialdesignicons.min.css",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\material-design-iconic-font\\css\\materialdesignicons.min.css",
       "PackagePath": "staticwebassets\\icons\\material-design-iconic-font\\css\\materialdesignicons.min.css"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\material-design-iconic-font\\fonts\\materialdesignicons-webfont683c.eot",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\material-design-iconic-font\\fonts\\materialdesignicons-webfont683c.eot",
       "PackagePath": "staticwebassets\\icons\\material-design-iconic-font\\fonts\\materialdesignicons-webfont683c.eot"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\material-design-iconic-font\\fonts\\materialdesignicons-webfont683c.svg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\material-design-iconic-font\\fonts\\materialdesignicons-webfont683c.svg",
       "PackagePath": "staticwebassets\\icons\\material-design-iconic-font\\fonts\\materialdesignicons-webfont683c.svg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\material-design-iconic-font\\fonts\\materialdesignicons-webfont683c.ttf",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\material-design-iconic-font\\fonts\\materialdesignicons-webfont683c.ttf",
       "PackagePath": "staticwebassets\\icons\\material-design-iconic-font\\fonts\\materialdesignicons-webfont683c.ttf"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\material-design-iconic-font\\fonts\\materialdesignicons-webfont683c.woff",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\material-design-iconic-font\\fonts\\materialdesignicons-webfont683c.woff",
       "PackagePath": "staticwebassets\\icons\\material-design-iconic-font\\fonts\\materialdesignicons-webfont683c.woff"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\material-design-iconic-font\\fonts\\materialdesignicons-webfont683c.woff2",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\material-design-iconic-font\\fonts\\materialdesignicons-webfont683c.woff2",
       "PackagePath": "staticwebassets\\icons\\material-design-iconic-font\\fonts\\materialdesignicons-webfont683c.woff2"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\material-design-iconic-font\\fonts\\materialdesignicons-webfontd41d.eot",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\material-design-iconic-font\\fonts\\materialdesignicons-webfontd41d.eot",
       "PackagePath": "staticwebassets\\icons\\material-design-iconic-font\\fonts\\materialdesignicons-webfontd41d.eot"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\simple-line-icons\\css\\simple-line-icons.css",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\simple-line-icons\\css\\simple-line-icons.css",
       "PackagePath": "staticwebassets\\icons\\simple-line-icons\\css\\simple-line-icons.css"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\simple-line-icons\\fonts\\Simple-Line-Icons4c824c82.eot",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\simple-line-icons\\fonts\\Simple-Line-Icons4c824c82.eot",
       "PackagePath": "staticwebassets\\icons\\simple-line-icons\\fonts\\Simple-Line-Icons4c824c82.eot"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\simple-line-icons\\fonts\\Simple-Line-Icons4c824c82.svg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\simple-line-icons\\fonts\\Simple-Line-Icons4c824c82.svg",
       "PackagePath": "staticwebassets\\icons\\simple-line-icons\\fonts\\Simple-Line-Icons4c824c82.svg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\simple-line-icons\\fonts\\Simple-Line-Icons4c824c82.ttf",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\simple-line-icons\\fonts\\Simple-Line-Icons4c824c82.ttf",
       "PackagePath": "staticwebassets\\icons\\simple-line-icons\\fonts\\Simple-Line-Icons4c824c82.ttf"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\simple-line-icons\\fonts\\Simple-Line-Icons4c824c82.woff",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\simple-line-icons\\fonts\\Simple-Line-Icons4c824c82.woff",
       "PackagePath": "staticwebassets\\icons\\simple-line-icons\\fonts\\Simple-Line-Icons4c824c82.woff"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\simple-line-icons\\fonts\\Simple-Line-Icons4c824c82.woff2",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\simple-line-icons\\fonts\\Simple-Line-Icons4c824c82.woff2",
       "PackagePath": "staticwebassets\\icons\\simple-line-icons\\fonts\\Simple-Line-Icons4c824c82.woff2"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\simple-line-icons\\fonts\\Simple-Line-Iconsd41dd41d.eot",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\simple-line-icons\\fonts\\Simple-Line-Iconsd41dd41d.eot",
       "PackagePath": "staticwebassets\\icons\\simple-line-icons\\fonts\\Simple-Line-Iconsd41dd41d.eot"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\themify-icons\\css\\themify-icons.css",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\themify-icons\\css\\themify-icons.css",
       "PackagePath": "staticwebassets\\icons\\themify-icons\\css\\themify-icons.css"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\themify-icons\\fonts\\themify.ttf",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\themify-icons\\fonts\\themify.ttf",
       "PackagePath": "staticwebassets\\icons\\themify-icons\\fonts\\themify.ttf"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\themify-icons\\fonts\\themify.woff",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\themify-icons\\fonts\\themify.woff",
       "PackagePath": "staticwebassets\\icons\\themify-icons\\fonts\\themify.woff"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\themify-icons\\fonts\\themify9f249f24.eot",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\themify-icons\\fonts\\themify9f249f24.eot",
       "PackagePath": "staticwebassets\\icons\\themify-icons\\fonts\\themify9f249f24.eot"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\themify-icons\\fonts\\themify9f249f24.svg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\themify-icons\\fonts\\themify9f249f24.svg",
       "PackagePath": "staticwebassets\\icons\\themify-icons\\fonts\\themify9f249f24.svg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\themify-icons\\fonts\\themifyd41dd41d.eot",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\icons\\themify-icons\\fonts\\themifyd41dd41d.eot",
       "PackagePath": "staticwebassets\\icons\\themify-icons\\fonts\\themifyd41dd41d.eot"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\1.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\1.jpg",
       "PackagePath": "staticwebassets\\images\\1.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\activity-img\\pic1.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\activity-img\\pic1.jpg",
       "PackagePath": "staticwebassets\\images\\activity-img\\pic1.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\activity-img\\pic2.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\activity-img\\pic2.jpg",
       "PackagePath": "staticwebassets\\images\\activity-img\\pic2.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\activity-img\\pic3.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\activity-img\\pic3.jpg",
       "PackagePath": "staticwebassets\\images\\activity-img\\pic3.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\activity-img\\pic4.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\activity-img\\pic4.jpg",
       "PackagePath": "staticwebassets\\images\\activity-img\\pic4.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\avatar\\1.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\avatar\\1.jpg",
       "PackagePath": "staticwebassets\\images\\avatar\\1.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\avatar\\1.png",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\avatar\\1.png",
       "PackagePath": "staticwebassets\\images\\avatar\\1.png"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\avatar\\10.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\avatar\\10.jpg",
       "PackagePath": "staticwebassets\\images\\avatar\\10.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\avatar\\2.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\avatar\\2.jpg",
       "PackagePath": "staticwebassets\\images\\avatar\\2.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\avatar\\2.png",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\avatar\\2.png",
       "PackagePath": "staticwebassets\\images\\avatar\\2.png"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\avatar\\3.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\avatar\\3.jpg",
       "PackagePath": "staticwebassets\\images\\avatar\\3.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\avatar\\3.png",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\avatar\\3.png",
       "PackagePath": "staticwebassets\\images\\avatar\\3.png"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\avatar\\4.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\avatar\\4.jpg",
       "PackagePath": "staticwebassets\\images\\avatar\\4.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\avatar\\5.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\avatar\\5.jpg",
       "PackagePath": "staticwebassets\\images\\avatar\\5.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\avatar\\5.png",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\avatar\\5.png",
       "PackagePath": "staticwebassets\\images\\avatar\\5.png"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\avatar\\8.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\avatar\\8.jpg",
       "PackagePath": "staticwebassets\\images\\avatar\\8.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\avatar\\9.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\avatar\\9.jpg",
       "PackagePath": "staticwebassets\\images\\avatar\\9.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\background\\pic-2.png",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\background\\pic-2.png",
       "PackagePath": "staticwebassets\\images\\background\\pic-2.png"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\background\\pic3.png",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\background\\pic3.png",
       "PackagePath": "staticwebassets\\images\\background\\pic3.png"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\background\\pic4.png",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\background\\pic4.png",
       "PackagePath": "staticwebassets\\images\\background\\pic4.png"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\background\\pic5.png",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\background\\pic5.png",
       "PackagePath": "staticwebassets\\images\\background\\pic5.png"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\big\\img1.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\big\\img1.jpg",
       "PackagePath": "staticwebassets\\images\\big\\img1.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\big\\img2.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\big\\img2.jpg",
       "PackagePath": "staticwebassets\\images\\big\\img2.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\big\\img3.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\big\\img3.jpg",
       "PackagePath": "staticwebassets\\images\\big\\img3.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\big\\img4.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\big\\img4.jpg",
       "PackagePath": "staticwebassets\\images\\big\\img4.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\big\\img5.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\big\\img5.jpg",
       "PackagePath": "staticwebassets\\images\\big\\img5.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\big\\img6.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\big\\img6.jpg",
       "PackagePath": "staticwebassets\\images\\big\\img6.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\big\\img7.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\big\\img7.jpg",
       "PackagePath": "staticwebassets\\images\\big\\img7.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\big\\img8.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\big\\img8.jpg",
       "PackagePath": "staticwebassets\\images\\big\\img8.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\big\\pic1.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\big\\pic1.jpg",
       "PackagePath": "staticwebassets\\images\\big\\pic1.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\big\\pic2.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\big\\pic2.jpg",
       "PackagePath": "staticwebassets\\images\\big\\pic2.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\big\\pic3.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\big\\pic3.jpg",
       "PackagePath": "staticwebassets\\images\\big\\pic3.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\big\\pic4.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\big\\pic4.jpg",
       "PackagePath": "staticwebassets\\images\\big\\pic4.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\big\\pic5.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\big\\pic5.jpg",
       "PackagePath": "staticwebassets\\images\\big\\pic5.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\big\\pic6.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\big\\pic6.jpg",
       "PackagePath": "staticwebassets\\images\\big\\pic6.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\big\\pic7.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\big\\pic7.jpg",
       "PackagePath": "staticwebassets\\images\\big\\pic7.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\big\\pic8.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\big\\pic8.jpg",
       "PackagePath": "staticwebassets\\images\\big\\pic8.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\big\\pic9.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\big\\pic9.jpg",
       "PackagePath": "staticwebassets\\images\\big\\pic9.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\big\\rainbow.gif",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\big\\rainbow.gif",
       "PackagePath": "staticwebassets\\images\\big\\rainbow.gif"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\body\\12.html",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\body\\12.html",
       "PackagePath": "staticwebassets\\images\\body\\12.html"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\card\\1.png",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\card\\1.png",
       "PackagePath": "staticwebassets\\images\\card\\1.png"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\card\\2.png",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\card\\2.png",
       "PackagePath": "staticwebassets\\images\\card\\2.png"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\card\\3.png",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\card\\3.png",
       "PackagePath": "staticwebassets\\images\\card\\3.png"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\circle.svg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\circle.svg",
       "PackagePath": "staticwebassets\\images\\circle.svg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\contacts\\1.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\contacts\\1.jpg",
       "PackagePath": "staticwebassets\\images\\contacts\\1.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\contacts\\10.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\contacts\\10.jpg",
       "PackagePath": "staticwebassets\\images\\contacts\\10.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\contacts\\11.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\contacts\\11.jpg",
       "PackagePath": "staticwebassets\\images\\contacts\\11.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\contacts\\12.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\contacts\\12.jpg",
       "PackagePath": "staticwebassets\\images\\contacts\\12.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\contacts\\2.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\contacts\\2.jpg",
       "PackagePath": "staticwebassets\\images\\contacts\\2.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\contacts\\3.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\contacts\\3.jpg",
       "PackagePath": "staticwebassets\\images\\contacts\\3.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\contacts\\4.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\contacts\\4.jpg",
       "PackagePath": "staticwebassets\\images\\contacts\\4.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\contacts\\5.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\contacts\\5.jpg",
       "PackagePath": "staticwebassets\\images\\contacts\\5.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\contacts\\6.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\contacts\\6.jpg",
       "PackagePath": "staticwebassets\\images\\contacts\\6.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\contacts\\7.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\contacts\\7.jpg",
       "PackagePath": "staticwebassets\\images\\contacts\\7.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\contacts\\8.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\contacts\\8.jpg",
       "PackagePath": "staticwebassets\\images\\contacts\\8.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\contacts\\9.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\contacts\\9.jpg",
       "PackagePath": "staticwebassets\\images\\contacts\\9.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\contacts\\pic-333.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\contacts\\pic-333.jpg",
       "PackagePath": "staticwebassets\\images\\contacts\\pic-333.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\contacts\\pic444.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\contacts\\pic444.jpg",
       "PackagePath": "staticwebassets\\images\\contacts\\pic444.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\contacts\\pic555.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\contacts\\pic555.jpg",
       "PackagePath": "staticwebassets\\images\\contacts\\pic555.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\contacts\\pic666.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\contacts\\pic666.jpg",
       "PackagePath": "staticwebassets\\images\\contacts\\pic666.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\coures\\1.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\coures\\1.jpg",
       "PackagePath": "staticwebassets\\images\\coures\\1.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\coures\\2.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\coures\\2.jpg",
       "PackagePath": "staticwebassets\\images\\coures\\2.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\coures\\3.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\coures\\3.jpg",
       "PackagePath": "staticwebassets\\images\\coures\\3.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\coures\\4.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\coures\\4.jpg",
       "PackagePath": "staticwebassets\\images\\coures\\4.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\coures\\5.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\coures\\5.jpg",
       "PackagePath": "staticwebassets\\images\\coures\\5.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\coures\\6.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\coures\\6.jpg",
       "PackagePath": "staticwebassets\\images\\coures\\6.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\coures\\7.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\coures\\7.jpg",
       "PackagePath": "staticwebassets\\images\\coures\\7.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\coures\\8.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\coures\\8.jpg",
       "PackagePath": "staticwebassets\\images\\coures\\8.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\coures\\9.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\coures\\9.jpg",
       "PackagePath": "staticwebassets\\images\\coures\\9.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\coures\\9.png",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\coures\\9.png",
       "PackagePath": "staticwebassets\\images\\coures\\9.png"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\favicon.png",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\favicon.png",
       "PackagePath": "staticwebassets\\images\\favicon.png"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\food\\pic1.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\food\\pic1.jpg",
       "PackagePath": "staticwebassets\\images\\food\\pic1.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\food\\pic2.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\food\\pic2.jpg",
       "PackagePath": "staticwebassets\\images\\food\\pic2.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\food\\pic3.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\food\\pic3.jpg",
       "PackagePath": "staticwebassets\\images\\food\\pic3.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\food\\pic4.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\food\\pic4.jpg",
       "PackagePath": "staticwebassets\\images\\food\\pic4.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\food\\pic5.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\food\\pic5.jpg",
       "PackagePath": "staticwebassets\\images\\food\\pic5.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\food\\pic6.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\food\\pic6.jpg",
       "PackagePath": "staticwebassets\\images\\food\\pic6.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\like.png",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\like.png",
       "PackagePath": "staticwebassets\\images\\like.png"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\logo-full.png",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\logo-full.png",
       "PackagePath": "staticwebassets\\images\\logo-full.png"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\logo-white.png",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\logo-white.png",
       "PackagePath": "staticwebassets\\images\\logo-white.png"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\media-1.png",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\media-1.png",
       "PackagePath": "staticwebassets\\images\\media-1.png"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\media-2.png",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\media-2.png",
       "PackagePath": "staticwebassets\\images\\media-2.png"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\media-3.png",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\media-3.png",
       "PackagePath": "staticwebassets\\images\\media-3.png"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\media-4.png",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\media-4.png",
       "PackagePath": "staticwebassets\\images\\media-4.png"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\no-img-avatar.png",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\no-img-avatar.png",
       "PackagePath": "staticwebassets\\images\\no-img-avatar.png"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\pattern\\pattern5.png",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\pattern\\pattern5.png",
       "PackagePath": "staticwebassets\\images\\pattern\\pattern5.png"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\product\\1.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\product\\1.jpg",
       "PackagePath": "staticwebassets\\images\\product\\1.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\product\\2.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\product\\2.jpg",
       "PackagePath": "staticwebassets\\images\\product\\2.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\product\\3.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\product\\3.jpg",
       "PackagePath": "staticwebassets\\images\\product\\3.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\product\\4.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\product\\4.jpg",
       "PackagePath": "staticwebassets\\images\\product\\4.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\product\\5.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\product\\5.jpg",
       "PackagePath": "staticwebassets\\images\\product\\5.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\product\\6.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\product\\6.jpg",
       "PackagePath": "staticwebassets\\images\\product\\6.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\product\\7.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\product\\7.jpg",
       "PackagePath": "staticwebassets\\images\\product\\7.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\profile.svg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\profile.svg",
       "PackagePath": "staticwebassets\\images\\profile.svg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\profile\\1.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\profile\\1.jpg",
       "PackagePath": "staticwebassets\\images\\profile\\1.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\profile\\12.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\profile\\12.jpg",
       "PackagePath": "staticwebassets\\images\\profile\\12.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\profile\\14.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\profile\\14.jpg",
       "PackagePath": "staticwebassets\\images\\profile\\14.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\profile\\18.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\profile\\18.jpg",
       "PackagePath": "staticwebassets\\images\\profile\\18.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\profile\\19.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\profile\\19.jpg",
       "PackagePath": "staticwebassets\\images\\profile\\19.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\profile\\2.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\profile\\2.jpg",
       "PackagePath": "staticwebassets\\images\\profile\\2.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\profile\\3.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\profile\\3.jpg",
       "PackagePath": "staticwebassets\\images\\profile\\3.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\profile\\4.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\profile\\4.jpg",
       "PackagePath": "staticwebassets\\images\\profile\\4.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\profile\\5.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\profile\\5.jpg",
       "PackagePath": "staticwebassets\\images\\profile\\5.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\profile\\6.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\profile\\6.jpg",
       "PackagePath": "staticwebassets\\images\\profile\\6.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\profile\\7.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\profile\\7.jpg",
       "PackagePath": "staticwebassets\\images\\profile\\7.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\profile\\8.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\profile\\8.jpg",
       "PackagePath": "staticwebassets\\images\\profile\\8.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\profile\\9.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\profile\\9.jpg",
       "PackagePath": "staticwebassets\\images\\profile\\9.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\profile\\cover.html",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\profile\\cover.html",
       "PackagePath": "staticwebassets\\images\\profile\\cover.html"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\profile\\pic2.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\profile\\pic2.jpg",
       "PackagePath": "staticwebassets\\images\\profile\\pic2.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\profile\\profile.png",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\profile\\profile.png",
       "PackagePath": "staticwebassets\\images\\profile\\profile.png"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\profile\\small\\pic1.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\profile\\small\\pic1.jpg",
       "PackagePath": "staticwebassets\\images\\profile\\small\\pic1.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\profile\\small\\pic10.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\profile\\small\\pic10.jpg",
       "PackagePath": "staticwebassets\\images\\profile\\small\\pic10.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\profile\\small\\pic2.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\profile\\small\\pic2.jpg",
       "PackagePath": "staticwebassets\\images\\profile\\small\\pic2.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\profile\\small\\pic3.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\profile\\small\\pic3.jpg",
       "PackagePath": "staticwebassets\\images\\profile\\small\\pic3.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\profile\\small\\pic4.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\profile\\small\\pic4.jpg",
       "PackagePath": "staticwebassets\\images\\profile\\small\\pic4.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\profile\\small\\pic5.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\profile\\small\\pic5.jpg",
       "PackagePath": "staticwebassets\\images\\profile\\small\\pic5.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\profile\\small\\pic6.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\profile\\small\\pic6.jpg",
       "PackagePath": "staticwebassets\\images\\profile\\small\\pic6.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\profile\\small\\pic7.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\profile\\small\\pic7.jpg",
       "PackagePath": "staticwebassets\\images\\profile\\small\\pic7.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\profile\\small\\pic8.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\profile\\small\\pic8.jpg",
       "PackagePath": "staticwebassets\\images\\profile\\small\\pic8.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\profile\\small\\pic9.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\profile\\small\\pic9.jpg",
       "PackagePath": "staticwebassets\\images\\profile\\small\\pic9.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\qr.png",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\qr.png",
       "PackagePath": "staticwebassets\\images\\qr.png"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\quotes.svg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\quotes.svg",
       "PackagePath": "staticwebassets\\images\\quotes.svg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\student-bg-Recovered.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\student-bg-Recovered.jpg",
       "PackagePath": "staticwebassets\\images\\student-bg-Recovered.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\student-bg.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\student-bg.jpg",
       "PackagePath": "staticwebassets\\images\\student-bg.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\svg\\cd-arrow.html",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\svg\\cd-arrow.html",
       "PackagePath": "staticwebassets\\images\\svg\\cd-arrow.html"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\svg\\check.html",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\svg\\check.html",
       "PackagePath": "staticwebassets\\images\\svg\\check.html"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\svg\\email.svg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\svg\\email.svg",
       "PackagePath": "staticwebassets\\images\\svg\\email.svg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\svg\\location.svg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\svg\\location.svg",
       "PackagePath": "staticwebassets\\images\\svg\\location.svg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\svg\\phone.svg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\svg\\phone.svg",
       "PackagePath": "staticwebassets\\images\\svg\\phone.svg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\svg\\student.svg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\svg\\student.svg",
       "PackagePath": "staticwebassets\\images\\svg\\student.svg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\tab\\1.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\tab\\1.jpg",
       "PackagePath": "staticwebassets\\images\\tab\\1.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\tab\\2.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\tab\\2.jpg",
       "PackagePath": "staticwebassets\\images\\tab\\2.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\tab\\3.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\tab\\3.jpg",
       "PackagePath": "staticwebassets\\images\\tab\\3.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\tab\\4.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\tab\\4.jpg",
       "PackagePath": "staticwebassets\\images\\tab\\4.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\trans\\1.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\trans\\1.jpg",
       "PackagePath": "staticwebassets\\images\\trans\\1.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\trans\\10.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\trans\\10.jpg",
       "PackagePath": "staticwebassets\\images\\trans\\10.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\trans\\2.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\trans\\2.jpg",
       "PackagePath": "staticwebassets\\images\\trans\\2.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\trans\\3.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\trans\\3.jpg",
       "PackagePath": "staticwebassets\\images\\trans\\3.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\trans\\4.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\trans\\4.jpg",
       "PackagePath": "staticwebassets\\images\\trans\\4.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\trans\\5.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\trans\\5.jpg",
       "PackagePath": "staticwebassets\\images\\trans\\5.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\trans\\6.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\trans\\6.jpg",
       "PackagePath": "staticwebassets\\images\\trans\\6.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\trans\\7.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\trans\\7.jpg",
       "PackagePath": "staticwebassets\\images\\trans\\7.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\trans\\8.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\trans\\8.jpg",
       "PackagePath": "staticwebassets\\images\\trans\\8.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\trans\\9.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\trans\\9.jpg",
       "PackagePath": "staticwebassets\\images\\trans\\9.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\images\\user.jpg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\images\\user.jpg",
       "PackagePath": "staticwebassets\\images\\user.jpg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\js\\calendar-2.js",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\js\\calendar-2.js",
       "PackagePath": "staticwebassets\\js\\calendar-2.js"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\js\\calendar.js",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\js\\calendar.js",
       "PackagePath": "staticwebassets\\js\\calendar.js"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\js\\custom.min.js",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\js\\custom.min.js",
       "PackagePath": "staticwebassets\\js\\custom.min.js"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\js\\dashboard\\dashboard-1.js",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\js\\dashboard\\dashboard-1.js",
       "PackagePath": "staticwebassets\\js\\dashboard\\dashboard-1.js"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\js\\dashboard\\dashboard-2.js",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\js\\dashboard\\dashboard-2.js",
       "PackagePath": "staticwebassets\\js\\dashboard\\dashboard-2.js"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\js\\demo.js",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\js\\demo.js",
       "PackagePath": "staticwebassets\\js\\demo.js"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\js\\dlabnav-init.js",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\js\\dlabnav-init.js",
       "PackagePath": "staticwebassets\\js\\dlabnav-init.js"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\js\\highlight.min.js",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\js\\highlight.min.js",
       "PackagePath": "staticwebassets\\js\\highlight.min.js"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\js\\plugins-init\\bs-daterange-picker-init.js",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\js\\plugins-init\\bs-daterange-picker-init.js",
       "PackagePath": "staticwebassets\\js\\plugins-init\\bs-daterange-picker-init.js"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\js\\plugins-init\\chartist-init.js",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\js\\plugins-init\\chartist-init.js",
       "PackagePath": "staticwebassets\\js\\plugins-init\\chartist-init.js"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\js\\plugins-init\\chartjs-init.js",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\js\\plugins-init\\chartjs-init.js",
       "PackagePath": "staticwebassets\\js\\plugins-init\\chartjs-init.js"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\js\\plugins-init\\clock-picker-init.js",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\js\\plugins-init\\clock-picker-init.js",
       "PackagePath": "staticwebassets\\js\\plugins-init\\clock-picker-init.js"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\js\\plugins-init\\datatables.init.js",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\js\\plugins-init\\datatables.init.js",
       "PackagePath": "staticwebassets\\js\\plugins-init\\datatables.init.js"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\js\\plugins-init\\flot-init.js",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\js\\plugins-init\\flot-init.js",
       "PackagePath": "staticwebassets\\js\\plugins-init\\flot-init.js"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\js\\plugins-init\\jquery-asColorPicker.init.js",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\js\\plugins-init\\jquery-asColorPicker.init.js",
       "PackagePath": "staticwebassets\\js\\plugins-init\\jquery-asColorPicker.init.js"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\js\\plugins-init\\jquery.validate-init.js",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\js\\plugins-init\\jquery.validate-init.js",
       "PackagePath": "staticwebassets\\js\\plugins-init\\jquery.validate-init.js"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\js\\plugins-init\\jqvmap-init.js",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\js\\plugins-init\\jqvmap-init.js",
       "PackagePath": "staticwebassets\\js\\plugins-init\\jqvmap-init.js"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\js\\plugins-init\\material-date-picker-init.js",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\js\\plugins-init\\material-date-picker-init.js",
       "PackagePath": "staticwebassets\\js\\plugins-init\\material-date-picker-init.js"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\js\\plugins-init\\morris-init.js",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\js\\plugins-init\\morris-init.js",
       "PackagePath": "staticwebassets\\js\\plugins-init\\morris-init.js"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\js\\plugins-init\\nestable-init.js",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\js\\plugins-init\\nestable-init.js",
       "PackagePath": "staticwebassets\\js\\plugins-init\\nestable-init.js"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\js\\plugins-init\\nouislider-init.js",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\js\\plugins-init\\nouislider-init.js",
       "PackagePath": "staticwebassets\\js\\plugins-init\\nouislider-init.js"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\js\\plugins-init\\pickadate-init.js",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\js\\plugins-init\\pickadate-init.js",
       "PackagePath": "staticwebassets\\js\\plugins-init\\pickadate-init.js"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\js\\plugins-init\\piety-init.js",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\js\\plugins-init\\piety-init.js",
       "PackagePath": "staticwebassets\\js\\plugins-init\\piety-init.js"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\js\\plugins-init\\select2-init.js",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\js\\plugins-init\\select2-init.js",
       "PackagePath": "staticwebassets\\js\\plugins-init\\select2-init.js"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\js\\plugins-init\\sparkline-init.js",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\js\\plugins-init\\sparkline-init.js",
       "PackagePath": "staticwebassets\\js\\plugins-init\\sparkline-init.js"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\js\\plugins-init\\sweetalert.init.js",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\js\\plugins-init\\sweetalert.init.js",
       "PackagePath": "staticwebassets\\js\\plugins-init\\sweetalert.init.js"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\js\\plugins-init\\toastr-init.js",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\js\\plugins-init\\toastr-init.js",
       "PackagePath": "staticwebassets\\js\\plugins-init\\toastr-init.js"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\js\\plugins-init\\widgets-script-init.js",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\js\\plugins-init\\widgets-script-init.js",
       "PackagePath": "staticwebassets\\js\\plugins-init\\widgets-script-init.js"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\js\\site.js",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\js\\styleSwitcher.js",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\js\\styleSwitcher.js",
       "PackagePath": "staticwebassets\\js\\styleSwitcher.js"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\bootstrap\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\animate\\animate.min.css",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\animate\\animate.min.css",
       "PackagePath": "staticwebassets\\vendor\\animate\\animate.min.css"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\aos\\css\\aos.min.css",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\aos\\css\\aos.min.css",
       "PackagePath": "staticwebassets\\vendor\\aos\\css\\aos.min.css"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\apexchart\\apexchart.js",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\apexchart\\apexchart.js",
       "PackagePath": "staticwebassets\\vendor\\apexchart\\apexchart.js"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\bootstrap-datepicker-master\\css\\bootstrap-datepicker.min.css",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\bootstrap-datepicker-master\\css\\bootstrap-datepicker.min.css",
       "PackagePath": "staticwebassets\\vendor\\bootstrap-datepicker-master\\css\\bootstrap-datepicker.min.css"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\bootstrap-datepicker-master\\js\\bootstrap-datepicker.min.js",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\bootstrap-datepicker-master\\js\\bootstrap-datepicker.min.js",
       "PackagePath": "staticwebassets\\vendor\\bootstrap-datepicker-master\\js\\bootstrap-datepicker.min.js"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\bootstrap-daterangepicker\\daterangepicker.css",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\bootstrap-daterangepicker\\daterangepicker.css",
       "PackagePath": "staticwebassets\\vendor\\bootstrap-daterangepicker\\daterangepicker.css"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\bootstrap-daterangepicker\\daterangepicker.js",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\bootstrap-daterangepicker\\daterangepicker.js",
       "PackagePath": "staticwebassets\\vendor\\bootstrap-daterangepicker\\daterangepicker.js"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\bootstrap-datetimepicker\\css\\bootstrap-datetimepicker.min.css",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\bootstrap-datetimepicker\\css\\bootstrap-datetimepicker.min.css",
       "PackagePath": "staticwebassets\\vendor\\bootstrap-datetimepicker\\css\\bootstrap-datetimepicker.min.css"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\bootstrap-datetimepicker\\js\\moment.js",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\bootstrap-datetimepicker\\js\\moment.js",
       "PackagePath": "staticwebassets\\vendor\\bootstrap-datetimepicker\\js\\moment.js"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\bootstrap-material-datetimepicker\\css\\bootstrap-material-datetimepicker.css",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\bootstrap-material-datetimepicker\\css\\bootstrap-material-datetimepicker.css",
       "PackagePath": "staticwebassets\\vendor\\bootstrap-material-datetimepicker\\css\\bootstrap-material-datetimepicker.css"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\bootstrap-material-datetimepicker\\js\\bootstrap-material-datetimepicker.js",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\bootstrap-material-datetimepicker\\js\\bootstrap-material-datetimepicker.js",
       "PackagePath": "staticwebassets\\vendor\\bootstrap-material-datetimepicker\\js\\bootstrap-material-datetimepicker.js"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\bootstrap-select-country\\css\\bootstrap-select-country.min.css",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\bootstrap-select-country\\css\\bootstrap-select-country.min.css",
       "PackagePath": "staticwebassets\\vendor\\bootstrap-select-country\\css\\bootstrap-select-country.min.css"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\bootstrap-select-country\\css\\images\\flags16.png",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\bootstrap-select-country\\css\\images\\flags16.png",
       "PackagePath": "staticwebassets\\vendor\\bootstrap-select-country\\css\\images\\flags16.png"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\bootstrap-select-country\\js\\bootstrap-select-country.min.js",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\bootstrap-select-country\\js\\bootstrap-select-country.min.js",
       "PackagePath": "staticwebassets\\vendor\\bootstrap-select-country\\js\\bootstrap-select-country.min.js"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\bootstrap-select\\dist\\css\\bootstrap-select.min.css",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\bootstrap-select\\dist\\css\\bootstrap-select.min.css",
       "PackagePath": "staticwebassets\\vendor\\bootstrap-select\\dist\\css\\bootstrap-select.min.css"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\bootstrap-select\\dist\\js\\bootstrap-select.min.js",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\bootstrap-select\\dist\\js\\bootstrap-select.min.js",
       "PackagePath": "staticwebassets\\vendor\\bootstrap-select\\dist\\js\\bootstrap-select.min.js"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\chart.js\\Chart.bundle.min.js",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\chart.js\\Chart.bundle.min.js",
       "PackagePath": "staticwebassets\\vendor\\chart.js\\Chart.bundle.min.js"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\chartist-plugin-tooltips\\js\\chartist-plugin-tooltip.min.js",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\chartist-plugin-tooltips\\js\\chartist-plugin-tooltip.min.js",
       "PackagePath": "staticwebassets\\vendor\\chartist-plugin-tooltips\\js\\chartist-plugin-tooltip.min.js"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\chartist\\css\\chartist.min.css",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\chartist\\css\\chartist.min.css",
       "PackagePath": "staticwebassets\\vendor\\chartist\\css\\chartist.min.css"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\chartist\\js\\chartist.min.js",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\chartist\\js\\chartist.min.js",
       "PackagePath": "staticwebassets\\vendor\\chartist\\js\\chartist.min.js"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\ckeditor\\ckeditor.js",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\ckeditor\\ckeditor.js",
       "PackagePath": "staticwebassets\\vendor\\ckeditor\\ckeditor.js"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\clockpicker\\css\\bootstrap-clockpicker.min.css",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\clockpicker\\css\\bootstrap-clockpicker.min.css",
       "PackagePath": "staticwebassets\\vendor\\clockpicker\\css\\bootstrap-clockpicker.min.css"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\clockpicker\\js\\bootstrap-clockpicker.min.js",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\clockpicker\\js\\bootstrap-clockpicker.min.js",
       "PackagePath": "staticwebassets\\vendor\\clockpicker\\js\\bootstrap-clockpicker.min.js"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\datatables\\css\\jquery.dataTables.min.css",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\datatables\\css\\jquery.dataTables.min.css",
       "PackagePath": "staticwebassets\\vendor\\datatables\\css\\jquery.dataTables.min.css"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\datatables\\images\\sort_asc.png",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\datatables\\images\\sort_asc.png",
       "PackagePath": "staticwebassets\\vendor\\datatables\\images\\sort_asc.png"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\datatables\\images\\sort_asc_disabled.png",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\datatables\\images\\sort_asc_disabled.png",
       "PackagePath": "staticwebassets\\vendor\\datatables\\images\\sort_asc_disabled.png"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\datatables\\images\\sort_both.png",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\datatables\\images\\sort_both.png",
       "PackagePath": "staticwebassets\\vendor\\datatables\\images\\sort_both.png"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\datatables\\images\\sort_desc.png",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\datatables\\images\\sort_desc.png",
       "PackagePath": "staticwebassets\\vendor\\datatables\\images\\sort_desc.png"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\datatables\\images\\sort_desc_disabled.png",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\datatables\\images\\sort_desc_disabled.png",
       "PackagePath": "staticwebassets\\vendor\\datatables\\images\\sort_desc_disabled.png"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\datatables\\js\\jquery.dataTables.min.js",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\datatables\\js\\jquery.dataTables.min.js",
       "PackagePath": "staticwebassets\\vendor\\datatables\\js\\jquery.dataTables.min.js"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\datepicker\\css\\bootstrap-datepicker.min.css",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\datepicker\\css\\bootstrap-datepicker.min.css",
       "PackagePath": "staticwebassets\\vendor\\datepicker\\css\\bootstrap-datepicker.min.css"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\datepicker\\js\\bootstrap-datepicker.min.js",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\datepicker\\js\\bootstrap-datepicker.min.js",
       "PackagePath": "staticwebassets\\vendor\\datepicker\\js\\bootstrap-datepicker.min.js"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\dropzone\\dist\\dropzone.css",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\dropzone\\dist\\dropzone.css",
       "PackagePath": "staticwebassets\\vendor\\dropzone\\dist\\dropzone.css"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\dropzone\\dist\\dropzone.js",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\dropzone\\dist\\dropzone.js",
       "PackagePath": "staticwebassets\\vendor\\dropzone\\dist\\dropzone.js"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\flot-spline\\jquery.flot.spline.min.js",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\flot-spline\\jquery.flot.spline.min.js",
       "PackagePath": "staticwebassets\\vendor\\flot-spline\\jquery.flot.spline.min.js"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\flot\\jquery.flot.js",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\flot\\jquery.flot.js",
       "PackagePath": "staticwebassets\\vendor\\flot\\jquery.flot.js"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\flot\\jquery.flot.pie.js",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\flot\\jquery.flot.pie.js",
       "PackagePath": "staticwebassets\\vendor\\flot\\jquery.flot.pie.js"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\flot\\jquery.flot.resize.js",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\flot\\jquery.flot.resize.js",
       "PackagePath": "staticwebassets\\vendor\\flot\\jquery.flot.resize.js"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\fullcalendar-5.11.0\\lib\\main.css",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\fullcalendar-5.11.0\\lib\\main.css",
       "PackagePath": "staticwebassets\\vendor\\fullcalendar-5.11.0\\lib\\main.css"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\fullcalendar-5.11.0\\lib\\main.js",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\fullcalendar-5.11.0\\lib\\main.js",
       "PackagePath": "staticwebassets\\vendor\\fullcalendar-5.11.0\\lib\\main.js"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\global\\global.min.js",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\global\\global.min.js",
       "PackagePath": "staticwebassets\\vendor\\global\\global.min.js"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\highlightjs\\highlight.pack.min.js",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\highlightjs\\highlight.pack.min.js",
       "PackagePath": "staticwebassets\\vendor\\highlightjs\\highlight.pack.min.js"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\jquery-asColorPicker\\css\\asColorPicker.min.css",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\jquery-asColorPicker\\css\\asColorPicker.min.css",
       "PackagePath": "staticwebassets\\vendor\\jquery-asColorPicker\\css\\asColorPicker.min.css"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\jquery-asColorPicker\\images\\alpha.png",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\jquery-asColorPicker\\images\\alpha.png",
       "PackagePath": "staticwebassets\\vendor\\jquery-asColorPicker\\images\\alpha.png"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\jquery-asColorPicker\\images\\hue.png",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\jquery-asColorPicker\\images\\hue.png",
       "PackagePath": "staticwebassets\\vendor\\jquery-asColorPicker\\images\\hue.png"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\jquery-asColorPicker\\images\\saturation.png",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\jquery-asColorPicker\\images\\saturation.png",
       "PackagePath": "staticwebassets\\vendor\\jquery-asColorPicker\\images\\saturation.png"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\jquery-asColorPicker\\images\\transparent.png",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\jquery-asColorPicker\\images\\transparent.png",
       "PackagePath": "staticwebassets\\vendor\\jquery-asColorPicker\\images\\transparent.png"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\jquery-asColorPicker\\js\\jquery-asColorPicker.min.js",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\jquery-asColorPicker\\js\\jquery-asColorPicker.min.js",
       "PackagePath": "staticwebassets\\vendor\\jquery-asColorPicker\\js\\jquery-asColorPicker.min.js"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\jquery-asColor\\jquery-asColor.min.js",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\jquery-asColor\\jquery-asColor.min.js",
       "PackagePath": "staticwebassets\\vendor\\jquery-asColor\\jquery-asColor.min.js"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\jquery-asGradient\\jquery-asGradient.min.js",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\jquery-asGradient\\jquery-asGradient.min.js",
       "PackagePath": "staticwebassets\\vendor\\jquery-asGradient\\jquery-asGradient.min.js"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\jquery-nice-select\\css\\nice-select.css",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\jquery-nice-select\\css\\nice-select.css",
       "PackagePath": "staticwebassets\\vendor\\jquery-nice-select\\css\\nice-select.css"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\jquery-nice-select\\js\\jquery.nice-select.min.js",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\jquery-nice-select\\js\\jquery.nice-select.min.js",
       "PackagePath": "staticwebassets\\vendor\\jquery-nice-select\\js\\jquery.nice-select.min.js"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\jquery-smartwizard\\dist\\css\\smart_wizard.min.css",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\jquery-smartwizard\\dist\\css\\smart_wizard.min.css",
       "PackagePath": "staticwebassets\\vendor\\jquery-smartwizard\\dist\\css\\smart_wizard.min.css"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\jquery-smartwizard\\dist\\js\\jquery.smartWizard.js",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\jquery-smartwizard\\dist\\js\\jquery.smartWizard.js",
       "PackagePath": "staticwebassets\\vendor\\jquery-smartwizard\\dist\\js\\jquery.smartWizard.js"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\jquery-sparkline\\jquery.sparkline.min.js",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\jquery-sparkline\\jquery.sparkline.min.js",
       "PackagePath": "staticwebassets\\vendor\\jquery-sparkline\\jquery.sparkline.min.js"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\jquery-steps\\build\\jquery.steps.min.js",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\jquery-steps\\build\\jquery.steps.min.js",
       "PackagePath": "staticwebassets\\vendor\\jquery-steps\\build\\jquery.steps.min.js"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\jquery-validation\\jquery.validate.min.js",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\jquery-validation\\jquery.validate.min.js",
       "PackagePath": "staticwebassets\\vendor\\jquery-validation\\jquery.validate.min.js"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\jqvmap\\css\\jqvmap.min.css",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\jqvmap\\css\\jqvmap.min.css",
       "PackagePath": "staticwebassets\\vendor\\jqvmap\\css\\jqvmap.min.css"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\jqvmap\\js\\jquery.vmap.min.js",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\jqvmap\\js\\jquery.vmap.min.js",
       "PackagePath": "staticwebassets\\vendor\\jqvmap\\js\\jquery.vmap.min.js"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\jqvmap\\js\\jquery.vmap.usa.js",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\jqvmap\\js\\jquery.vmap.usa.js",
       "PackagePath": "staticwebassets\\vendor\\jqvmap\\js\\jquery.vmap.usa.js"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\jqvmap\\js\\jquery.vmap.world.js",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\jqvmap\\js\\jquery.vmap.world.js",
       "PackagePath": "staticwebassets\\vendor\\jqvmap\\js\\jquery.vmap.world.js"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\lightgallery\\css\\lightgallery.min.css",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\lightgallery\\css\\lightgallery.min.css",
       "PackagePath": "staticwebassets\\vendor\\lightgallery\\css\\lightgallery.min.css"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\lightgallery\\fonts\\lgd41d.eot",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\lightgallery\\fonts\\lgd41d.eot",
       "PackagePath": "staticwebassets\\vendor\\lightgallery\\fonts\\lgd41d.eot"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\lightgallery\\fonts\\lgd641.eot",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\lightgallery\\fonts\\lgd641.eot",
       "PackagePath": "staticwebassets\\vendor\\lightgallery\\fonts\\lgd641.eot"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\lightgallery\\fonts\\lgd641.svg",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\lightgallery\\fonts\\lgd641.svg",
       "PackagePath": "staticwebassets\\vendor\\lightgallery\\fonts\\lgd641.svg"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\lightgallery\\fonts\\lgd641.ttf",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\lightgallery\\fonts\\lgd641.ttf",
       "PackagePath": "staticwebassets\\vendor\\lightgallery\\fonts\\lgd641.ttf"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\lightgallery\\fonts\\lgd641.woff",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\lightgallery\\fonts\\lgd641.woff",
       "PackagePath": "staticwebassets\\vendor\\lightgallery\\fonts\\lgd641.woff"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\lightgallery\\img\\loading.gif",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\lightgallery\\img\\loading.gif",
       "PackagePath": "staticwebassets\\vendor\\lightgallery\\img\\loading.gif"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\lightgallery\\img\\video-play.png",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\lightgallery\\img\\video-play.png",
       "PackagePath": "staticwebassets\\vendor\\lightgallery\\img\\video-play.png"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\lightgallery\\img\\vimeo-play.png",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\lightgallery\\img\\vimeo-play.png",
       "PackagePath": "staticwebassets\\vendor\\lightgallery\\img\\vimeo-play.png"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\lightgallery\\img\\youtube-play.png",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\lightgallery\\img\\youtube-play.png",
       "PackagePath": "staticwebassets\\vendor\\lightgallery\\img\\youtube-play.png"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\lightgallery\\js\\lightgallery-all.min.js",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\lightgallery\\js\\lightgallery-all.min.js",
       "PackagePath": "staticwebassets\\vendor\\lightgallery\\js\\lightgallery-all.min.js"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\metismenu\\css\\metisMenu.min.css",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\metismenu\\css\\metisMenu.min.css",
       "PackagePath": "staticwebassets\\vendor\\metismenu\\css\\metisMenu.min.css"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\moment\\moment.min.js",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\moment\\moment.min.js",
       "PackagePath": "staticwebassets\\vendor\\moment\\moment.min.js"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\morris\\morris.min.js",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\morris\\morris.min.js",
       "PackagePath": "staticwebassets\\vendor\\morris\\morris.min.js"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\nestable2\\css\\jquery.nestable.min.css",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\nestable2\\css\\jquery.nestable.min.css",
       "PackagePath": "staticwebassets\\vendor\\nestable2\\css\\jquery.nestable.min.css"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\nestable2\\js\\jquery.nestable.min.js",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\nestable2\\js\\jquery.nestable.min.js",
       "PackagePath": "staticwebassets\\vendor\\nestable2\\js\\jquery.nestable.min.js"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\nouislider\\nouislider.min.css",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\nouislider\\nouislider.min.css",
       "PackagePath": "staticwebassets\\vendor\\nouislider\\nouislider.min.css"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\nouislider\\nouislider.min.js",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\nouislider\\nouislider.min.js",
       "PackagePath": "staticwebassets\\vendor\\nouislider\\nouislider.min.js"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\peity\\jquery.peity.min.js",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\peity\\jquery.peity.min.js",
       "PackagePath": "staticwebassets\\vendor\\peity\\jquery.peity.min.js"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\perfect-scrollbar\\css\\perfect-scrollbar.css",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\perfect-scrollbar\\css\\perfect-scrollbar.css",
       "PackagePath": "staticwebassets\\vendor\\perfect-scrollbar\\css\\perfect-scrollbar.css"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\pickadate\\picker.date.js",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\pickadate\\picker.date.js",
       "PackagePath": "staticwebassets\\vendor\\pickadate\\picker.date.js"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\pickadate\\picker.js",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\pickadate\\picker.js",
       "PackagePath": "staticwebassets\\vendor\\pickadate\\picker.js"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\pickadate\\picker.time.js",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\pickadate\\picker.time.js",
       "PackagePath": "staticwebassets\\vendor\\pickadate\\picker.time.js"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\pickadate\\themes\\default.css",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\pickadate\\themes\\default.css",
       "PackagePath": "staticwebassets\\vendor\\pickadate\\themes\\default.css"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\pickadate\\themes\\default.date.css",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\pickadate\\themes\\default.date.css",
       "PackagePath": "staticwebassets\\vendor\\pickadate\\themes\\default.date.css"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\raphael\\raphael.min.js",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\raphael\\raphael.min.js",
       "PackagePath": "staticwebassets\\vendor\\raphael\\raphael.min.js"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\select2\\css\\select2.min.css",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\select2\\css\\select2.min.css",
       "PackagePath": "staticwebassets\\vendor\\select2\\css\\select2.min.css"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\select2\\js\\select2.full.min.js",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\select2\\js\\select2.full.min.js",
       "PackagePath": "staticwebassets\\vendor\\select2\\js\\select2.full.min.js"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\star-rating\\jquery.star-rating-svg.js",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\star-rating\\jquery.star-rating-svg.js",
       "PackagePath": "staticwebassets\\vendor\\star-rating\\jquery.star-rating-svg.js"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\star-rating\\star-rating-svg.css",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\star-rating\\star-rating-svg.css",
       "PackagePath": "staticwebassets\\vendor\\star-rating\\star-rating-svg.css"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\svganimation\\svg.animation.js",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\svganimation\\svg.animation.js",
       "PackagePath": "staticwebassets\\vendor\\svganimation\\svg.animation.js"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\svganimation\\vivus.min.js",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\svganimation\\vivus.min.js",
       "PackagePath": "staticwebassets\\vendor\\svganimation\\vivus.min.js"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\sweetalert2\\dist\\sweetalert2.min.css",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\sweetalert2\\dist\\sweetalert2.min.css",
       "PackagePath": "staticwebassets\\vendor\\sweetalert2\\dist\\sweetalert2.min.css"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\sweetalert2\\dist\\sweetalert2.min.js",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\sweetalert2\\dist\\sweetalert2.min.js",
       "PackagePath": "staticwebassets\\vendor\\sweetalert2\\dist\\sweetalert2.min.js"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\swiper\\css\\swiper-bundle.min.css",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\swiper\\css\\swiper-bundle.min.css",
       "PackagePath": "staticwebassets\\vendor\\swiper\\css\\swiper-bundle.min.css"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\swiper\\js\\swiper-bundle.min.js",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\swiper\\js\\swiper-bundle.min.js",
       "PackagePath": "staticwebassets\\vendor\\swiper\\js\\swiper-bundle.min.js"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\toastr\\css\\toastr.min.css",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\toastr\\css\\toastr.min.css",
       "PackagePath": "staticwebassets\\vendor\\toastr\\css\\toastr.min.css"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\toastr\\js\\toastr.min.js",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\toastr\\js\\toastr.min.js",
       "PackagePath": "staticwebassets\\vendor\\toastr\\js\\toastr.min.js"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\wnumb\\wNumb.js",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\wnumb\\wNumb.js",
       "PackagePath": "staticwebassets\\vendor\\wnumb\\wNumb.js"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\wow-master\\css\\libs\\animate.css",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\wow-master\\css\\libs\\animate.css",
       "PackagePath": "staticwebassets\\vendor\\wow-master\\css\\libs\\animate.css"
     },
     {
-      "Id": "C:\\Users\\Hp\\Desktop\\FinalProject\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\wow-master\\dist\\wow.min.js",
+      "Id": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\WebUI\\wwwroot\\vendor\\wow-master\\dist\\wow.min.js",
       "PackagePath": "staticwebassets\\vendor\\wow-master\\dist\\wow.min.js"
     },
     {

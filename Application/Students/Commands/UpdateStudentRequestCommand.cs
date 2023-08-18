@@ -35,8 +35,8 @@ using System.Text;
 
 
        
-        public string? Countryname { get; set; }
-        public string? Cityname { get; set; }
+        public string? Country { get; set; }
+        public string? City { get; set; }
 
         public List<string>? Phonenumbers { get; set; }
 

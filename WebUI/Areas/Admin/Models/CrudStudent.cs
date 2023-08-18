@@ -19,11 +19,19 @@ namespace WebUI.Areas.Admin.Models
 		public string? City { get; set; }
 
 		public List<string> PhoneNumbers { get; set; }
-		//public List<string> Courses { get; set; }
+		public List<string> Courses { get; set; }
 
 
 
-		//public List<string> Groups { get; set; } = null!;
+		public List<string> Groups { get; set; }
+		public string? District { get; set; }
+		public string? StreetAddress { get; set; }
+		public int HouseNo { get; set; }
+		public int ZipCode { get; set; }
+
+		public int HomeNumber { get; set; }
+
+		public double? AverageGrade { get; set; }
 
 		//  public int AddressId { get; set; }
 		//public Address Address { get; set; }
@@ -38,7 +46,7 @@ namespace WebUI.Areas.Admin.Models
 		//public List<Group> Groups { get; set; } = null!;
 
 
-		//public Status Status { get; set; }
+		public int Status { get; set; }
 
 		//public GraduatedStatus? GraduatedStatus { get; set; }
 
