@@ -17,7 +17,7 @@ namespace SMSDomain.Entities
         public FinalExam? FinalExam { get; set; } 
         public List<CourseStudent>? CourseStudents { get;  } = null!;
         public List<Module>? Modules { get; set; }
-        public List<Teacher>? Teachers { get; set; }
+        public List<CourseTeacher>? courseTeachers { get; set; }
 
         public List<Coordinator>? Coordinators { get; set; }
 

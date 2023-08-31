@@ -37,8 +37,11 @@ namespace Infrastructure.Persistence
             try
             {
                 if (_dbContext.Database.IsSqlServer())
+
                 {
                     await _dbContext.Database.MigrateAsync();
+                    await SeedAsync();
+
                 }
             }
             catch (Exception ex)
@@ -71,7 +74,7 @@ namespace Infrastructure.Persistence
 
 
             // Default User
-
+            
             if (_userManager.Users.FirstOrDefault(u => u.UserName == admin.UserName) == null)
             {
 
@@ -79,6 +82,8 @@ namespace Infrastructure.Persistence
 
              
                 await _userManager.AddToRoleAsync(admin, "Admin");
+     
+
             }
         }
     }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Application.Students.Queries
 {
-    public class GetAllStudentsQueryRequest : IRequest<GetAllStudentsResponse>
+    public class GetAllStudentsQueryRequest : IRequest<GetAllStudentsQueryResponse>
     {
     }
 }

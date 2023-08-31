@@ -1,0 +1,310 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+	Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+
+}
+@model WebUI.Areas.Admin.Models.TeacherResponse
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from akademi.dexignlab.com/xhtml/add-student.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 20 Jul 2023 19:29:25 GMT -->
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="author" content="DexignLab">
+	<meta name="robots" content="">
+	<meta name="keywords" content="school, school admin, education, academy, admin dashboard, college, college management, education management, institute, school management, school management system, student management, teacher management, university, university management">
+	<meta name="description" content="Discover Akademi - the ultimate admin dashboard and Bootstrap 5 template. Specially designed for professionals, and for business. Akademi provides advanced features and an easy-to-use interface for creating a top-quality website with School and Education Dashboard">
+	<meta property="og:title" content="Akademi : School and Education Management Admin Dashboard Template">
+	<meta property="og:description" content="Akademi - the ultimate admin dashboard and Bootstrap 5 template. Specially designed for professionals, and for business. Akademi provides advanced features and an easy-to-use interface for creating a top-quality website with School and Education Dashboard">
+	<meta property="og:image" content="social-image.png">
+	<meta name="format-detection" content="telephone=no">
+
+	<!-- Mobile Specific -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Page Title Here -->
+	<title>Akademi : School and Education Management Admin Dashboard Template</title>
+
+	<!-- FAVICONS ICON -->
+	<link rel="shortcut icon" type="image/png" href="~/images/favicon.png">
+	<link href="~/vendor/wow-master/css/libs/animate.css" rel="stylesheet">
+	<link href="~/vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="~/vendor/jquery-nice-select/css/nice-select.css">
+
+	<link href="~/vendor/bootstrap-datepicker-master/css/bootstrap-datepicker.min.css" rel="stylesheet">
+
+
+	<link href="~/vendor/datatables/css/jquery.dataTables.min.css" rel="stylesheet">
+	<!--swiper-slider-->
+	<!-- Style css -->
+	<link href="~/https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+	<link href="~/css/style.css" rel="stylesheet">
+
+</head>
+<body>
+
+
+	<div class="content-body pe-0">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xl-12">
+					<div class="card">
+						<div class="card-header">
+							<h5 class="mb-0">Teacher Details</h5>
+						</div>
+						<form method="post" asp-action="GetNewTeacher" asp-controller="Teacher">
+							<div class="card-body">
+								<div class="row">
+									@* <div class="col-xl-3 col-lg-4">
+									<label class="form-label text-primary">Photo<span class="required">*</span></label>
+									<div class="avatar-upload">
+									<div class="avatar-preview">
+									<div id="imagePreview" style="background-image: url(images/no-img-avatar.png);">
+									</div>
+									</div>
+									<div class="change-btn mt-2 mb-lg-0 mb-3">
+									<input type='file' class="form-control d-none" id="imageUpload" accept=".png, .jpg, .jpeg">
+									<label for="imageUpload" class="dlab-upload mb-0 btn btn-primary btn-sm">Choose File</label>
+									<a href="~/javascript:void" class="btn btn-danger light remove-img ms-2 btn-sm">Remove</a>
+									</div>
+									</div>
+									</div> *@
+
+									<div class="col-xl-12 col-lg-12">
+										<div class="row">
+											<div class="col-xl-6 col-sm-6">
+												<div class="mb-3">
+													<label for="exampleFormControlInput1" class="form-label text-primary">First Name<span class="required">*</span></label>
+													<input type="text" class="form-control" id="exampleFormControlInput1" placeholder="John" name="teacher.Name" >
+												</div>
+												<div class="mb-3">
+													<label class="form-label text-primary">Date of Birth<span class="required">*</span></label>
+													<div class="d-flex">
+														<input type="text" class="form-control" placeholder="2017-06-04" id="datepicker" name="teacher.BirthDate" >
+														
+
+													</div>
+												</div>
+												<div class="row">
+													<div class="mb-3 col-xl-4 col-sm-4">
+														<label for="exampleFormControlInput3" class="form-label text-primary">Email<span class="required">*</span></label>
+														<input type="email" class="form-control" id="exampleFormControlInput3" placeholder="hello@example.com" name="teacher.Email" >
+													</div>
+													<div class="mb-3 col-xl-2 col-sm-2">
+														<label for="exampleFormControlInput3" class="form-label text-primary">Fin ID<span class="required">*</span></label>
+														<input type="text" class="form-control" id="exampleFormControlInput3" placeholder="7sxa8q28" name="teacher.Fin" >
+													</div>
+												</div>
+											@*	<div class="mb-3">
+													<label for="exampleFormControlTextarea1" class="form-label text-primary">Country<span class="required">*</span></label>
+
+													<select class="default-select  form-control wide" name="student.Country" asp-for="Country">
+														<option value="Azerbaijan" selected="selected">   Azerbaijan		</option>
+														<option value="Georgia">   Georgia			</option>
+														<option value="Israel">   Israel			</option>
+														<option value="Kazakhstan">   Kazakhstan		</option>
+														<option value="Russia">   Russia			</option>
+														<option value="Tajikistan">   Tajikistan		</option>
+														<option value="Turkey">   Turkey			</option>
+														<option value="Turkmenistan">   Turkmenistan	</option>
+														<option value="Ukraine">   Ukraine			</option>
+														<option value="Uzbekistan">   Uzbekistan		</option>
+
+													</select>
+												</div>*@
+
+
+												<div class="row">
+													<div class="mb-3 col-md-4">
+														<label class="form-label">District</label>
+														<input type="text" class="form-control" name="teacher.District">
+													</div>
+													<div class="mb-3 col-md-4">
+														<label class="form-label">Street Address</label>
+														<input type="text" class="form-control" name="teacher.StreetAddress">
+													</div>
+													<div class="mb-3 col-md-2">
+														<label class="form-label">House No</label>
+														<input type="number" class="form-control" name="teacher.HouseNo" >
+													</div>
+													<div class="mb-3 col-md-2">
+														<label class="form-label">Zip</label>
+														<input type="number" class="form-control" name="teacher.ZipCode">
+													</div>
+												</div>
+
+
+
+												<div class="row">
+
+
+													<div class="col-xl-5 col-sm-5">
+														@{
+															// var btnClicked = false;
+															//for (int i = 0; i < Model.Courses.Count; i++)
+															//{
+																<label for="exampleFormControlCourse" class="form-label text-primary">Course<span class="required">*</span></label>
+																<div class=" d-flex align-items-start justify-content-between w-100">
+
+																	<div class="card">
+
+																		<div class="card-body">
+																			<div class="basic-form">
+
+																				<div class="mb-3">
+																				<select class="default-select  form-control wide" name="teacher.Course" asp-for="Course">
+																					<option value="Front-end development"> Front-end development	</option>
+																					<option value="Back-end development">   Back-end development	</option>
+																			
+
+																				</select>
+																				</div>
+
+																			</div>
+																		</div>
+																	</div>
+																</div>
+
+
+															//}
+														}
+													</div>
+
+													@*<div class="col-xl-4 col-sm-4">
+														<label for="exampleFormControlTextarea1" class="form-label text-primary">Group Name<span class="required">*</span></label>
+														<select class="default-select  form-control wide" name="student.Group" asp-for="teacher.Group">
+															<option value="FRONT102" selected="selected">  FRONT102		</option>
+
+														</select>
+
+													</div>
+													<div class="mb-3 col-xl-3 col-sm-3">
+														<label for="exampleFormControlGrade" class="form-label text-primary">Average grade <span class="required">*</span></label>
+														<input type="text" class="form-control" id="exampleFormControlGrade" name="teacher.AverageGrade" >
+													</div>*@
+
+												</div>
+											</div>
+
+
+
+											<div class="col-xl-6 col-sm-6">
+
+
+
+
+												<div class="mb-3">
+													<label for="exampleFormControlInput4" class="form-label text-primary">Last Name<span class="required">*</span></label>
+													<input type="text" class="form-control" id="exampleFormControlInput4" placeholder="Doe" name="teacher.Surname" >
+												</div>
+												<div class="mb-3">
+													<label for="exampleFormControlInput5" class="form-label text-primary">Father's name<span class="required">*</span></label>
+													<input type="text" class="form-control" id="exampleFormControlInput5" placeholder="Mana William" name="teacher.FathersName">
+												</div>
+												<div class="mb-3 col-md-2">
+														<label class="form-label">active status</label>
+														<input type="text" class="form-control" name="teacher.ActiveStatus">
+													</div>
+												
+						@*							@{
+
+														var btnClicked = false;
+														//for (int i = 0; i < Model.PhoneNumbers.Count; i++)
+														//{
+															<label for="exampleFormControlInput6" class="form-label text-primary">Phone Number<span class="required">*</span></label>
+															<div class=" d-flex align-items-start justify-content-between w-100">
+
+																
+																<div class=" mx-2" style="width: 5%">
+																	<button class="btn btn-primary shadow btn-xs sharp me-1 mt-2" id="addNewNum" type="button"><i class="fa-solid fa-plus"></i></button>
+																</div>
+															</div>
+
+
+														//}
+
+
+													}*@
+													<div class=" " id="numberDiv" style="width: 90%">
+
+																	<input type="number" class="form-control mb-3" id="exampleFormControlInput6" placeholder="+123456789" name="teacher.PhoneNumbers[0]" >
+																</div>
+											
+												@*<div class="mb-3">
+													<label for="exampleFormControlTextarea1" class="form-label text-primary">City<span class="required">*</span></label>
+
+													<select class="default-select  form-control wide" name="student.City" asp-for="City">
+
+														<option value="Baku" selected="selected"> Baku	</option>
+
+													</select>
+												</div>*@
+												<div class="mb-3">
+													<label for="exampleFormControlHomeNum5" class="form-label text-primary">Home number<span class="required">*</span></label>
+													<input type="number" class="form-control" id="exampleFormControlHomeNum5" name="teacher.HomeNumber">
+												</div>
+
+												@*<div class="mb-3">
+													<label for="exampleFormControlStatus" class="form-label text-primary">Current status<span class="required">*</span></label>
+
+													<select class="default-select  form-control wide" name="student.Status" asp-for="Status">
+
+															<option value="0"> Active	</option>
+															<option value="1" >   Left		</option>
+															<option value="2">   Temporary stopped	</option>
+															<option value="3">   Graduated	</option>
+
+														
+
+														
+													</select>
+													
+
+												</div>
+*@
+
+												<div class="">
+
+													<button class="btn btn-primary" type="submit" id="submitbtn">Save</button>
+												</div>
+
+											</div>
+										</div>
+									</div>
+
+									
+						</form>
+					</div>
+				</div>
+			</div>
+
+
+
+		</div>
+	</div>
+
+	</div>
+	</div>
+
+
+	<script src="~/vendor/global/global.min.js"></script>
+	<script src="~/vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+	<script src="~/vendor/moment/moment.min.js"></script>
+
+
+	<script src="~/vendor/bootstrap-datepicker-master/js/bootstrap-datepicker.min.js"></script>
+	<script src="~/vendor/wow-master/dist/wow.min.js"></script>
+	<script src="~/js/custom.min.js"></script>
+	<script src="~/js/dlabnav-init.js"></script>
+	<script src="~/js/demo.js"></script>
+	<script src="~/js/styleSwitcher.js"></script>
+</body>
+
+<!-- Mirrored from akademi.dexignlab.com/xhtml/add-student.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 20 Jul 2023 19:29:26 GMT -->
+</html>

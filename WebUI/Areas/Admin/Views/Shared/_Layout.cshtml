@@ -2,6 +2,11 @@
 	ViewData["Title"] = "Index";
 	var dashboard = Url.Action("Index", "Dashboard", new { area = "Admin" });
 	var allStudents = Url.Action("Index", "AllStudents", new { area = "Admin" });
+	var createStudent = Url.Action("Index", "CreateStudent", new { area = "Admin" });
+	var allLessons = Url.Action("Get", "Lessons", new { area = "Admin" });
+	var allTeachers = Url.Action("GetAll", "Teacher", new { area = "Admin" });
+	var createTeacher = Url.Action("GetNewTeacher", "Teacher", new { area = "Admin" });
+	var allNewStudents = Url.Action("Index", "AllNewStudents", new { area = "Admin" });
 }
 
 <!DOCTYPE html>
@@ -329,8 +334,9 @@
 						<ul aria-expanded="false">
 							<li><a href="@allStudents">Students</a></li>
 
-							<li><a href="~/add-student.html">Add New Student</a></li>
+							<li><a href="@createStudent">Add New Student</a></li>
 
+							<li><a href="@allNewStudents">Recently registered students</a></li>
 						</ul>
 
 					</li>
@@ -340,9 +346,9 @@
 							<span class="nav-text">Teachers</span>
 						</a>
 						<ul aria-expanded="false">
-							<li><a href="~/teacher.html">Teachers</a></li>
+							<li><a href="@allTeachers">Teachers</a></li>
 
-							<li><a href="~/add-teacher.html">Add New Teacher</a></li>
+							<li><a href="@createTeacher">Add New Teacher</a></li>
 
 						</ul>
 
@@ -372,7 +378,7 @@
 
 					</li>
 					<li>
-						<a href="~/javascript:void(0);" aria-expanded="false">
+						<a href="@allLessons" aria-expanded="false">
 							<i class="material-icons w-"> app_registration </i>
 
 							<span>Calendar</span>

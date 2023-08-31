@@ -21,6 +21,7 @@ public class DashboardController : Controller
 	public async  Task<IActionResult> Index()
 	{
 		//var accessToken = HttpContext.Session.GetString("JWToken");
+		//if (accessToken != null) { }
 		//_httpClient.DefaultRequestHeaders.Authorization =
 		//		new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", accessToken);
 		return View();

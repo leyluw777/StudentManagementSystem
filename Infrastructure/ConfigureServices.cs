@@ -48,6 +48,7 @@ namespace Infrastructure
             // Adds the AppDbContextInitialiser as a scoped service
             services.AddScoped<AppDbContextInitialiser>();
 
+
             // Adds DateTimeService as a transient service for providing current date and time
             services.AddTransient<IDatetime, DateTimeService>();
 

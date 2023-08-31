@@ -1,3 +1,5 @@
+using WebUI.Areas.Admin.Services;
+
 namespace WebUI
 {
     public class Program
@@ -7,9 +9,10 @@ namespace WebUI
             var builder = WebApplication.CreateBuilder(args);
 			builder.Services.AddSession();
 			// Add services to the container.
+            builder.Services.AddTransient<ICourse, Course>();
 			builder.Services.AddControllersWithViews();
+            builder.Services.AddHttpContextAccessor();
             builder.Services.AddHttpClient();
-
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -33,9 +36,18 @@ namespace WebUI
 
             app.MapControllerRoute(
                  name: "areas",
-            pattern: "{area:exists}/{controller=Dashboard}/{action=Index}/{id?}");
+                pattern: "{area:exists}/{controller=Dashboard}/{action=Index}/{id?}");
 
-			app.MapControllerRoute(
+            app.MapControllerRoute(
+               name: "areas",
+              pattern: "{area:exists}/{controller=StudentDashboard}/{action=Index}/{id?}");
+
+            app.MapControllerRoute(
+              name: "areas",
+             pattern: "{area:exists}/{controller=TeacherDashboard}/{action=Index}/{id?}");
+
+
+            app.MapControllerRoute(
 						   name: "default",
 						   pattern: "{controller=Auth}/{action=Login}/{id?}");
 

@@ -4,12 +4,13 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using Infrastructure.Persistence;
+using System.Threading.Tasks;
 
 namespace WebApi
 {
     public class Program
     {
-        public static void Main(string[] args)
+        public static async Task Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
 
@@ -54,8 +55,9 @@ namespace WebApi
                 using (var scope = app.Services.CreateScope())
                 {
                     var initaliser = scope.ServiceProvider.GetRequiredService<AppDbContextInitialiser>();
-                     initaliser.InitializeAsync().Wait();
-                     initaliser.SeedAsync().Wait();
+                    await initaliser.InitializeAsync();
+                    
+                    await initaliser.SeedAsync();
                 }
             }
 

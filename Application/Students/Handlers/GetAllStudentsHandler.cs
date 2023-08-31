@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace Application.Students.Handlers
 {
-    public class GetAllStudentsHandler : IRequestHandler<GetAllStudentsQueryRequest, GetAllStudentsResponse>
+    public class GetAllStudentsHandler : IRequestHandler<GetAllStudentsQueryRequest, GetAllStudentsQueryResponse>
     {
 
         private readonly IApplicationDbContext _appDbContext;
@@ -25,7 +25,7 @@ namespace Application.Students.Handlers
         }
 
 
-        public async Task<GetAllStudentsResponse> Handle(GetAllStudentsQueryRequest request, CancellationToken cancellationToken)
+        public async Task<GetAllStudentsQueryResponse> Handle(GetAllStudentsQueryRequest request, CancellationToken cancellationToken)
         {
             List<StudentDto> students = new List<StudentDto>();
             var students1 = await _appDbContext.Students.ToListAsync();
@@ -35,7 +35,7 @@ namespace Application.Students.Handlers
                 students.Add(studentOne);
             }
 
-            return new GetAllStudentsResponse()
+            return new GetAllStudentsQueryResponse()
             {
                 Students = students,
             };

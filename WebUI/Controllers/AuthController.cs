@@ -60,10 +60,24 @@ namespace WebUI.Controllers
 				_httpClient.DefaultRequestHeaders.Authorization =
 					new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", accessToken);
 				var adminLogin = await _httpClient.GetAsync($"{baseUrl}/Admin/AdminLogin");
-				if (adminLogin.IsSuccessStatusCode)
+				var studentLogin = await _httpClient.GetAsync($"{baseUrl}/StudentDashboard/StudentLogin");
+				var teacherLogin = await _httpClient.GetAsync($"{baseUrl}/TeacherDashboard/TeacherLogin");
+                if (adminLogin.IsSuccessStatusCode)
 				{
 					return RedirectToAction("Index", "Dashboard", new { area = "Admin" });
 				}
+				else
+				{
+					if (studentLogin.IsSuccessStatusCode)
+					{
+                        return RedirectToAction("Index", "StudentDashboard", new { area = "Student" });
+                    }
+					else if (teacherLogin.IsSuccessStatusCode)
+					{
+                        return RedirectToAction("Index", "TeacherDashboard", new { area = "Teacher" });
+                    }
+
+                }
 				return RedirectToAction("Index", "Home");
 			}
 

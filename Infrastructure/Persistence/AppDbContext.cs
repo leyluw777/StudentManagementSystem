@@ -1,6 +1,7 @@
 ﻿using Application.Common.Interfaces;
 using Infrastructure.Persistence.Interceptors;
 using Infrastructure.SeedData;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using SMSDomain.Identity;
 using System.Reflection;
@@ -8,10 +9,11 @@ using System.Reflection;
 
 namespace Infrastructure.Persistence
 {
-    public class AppDbContext : IdentityDbContext<AppUser>, IApplicationDbContext
+	public class AppDbContext : IdentityDbContext<AppUser>, IApplicationDbContext
 {
 
     private readonly AuditableEntitySaveChangesInterceptor _interceptor;
+        private readonly UserManager<AppUser> _userManager;
 
 
         public AppDbContext(DbContextOptions options, AuditableEntitySaveChangesInterceptor interceptor) : base(options)
@@ -43,50 +45,51 @@ namespace Infrastructure.Persistence
         public DbSet<CourseStudent> CourseStudent { get; set ; }
         public DbSet<GroupStudent> GroupStudent { get; set; }
 		public DbSet<FirstLogin> FirstLogins { get; set; }
+        public DbSet<CourseTeacher> CourseTeacher { get; set; }
 
 
-		//public void SeedRoles()
-		//{
-		//    if (!Roles.Any())
-		//    {
-		//        var roles = new List<AppRole>
-		//{
-		//    new AppRole { Name = "Admin", NormalizedName = "ADMIN" },
-		//    new AppRole { Name = "Student", NormalizedName = "STUDENT" },
-		//    new AppRole { Name = "Teacher", NormalizedName = "TEACHER" },
-		//    new AppRole { Name = "Coordinator", NormalizedName = "COORDINATOR" }
+        //public void SeedRoles()
+        //{
+        //    if (!Roles.Any())
+        //    {
+        //        var roles = new List<AppRole>
+        //{
+        //    new AppRole { Name = "Admin", NormalizedName = "ADMIN" },
+        //    new AppRole { Name = "Student", NormalizedName = "STUDENT" },
+        //    new AppRole { Name = "Teacher", NormalizedName = "TEACHER" },
+        //    new AppRole { Name = "Coordinator", NormalizedName = "COORDINATOR" }
 
-		//    // Add more roles as needed
-		//};
-		//        foreach (var role in roles)
-		//        {
-		//            _roleManager.CreateAsync(role).Wait();
-		//        }
-		//    }
-		//}
+        //    // Add more roles as needed
+        //};
+        //        foreach (var role in roles)
+        //        {
+        //            _roleManager.CreateAsync(role).Wait();
+        //        }
+        //    }
+        //}
 
-		/// <summary>
-		/// Initializes a new instance of the <see cref="AppDbContext"/> class.
-		/// </summary>
-		/// <param name="options">The options for configuring the database context.</param>
-		/// <param name="interceptor">The interceptor for automatically updating auditable entities.</param>
-		/// <param name="mediator">The mediator for handling events and commands.</param>
-		//public AppDbContext(
-		//                DbContextOptions<AppDbContext> options,
-		//                AuditableEntitySaveChangesInterceptor interceptor
-		//                )
-		//                : base(options)
-		//{
-		//    _interceptor = interceptor;
+        /// <summary>
+        /// Initializes a new instance of the <see cref="AppDbContext"/> class.
+        /// </summary>
+        /// <param name="options">The options for configuring the database context.</param>
+        /// <param name="interceptor">The interceptor for automatically updating auditable entities.</param>
+        /// <param name="mediator">The mediator for handling events and commands.</param>
+        //public AppDbContext(
+        //                DbContextOptions<AppDbContext> options,
+        //                AuditableEntitySaveChangesInterceptor interceptor
+        //                )
+        //                : base(options)
+        //{
+        //    _interceptor = interceptor;
 
-		//}
+        //}
 
 
-		/// <summary>
-		/// Configures the model for the database context.
-		/// </summary>
-		/// <param name="builder">The model builder instance to be configured.</param>
-		protected override void OnModelCreating(ModelBuilder builder)
+        /// <summary>
+        /// Configures the model for the database context.
+        /// </summary>
+        /// <param name="builder">The model builder instance to be configured.</param>
+        protected override void OnModelCreating(ModelBuilder builder)
     {
         builder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
             builder.Entity<Course>().HasOne(x => x.FinalExam)
@@ -196,6 +199,24 @@ namespace Infrastructure.Persistence
                 .HasForeignKey(cs => cs.StudentId);
 
 
+            builder.Entity<CourseTeacher>()
+    .HasKey(cs => new { cs.CourseId, cs.TeacherId });
+
+            // Configure the relationship between Course and CourseStudent
+            builder.Entity<CourseTeacher>()
+                .HasOne(cs => cs.Course)
+                .WithMany(c => c.courseTeachers)
+                .HasForeignKey(cs => cs.CourseId);
+
+            // Configure the relationship between Student and CourseStudent
+            builder.Entity<CourseTeacher>()
+                .HasOne(cs => cs.Teacher)
+                .WithMany(s => s.courseTeachers)
+                .HasForeignKey(cs => cs.TeacherId);
+
+
+
+
             builder.Entity<GroupStudent>()
                 .HasKey(cs => new { cs.GroupId, cs.StudentId });
 
@@ -239,17 +260,7 @@ namespace Infrastructure.Persistence
 
             //});
 
-            builder.Entity<Course>().HasData(
-            new Course
-            {
-                Id = 1,
-                Name = "Front-end development",
-                TotalHours = 360,
-                TotalModules = 5,
-
-
-
-            });
+           
         builder.Entity<Group>().HasData(
            new Group
            {
@@ -261,26 +272,22 @@ namespace Infrastructure.Persistence
 
            });
 
-          
 
-            //    builder.Entity<Teacher>().HasData(
-            //new Teacher
-            //{
-            //    Description = "Teacher with 5 year of experience",
-            //    Experience = "5 years",
-            //    ActiveStatus = true,
-            //    PhoneNumber = 
+            builder.Entity<AppRole>().HasData(
+                      new AppRole { Name = "Admin", NormalizedName = "ADMIN" },
+                      new AppRole { Name = "Student", NormalizedName = "STUDENT" },
+                      new AppRole { Name = "Teacher", NormalizedName = "TEACHER" },
+                      new AppRole { Name = "Coordinator", NormalizedName = "COORDINATOR" }
+              );
 
-
-            //});
             builder.AddCountriesData();
             builder.AddCitiesData();
-            builder.Entity<AppRole>().HasData(
-                        new AppRole { Name = "Admin", NormalizedName = "ADMIN" },
-                        new AppRole { Name = "Student", NormalizedName = "STUDENT" },
-                        new AppRole { Name = "Teacher", NormalizedName = "TEACHER" },
-                        new AppRole { Name = "Coordinator", NormalizedName = "COORDINATOR" }
-                );
+            builder.AddCoursesData();
+            builder.AddModulesData();
+            builder.AddGroupsData();
+
+        
+
 
 
 

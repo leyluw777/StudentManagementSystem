@@ -24,7 +24,7 @@ namespace Application.Common.Results
         {
         }
 
-        public SuccessDataResult()
+        public SuccessDataResult(Teacher.Commands.DeleteTeacherRequestCommand request, string V)
             : base(default, true)
         {
         }

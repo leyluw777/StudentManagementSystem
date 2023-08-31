@@ -34,3 +34,15 @@ C:\Users\murat.vuranok\Desktop\SMS\StudentManagementSystem\SMSDomain\obj\Debug\n
 C:\Users\murat.vuranok\Desktop\SMS\StudentManagementSystem\SMSDomain\obj\Debug\net7.0\refint\SMSDomain.dll
 C:\Users\murat.vuranok\Desktop\SMS\StudentManagementSystem\SMSDomain\obj\Debug\net7.0\SMSDomain.pdb
 C:\Users\murat.vuranok\Desktop\SMS\StudentManagementSystem\SMSDomain\obj\Debug\net7.0\ref\SMSDomain.dll
+C:\Users\Hp\Desktop\FinalProject2\StudentManagementSystem\SMSDomain\bin\Debug\net7.0\SMSDomain.deps.json
+C:\Users\Hp\Desktop\FinalProject2\StudentManagementSystem\SMSDomain\bin\Debug\net7.0\SMSDomain.dll
+C:\Users\Hp\Desktop\FinalProject2\StudentManagementSystem\SMSDomain\bin\Debug\net7.0\SMSDomain.pdb
+C:\Users\Hp\Desktop\FinalProject2\StudentManagementSystem\SMSDomain\obj\Debug\net7.0\SMSDomain.csproj.AssemblyReference.cache
+C:\Users\Hp\Desktop\FinalProject2\StudentManagementSystem\SMSDomain\obj\Debug\net7.0\SMSDomain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Hp\Desktop\FinalProject2\StudentManagementSystem\SMSDomain\obj\Debug\net7.0\SMSDomain.AssemblyInfoInputs.cache
+C:\Users\Hp\Desktop\FinalProject2\StudentManagementSystem\SMSDomain\obj\Debug\net7.0\SMSDomain.AssemblyInfo.cs
+C:\Users\Hp\Desktop\FinalProject2\StudentManagementSystem\SMSDomain\obj\Debug\net7.0\SMSDomain.csproj.CoreCompileInputs.cache
+C:\Users\Hp\Desktop\FinalProject2\StudentManagementSystem\SMSDomain\obj\Debug\net7.0\SMSDomain.dll
+C:\Users\Hp\Desktop\FinalProject2\StudentManagementSystem\SMSDomain\obj\Debug\net7.0\refint\SMSDomain.dll
+C:\Users\Hp\Desktop\FinalProject2\StudentManagementSystem\SMSDomain\obj\Debug\net7.0\SMSDomain.pdb
+C:\Users\Hp\Desktop\FinalProject2\StudentManagementSystem\SMSDomain\obj\Debug\net7.0\ref\SMSDomain.dll

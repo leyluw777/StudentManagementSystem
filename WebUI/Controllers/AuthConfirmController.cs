@@ -51,8 +51,19 @@ namespace WebUI.Controllers
 
 			if (responseMessage.IsSuccessStatusCode)
 			{
-				
-				return RedirectToAction("Index", "Home");
+                var studentLogin = await _httpClient.GetAsync($"{baseUrl}/StudentDashboard/StudentLogin");
+                var teacherLogin = await _httpClient.GetAsync($"{baseUrl}/TeacherDashboard/TeacherLogin");
+
+                if (studentLogin.IsSuccessStatusCode)
+                {
+                    return RedirectToAction("Index", "StudentDashboard", new { area = "Student" });
+                }
+                else if (teacherLogin.IsSuccessStatusCode)
+                {
+                    return RedirectToAction("Index", "TeacherDashboard", new { area = "Teacher" });
+                }
+
+                return RedirectToAction("Index", "Home");
 			}
 			
 			return View(authconfirmmodel);

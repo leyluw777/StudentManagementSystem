@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Application.Students.Queries
 {
-    public class GetAllStudentsResponse //: IMapFrom<Student>
+    public class GetAllStudentsQueryResponse //: IMapFrom<Student>
     {
         public List<StudentDto> Students { get; set; }
     }

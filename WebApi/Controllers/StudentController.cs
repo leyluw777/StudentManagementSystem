@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace WebApi.Controllers
 {
     [Route("api/[controller]/[action]")]
-    [Authorize(Roles = "Admin", AuthenticationSchemes = "Bearer")]
+    [Authorize( AuthenticationSchemes = "Bearer")]
     [ApiController]
     public class StudentController : ControllerBase
     {
@@ -24,11 +24,19 @@ namespace WebApi.Controllers
         public async Task<IActionResult> GetAll()
         {
             GetAllStudentsQueryRequest getAllStudentsQuery = new GetAllStudentsQueryRequest();
-            GetAllStudentsResponse allStudents = await _mediator.Send(getAllStudentsQuery);
+            GetAllStudentsQueryResponse allStudents = await _mediator.Send(getAllStudentsQuery);
             return Ok(allStudents.Students);
         }
 
-        [HttpGet("{id}")]
+		[HttpGet]
+		public async Task<IActionResult> GetAllNewStudents()
+		{
+			GetNewStudentsRequest getAllNewStudentsQuery = new GetNewStudentsRequest();
+			GetNewStudentsResponse allNewStudents = await _mediator.Send(getAllNewStudentsQuery);
+			return Ok(allNewStudents.NewStudents);
+		}
+
+		[HttpGet("{id}")]
             public async Task<IActionResult> GetById([FromRoute] string id)
             {
           
@@ -38,6 +46,9 @@ namespace WebApi.Controllers
             
             return Ok(getStudent);
             }
+
+
+
 
         [HttpPost]
         public async Task<IActionResult> CreateStudent(CreateStudentRequestCommand request)

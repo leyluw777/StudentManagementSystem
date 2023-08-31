@@ -36,7 +36,7 @@ namespace Application.AppUser.Handler
             var result = await _userManager.CheckPasswordAsync(user, request.Password);
                 
             if (!result) throw new Exception("Authentication error");
-            var accessToken =await  _tokenHandler.CreateAccessToken(1200, user);
+            var accessToken = await  _tokenHandler.CreateAccessToken(1200, user);
 
             if (firstLogin != null) //varsa
             {

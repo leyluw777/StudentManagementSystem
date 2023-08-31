@@ -3876,37 +3876,38 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\murat.vuranok\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Users\\Hp\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\Application\\Application.csproj",
+      "projectUniqueName": "C:\\Users\\Hp\\Desktop\\FinalProject2\\StudentManagementSystem\\Application\\Application.csproj",
       "projectName": "Application",
-      "projectPath": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\Application\\Application.csproj",
-      "packagesPath": "C:\\Users\\murat.vuranok\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\Application\\obj\\",
+      "projectPath": "C:\\Users\\Hp\\Desktop\\FinalProject2\\StudentManagementSystem\\Application\\Application.csproj",
+      "packagesPath": "C:\\Users\\Hp\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Hp\\Desktop\\FinalProject2\\StudentManagementSystem\\Application\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\murat.vuranok\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\Hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\SMSDomain\\SMSDomain.csproj": {
-              "projectPath": "C:\\Users\\murat.vuranok\\Desktop\\SMS\\StudentManagementSystem\\SMSDomain\\SMSDomain.csproj"
+            "C:\\Users\\Hp\\Desktop\\FinalProject2\\StudentManagementSystem\\SMSDomain\\SMSDomain.csproj": {
+              "projectPath": "C:\\Users\\Hp\\Desktop\\FinalProject2\\StudentManagementSystem\\SMSDomain\\SMSDomain.csproj"
             }
           }
         }
@@ -3978,7 +3979,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }

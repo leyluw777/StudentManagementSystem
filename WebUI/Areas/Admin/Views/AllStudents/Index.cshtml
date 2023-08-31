@@ -7,6 +7,7 @@
 	var dashboard = Url.Action("Index", "Dashboard", new { area = "Admin" });
 	var deleteStudent = Url.Action("Index", "DeleteStudent", new { area = "Admin" });
 	var editStudent = Url.Action("Index", "EditStudent", new { area = "Admin" });
+	var createStudent = Url.Action("Index", "CreateStudent", new { area = "Admin" });
 }
 <!DOCTYPE html>
 <html lang="en">
@@ -75,9 +76,11 @@ href="
 								<div>
 
 									<!-- Button trigger modal -->
-									<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+									<a href="@createStudent" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+									
 										+ New Student
-									</button>
+									
+									</a>
 								</div>
 							</div>
 						</div>

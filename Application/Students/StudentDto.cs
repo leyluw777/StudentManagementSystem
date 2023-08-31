@@ -45,5 +45,6 @@ namespace Application.Students
         public LeftStatus? LeftStatus { get; set; }
 
         public StoppedStatus? StoppedStatus { get; set; }
+
     }
 }

@@ -36,18 +36,18 @@ namespace Application.Students.Commands
 
         public int HomeNumber { get; set; }
 
-        public string Countryname { get; set; }
-        public string Cityname { get; set; }
+        public string Country { get; set; }
+        public string City { get; set; }
         public List<string> Phonenumber { get; set; }
      
 
         //public string Number { get; set; }
 
 
-        public string CourseName { get; set; }
+        public string Course { get; set; }
 
 
-        public string GroupName { get; set; }   
+        public string Group { get; set; }   
         //public List<Group> Groups { get; set; } = null!;
 
         public int Status { get; set; }

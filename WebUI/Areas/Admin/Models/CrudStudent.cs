@@ -23,6 +23,7 @@ namespace WebUI.Areas.Admin.Models
 
 
 
+
 		public List<string> Groups { get; set; }
 		public string? District { get; set; }
 		public string? StreetAddress { get; set; }

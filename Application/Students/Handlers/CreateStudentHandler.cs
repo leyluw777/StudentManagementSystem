@@ -37,7 +37,7 @@ namespace Application.Students.Handlers
         public string GenerateUniqueUsername(CreateStudentRequestCommand request)
         {
 
-            var username = request.Name + request.FathersName[0] + request.Surname[0]+ request.Fin;
+            var username = request.Name.ToLower() + request.FathersName[0] + request.Surname[0]+ request.Fin;
             return username;
         }
         public string GenerateRandomPassword()
@@ -78,8 +78,8 @@ namespace Application.Students.Handlers
                     Gender = request.Gender,
                     Fin = request.Fin,
                     Status = (SMSDomain.Enums.Status)request.Status,
-                    CityId = _appDbContext.Cities.FirstOrDefault(x => x.Name == request.Cityname).Id,
-                    CountryId =  _appDbContext.Countries.FirstOrDefault(c => c.Name == request.Countryname).Id,
+                    CityId = _appDbContext.Cities.FirstOrDefault(x => x.Name == request.City).Id,
+                    CountryId =  _appDbContext.Countries.FirstOrDefault(c => c.Name == request.Country).Id,
                     AverageGrade = 0.0,
                     UserName = username,
                   
@@ -95,6 +95,11 @@ namespace Application.Students.Handlers
                 FirstLogin firstLogin = new()
                 {
                     UserId = newStudent.Id,
+                    UserName = newStudent.UserName,
+                    Password = password,
+                    Name = newStudent.Name,
+                    Surname = newStudent.Surname,
+                    FathersName = newStudent.FathersName
                 };
 
                 await _appDbContext.FirstLogins.AddAsync(firstLogin);
@@ -140,7 +145,7 @@ namespace Application.Students.Handlers
                 await _appDbContext.SaveChangesAsync(cancellationToken);
 
 
-                List<Course> courses = await _appDbContext.Courses.Where(c => c.Name == request.CourseName).ToListAsync();
+                List<Course> courses = await _appDbContext.Courses.Where(c => c.Name == request.Course).ToListAsync();
                 foreach(var course in courses)
                 {
                     CourseStudent studentCourse = new CourseStudent()
@@ -159,7 +164,7 @@ namespace Application.Students.Handlers
                 }
 
 
-                List<Group> groups = await _appDbContext.Groups.Where(c => c.Name == request.GroupName).ToListAsync();
+                List<Group> groups = await _appDbContext.Groups.Where(c => c.Name == request.Group).ToListAsync();
                 foreach (var group in groups)
                 {
                     GroupStudent studentGroup = new GroupStudent()

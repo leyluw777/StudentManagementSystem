@@ -37,21 +37,6 @@ namespace Infrastructure.Migrations
                     b.ToTable("CoordinatorCourse");
                 });
 
-            modelBuilder.Entity("CourseTeacher", b =>
-                {
-                    b.Property<int>("CoursesId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("TeachersId")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.HasKey("CoursesId", "TeachersId");
-
-                    b.HasIndex("TeachersId");
-
-                    b.ToTable("CourseTeacher");
-                });
-
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
                 {
                     b.Property<string>("Id")
@@ -316,7 +301,7 @@ namespace Infrastructure.Migrations
                     b.Property<string>("InternalNotes")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("LessonId")
+                    b.Property<int?>("LessonId")
                         .HasColumnType("int");
 
                     b.Property<string>("ModifiedBy")
@@ -332,7 +317,6 @@ namespace Infrastructure.Migrations
                         .HasColumnType("bit");
 
                     b.Property<string>("StudentId")
-                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
@@ -1230,8 +1214,53 @@ namespace Infrastructure.Migrations
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             JoinedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "Front-end development",
-                            TotalHours = 360,
-                            TotalModules = 5
+                            TotalHours = 280,
+                            TotalModules = 4
+                        },
+                        new
+                        {
+                            Id = 2,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            JoinedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Back-end development",
+                            TotalHours = 350,
+                            TotalModules = 4
+                        },
+                        new
+                        {
+                            Id = 3,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            JoinedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Data science",
+                            TotalHours = 250,
+                            TotalModules = 4
+                        },
+                        new
+                        {
+                            Id = 4,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            JoinedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "UI/UX design",
+                            TotalHours = 320,
+                            TotalModules = 4
+                        },
+                        new
+                        {
+                            Id = 5,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            JoinedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Cybersecurity",
+                            TotalHours = 370,
+                            TotalModules = 4
+                        },
+                        new
+                        {
+                            Id = 6,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            JoinedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Mobile development",
+                            TotalHours = 300,
+                            TotalModules = 4
                         });
                 });
 
@@ -1248,6 +1277,21 @@ namespace Infrastructure.Migrations
                     b.HasIndex("StudentId");
 
                     b.ToTable("CourseStudent");
+                });
+
+            modelBuilder.Entity("SMSDomain.Entities.CourseTeacher", b =>
+                {
+                    b.Property<int>("CourseId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("TeacherId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("CourseId", "TeacherId");
+
+                    b.HasIndex("TeacherId");
+
+                    b.ToTable("CourseTeacher");
                 });
 
             modelBuilder.Entity("SMSDomain.Entities.FinalExam", b =>
@@ -1299,9 +1343,29 @@ namespace Infrastructure.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<string>("FathersName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Surname")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("UserId")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("UserName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
@@ -1354,10 +1418,9 @@ namespace Infrastructure.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Description")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("EndDate")
+                    b.Property<DateTime?>("EndDate")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("ModifiedBy")
@@ -1370,7 +1433,7 @@ namespace Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("StartDate")
+                    b.Property<DateTime?>("StartDate")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
@@ -1386,6 +1449,24 @@ namespace Infrastructure.Migrations
                             EndDate = new DateTime(2020, 5, 9, 9, 15, 0, 0, DateTimeKind.Unspecified),
                             Name = "FRONT102",
                             StartDate = new DateTime(2019, 5, 9, 9, 15, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 2,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "BACK100"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "MOBILE95"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "CYBER220"
                         });
                 });
 
@@ -1428,10 +1509,10 @@ namespace Infrastructure.Migrations
                     b.Property<bool>("FilesAttached")
                         .HasColumnType("bit");
 
-                    b.Property<DateTime>("HomeworkDate")
+                    b.Property<DateTime?>("HomeworkDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("LessonId")
+                    b.Property<int?>("LessonId")
                         .HasColumnType("int");
 
                     b.Property<string>("LessonName")
@@ -1504,6 +1585,9 @@ namespace Infrastructure.Migrations
                     b.Property<DateTime>("EndTime")
                         .HasColumnType("datetime2");
 
+                    b.Property<int?>("GroupId")
+                        .HasColumnType("int");
+
                     b.Property<DateTime>("LessonDate")
                         .HasColumnType("datetime2");
 
@@ -1513,7 +1597,7 @@ namespace Infrastructure.Migrations
                     b.Property<DateTime?>("ModifiedDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("ModuleId")
+                    b.Property<int?>("ModuleId")
                         .HasColumnType("int");
 
                     b.Property<string>("Name")
@@ -1530,6 +1614,8 @@ namespace Infrastructure.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("GroupId");
 
                     b.HasIndex("ModuleId");
 
@@ -1610,7 +1696,7 @@ namespace Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("TotalHours")
+                    b.Property<int?>("TotalHours")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -1618,6 +1704,200 @@ namespace Infrastructure.Migrations
                     b.HasIndex("CourseId");
 
                     b.ToTable("Modules");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CourseId = 1,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Basics",
+                            TotalHours = 70
+                        },
+                        new
+                        {
+                            Id = 2,
+                            CourseId = 1,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Introduction to programming",
+                            TotalHours = 70
+                        },
+                        new
+                        {
+                            Id = 3,
+                            CourseId = 1,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "ReactJS",
+                            TotalHours = 70
+                        },
+                        new
+                        {
+                            Id = 4,
+                            CourseId = 1,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "API",
+                            TotalHours = 70
+                        },
+                        new
+                        {
+                            Id = 5,
+                            CourseId = 2,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Basics",
+                            TotalHours = 50
+                        },
+                        new
+                        {
+                            Id = 6,
+                            CourseId = 2,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "OOP",
+                            TotalHours = 100
+                        },
+                        new
+                        {
+                            Id = 7,
+                            CourseId = 2,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Databases",
+                            TotalHours = 100
+                        },
+                        new
+                        {
+                            Id = 8,
+                            CourseId = 2,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Web application",
+                            TotalHours = 100
+                        },
+                        new
+                        {
+                            Id = 9,
+                            CourseId = 3,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Introduction",
+                            TotalHours = 50
+                        },
+                        new
+                        {
+                            Id = 10,
+                            CourseId = 3,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Statistical and math skills",
+                            TotalHours = 50
+                        },
+                        new
+                        {
+                            Id = 11,
+                            CourseId = 3,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Data visualization",
+                            TotalHours = 50
+                        },
+                        new
+                        {
+                            Id = 12,
+                            CourseId = 3,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Databases",
+                            TotalHours = 100
+                        },
+                        new
+                        {
+                            Id = 13,
+                            CourseId = 4,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Fundamentals",
+                            TotalHours = 50
+                        },
+                        new
+                        {
+                            Id = 14,
+                            CourseId = 4,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "UX Design concepts",
+                            TotalHours = 70
+                        },
+                        new
+                        {
+                            Id = 15,
+                            CourseId = 4,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Wireframing",
+                            TotalHours = 100
+                        },
+                        new
+                        {
+                            Id = 16,
+                            CourseId = 4,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "The Business of UX & UI Design",
+                            TotalHours = 100
+                        },
+                        new
+                        {
+                            Id = 17,
+                            CourseId = 5,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Foundation of Computing and Cyber Security",
+                            TotalHours = 100
+                        },
+                        new
+                        {
+                            Id = 18,
+                            CourseId = 5,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Endpoint Security",
+                            TotalHours = 100
+                        },
+                        new
+                        {
+                            Id = 19,
+                            CourseId = 5,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Secure Coding",
+                            TotalHours = 170
+                        },
+                        new
+                        {
+                            Id = 20,
+                            CourseId = 5,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Business Infrastructure and Security",
+                            TotalHours = 100
+                        },
+                        new
+                        {
+                            Id = 21,
+                            CourseId = 6,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Introduction",
+                            TotalHours = 50
+                        },
+                        new
+                        {
+                            Id = 22,
+                            CourseId = 6,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "UI of apps",
+                            TotalHours = 100
+                        },
+                        new
+                        {
+                            Id = 23,
+                            CourseId = 6,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Databases",
+                            TotalHours = 60
+                        },
+                        new
+                        {
+                            Id = 24,
+                            CourseId = 6,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Security",
+                            TotalHours = 90
+                        });
                 });
 
             modelBuilder.Entity("SMSDomain.Entities.PhoneNumber", b =>
@@ -1851,25 +2131,25 @@ namespace Infrastructure.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "cbe6c957-7635-40a8-9d5d-eab1739ca60e",
+                            Id = "45b40edc-b161-4a41-922c-4c369007d10a",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = "b7821238-a5f7-4b5d-a66d-c588138bccc8",
+                            Id = "efb0f841-221f-42dd-bc50-9e1271107198",
                             Name = "Student",
                             NormalizedName = "STUDENT"
                         },
                         new
                         {
-                            Id = "91cc01bc-4fb0-45ae-9687-1fe04f834061",
+                            Id = "8dfeb5bf-4e16-4f34-9bc6-17b1fe48c908",
                             Name = "Teacher",
                             NormalizedName = "TEACHER"
                         },
                         new
                         {
-                            Id = "85ca276c-e835-44d3-9e41-b58e47cfdf1a",
+                            Id = "c592345a-3271-4f79-92c1-2d05a0992672",
                             Name = "Coordinator",
                             NormalizedName = "COORDINATOR"
                         });
@@ -1964,21 +2244,6 @@ namespace Infrastructure.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("CourseTeacher", b =>
-                {
-                    b.HasOne("SMSDomain.Entities.Course", null)
-                        .WithMany()
-                        .HasForeignKey("CoursesId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("SMSDomain.Entities.Teacher", null)
-                        .WithMany()
-                        .HasForeignKey("TeachersId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
@@ -2069,15 +2334,11 @@ namespace Infrastructure.Migrations
                 {
                     b.HasOne("SMSDomain.Entities.Lesson", "Lesson")
                         .WithMany("Attendances")
-                        .HasForeignKey("LessonId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("LessonId");
 
                     b.HasOne("SMSDomain.Entities.Student", "Student")
                         .WithMany("Attendances")
-                        .HasForeignKey("StudentId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("StudentId");
 
                     b.Navigation("Lesson");
 
@@ -2123,6 +2384,25 @@ namespace Infrastructure.Migrations
                     b.Navigation("Student");
                 });
 
+            modelBuilder.Entity("SMSDomain.Entities.CourseTeacher", b =>
+                {
+                    b.HasOne("SMSDomain.Entities.Course", "Course")
+                        .WithMany("courseTeachers")
+                        .HasForeignKey("CourseId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("SMSDomain.Entities.Teacher", "Teacher")
+                        .WithMany("courseTeachers")
+                        .HasForeignKey("TeacherId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Course");
+
+                    b.Navigation("Teacher");
+                });
+
             modelBuilder.Entity("SMSDomain.Entities.FirstLogin", b =>
                 {
                     b.HasOne("SMSDomain.Identity.AppUser", "User")
@@ -2157,9 +2437,7 @@ namespace Infrastructure.Migrations
                 {
                     b.HasOne("SMSDomain.Entities.Lesson", "Lesson")
                         .WithMany("Homeworks")
-                        .HasForeignKey("LessonId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("LessonId");
 
                     b.HasOne("SMSDomain.Entities.Mark", "Mark")
                         .WithMany("Homeworks")
@@ -2174,11 +2452,15 @@ namespace Infrastructure.Migrations
 
             modelBuilder.Entity("SMSDomain.Entities.Lesson", b =>
                 {
+                    b.HasOne("SMSDomain.Entities.Group", "Group")
+                        .WithMany("Lessons")
+                        .HasForeignKey("GroupId");
+
                     b.HasOne("SMSDomain.Entities.Module", "Module")
                         .WithMany("Lessons")
-                        .HasForeignKey("ModuleId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("ModuleId");
+
+                    b.Navigation("Group");
 
                     b.Navigation("Module");
                 });
@@ -2335,6 +2617,8 @@ namespace Infrastructure.Migrations
                     b.Navigation("CourseStudents");
 
                     b.Navigation("Modules");
+
+                    b.Navigation("courseTeachers");
                 });
 
             modelBuilder.Entity("SMSDomain.Entities.FinalExam", b =>
@@ -2353,6 +2637,8 @@ namespace Infrastructure.Migrations
             modelBuilder.Entity("SMSDomain.Entities.Group", b =>
                 {
                     b.Navigation("GroupStudents");
+
+                    b.Navigation("Lessons");
                 });
 
             modelBuilder.Entity("SMSDomain.Entities.LeftStatus", b =>
@@ -2419,10 +2705,11 @@ namespace Infrastructure.Migrations
 
             modelBuilder.Entity("SMSDomain.Entities.Teacher", b =>
                 {
-                    b.Navigation("Address")
-                        .IsRequired();
+                    b.Navigation("Address");
 
                     b.Navigation("PhoneNumbers");
+
+                    b.Navigation("courseTeachers");
                 });
 #pragma warning restore 612, 618
         }

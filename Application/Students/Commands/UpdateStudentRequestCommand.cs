@@ -41,10 +41,10 @@ using System.Text;
         public List<string>? Phonenumbers { get; set; }
 
 
-        public List<string>? CourseName { get; set; }
+        public List<string>? Courses { get; set; }
 
 
-        public List<string>? GroupName { get; set; }
+        public List<string>? Groups { get; set; }
  
 
         public int Status { get; set; }
