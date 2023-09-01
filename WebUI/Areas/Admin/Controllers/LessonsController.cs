@@ -190,17 +190,17 @@ namespace WebUI.Areas.Admin.Controllers
             {
                 _httpClient.DefaultRequestHeaders.Authorization =
                 new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", accessToken);
-				List<CrudStudent> allStudents = new List<CrudStudent>();
-				var allStudentsResponse = await _httpClient.GetAsync($"{baseUrl}/Student/GetAll");
+				//List<CrudStudent> allStudents = new List<CrudStudent>();
+				//var allStudentsResponse = await _httpClient.GetAsync($"{baseUrl}/Student/GetAll");
 				UpdateLesson editedLesson = new UpdateLesson();
                 var responseMessage = await _httpClient.GetAsync($"{baseUrl}/Lesson/GetById/{id}");
                 if (responseMessage.IsSuccessStatusCode)
                 {
                     var lessonResponse = responseMessage.Content.ReadAsStringAsync().Result;
                     editedLesson = JsonConvert.DeserializeObject<UpdateLesson>(lessonResponse);
-					var studentsResponse = responseMessage.Content.ReadAsStringAsync().Result;
-					//allStudents = JsonConvert.DeserializeObject<List<GetAllStudents>>(studentsResponse);
-                    List<GetAllStudents> groupStudents = new List<GetAllStudents>();
+					//var studentsResponse = responseMessage.Content.ReadAsStringAsync().Result;
+	
+     //               List<GetAllStudents> groupStudents = new List<GetAllStudents>();
                  
 
 					return View(editedLesson);
@@ -225,8 +225,19 @@ namespace WebUI.Areas.Admin.Controllers
                 new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", accessToken);
                 string jsonData = JsonConvert.SerializeObject(lesson);
                 StringContent content = new StringContent(jsonData, Encoding.UTF8, "application/json");
-
+                List<GetAllStudents> allStudents = new List<GetAllStudents>();
+                var responseMessage = await _httpClient.GetAsync($"{baseUrl}/Student/GetAll");
+                if (responseMessage.IsSuccessStatusCode)
+                    {
+                        var studentResponse = responseMessage.Content.ReadAsStringAsync().Result;
+                        allStudents = JsonConvert.DeserializeObject<List<GetAllStudents>>(studentResponse);
+                        var groupStudents = new List<GetAllStudents>();
+                        groupStudents = allStudents.Where(x => x.Group == lesson.Group).ToList();
+                        ViewBag.AllStudents = groupStudents;
+                        
+                 }
                 HttpResponseMessage response = await _httpClient.PutAsync($"{baseUrl}/Lesson/UpdateLesson/", content);
+
                 if (response.IsSuccessStatusCode)
                 {
                     return RedirectToAction("Get", "Lessons");

@@ -1,7 +1,8 @@
-﻿
+﻿@using WebUI.Areas.Admin.Models;
+
 @{
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
-   // List<AllGroups> groups = ViewBag.Groups.Result as List<AllGroups>;
+    List<GetAllStudents> groups = ViewBag.AllStudents.Result as List<GetAllStudents>;
 
 }
 
@@ -90,21 +91,59 @@
                                         <input type="text" class="form-control" name="lesson.Notes" value="@Model.Notes">
                                     </div>
                                 </div>
+
+
+                                <div class="row">
+
+                                    <div class="col-xl-12 wow fadeInUp" data-wow-delay="1.5s">
+                                        <div class="table-responsive ">
+                                            <table class="table primary-table-bordered ">
+                                                <thead class="thead-primary">
+                                                    <tr>
+                                                        <th scope="col">Student Name</th>
+                                                        <th scope="col">Surname</th>
+                                                        <th scope="col">Father's name</th>
+                                                        <th scope="col">Username</th>
+                                                        <th scope="col">Password</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    @foreach (var student in groups)
+                                                    {
+                                                        <tr>
+
+                                                            <td> @student.Name</td>
+                                                            <td> @student.Surname</td>
+                                                            <td> @student.FathersName</td>
+                                                            <td> @student.Status</td>
+                                                         
+
+                                                        </tr>
+                                                    }
+
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+
+                                </div>
+
                             <div class="row">
-                                <div class="col-md-6 col-xl-3 col-xxl-6 mb-3">
+                                <div class="col-md-6 col-xl-6 col-xxl-6 mb-3">
                                     <label class="form-label">Start time of lesson</label>
                                     <div class="input-group clockpicker">
                                             <input type="text" class="form-control" name="lesson.StartTime" value="@Model.StartTime.ToString(" HH:mm")"><span class="input-group-text"><i class="far fa-clock"></i></span>
                                             
                                         </div>
                                 </div>
-                                    <div class="col-md-6 col-xl-3 col-xxl-6 mb-3">
+                                <div class="col-md-6 col-xl-6 col-xxl-6 mb-3">
                                         <label class="form-label">End time of lesson</label>
                                         <div class="input-group clockpicker">
                                             <input type="text" class="form-control" name="lesson.EndTime" value="@Model.EndTime.ToString(" HH:mm")"><span class="input-group-text"><i class="far fa-clock"></i></span>
                                         </div>
                                     </div>
-                                    <button type="submit" class="btn btn-primary" >Update lesson</button>
+                                <button type="submit" class="btn btn-primary" >Update lesson</button>
                             </div>
 
                                

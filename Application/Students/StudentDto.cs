@@ -22,7 +22,7 @@ namespace Application.Students
         public string? Image { get; set; }
         public string Fin { get; set; } = null!;
 
-        public double AverageGrade { get; set; }
+        public double? AverageGrade { get; set; }
 
 
         //  public int AddressId { get; set; }
@@ -33,9 +33,9 @@ namespace Application.Students
         public List<PhoneNumber> PhoneNumbers { get; set; }
         public List<Course> Courses { get; set; }
 
+     //   public List<Attendance>? Attendances { get; set; }
 
-
-        public List<Group> Groups { get; set; } = null!;
+        public string Group { get; set; } = null!;
 
 
         public Status Status { get; set; }

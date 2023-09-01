@@ -10,5 +10,7 @@
 		public string Email { get; set; }
 		public double AverageGrade { get; set; }
 		public int Status { get; set; }
+
+		public string Group { get; set; }
 	}
 }

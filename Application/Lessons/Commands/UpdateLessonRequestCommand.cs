@@ -1,5 +1,6 @@
 ﻿using Application.Common.Results;
 using MediatR;
+using SMSDomain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,7 +23,8 @@ namespace Application.Lessons.Commands
         public DateTime StartTime { get; set; }
         public DateTime EndTime { get; set; }
 
+
         //public List<Homework>? Homeworks { get; set; }
-        //public List<Attendance>? Attendances { get; set; }
+        public List<Attendance>? Attendances { get; set; }
     }
 }

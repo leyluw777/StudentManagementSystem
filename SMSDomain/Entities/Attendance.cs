@@ -15,7 +15,7 @@ namespace SMSDomain.Entities
         public string? StudentId { get; set; }
         public string? SharedNotes { get; set; }
         public string? InternalNotes { get; set; }
-        public bool Status { get; set; }
+        public bool Status { get; set; } 
         public DateTime AttendanceDate { get; set; }
 
     }

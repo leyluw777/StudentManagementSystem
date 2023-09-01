@@ -27,11 +27,23 @@ namespace Application.Students.Handlers
 
         public async Task<GetAllStudentsQueryResponse> Handle(GetAllStudentsQueryRequest request, CancellationToken cancellationToken)
         {
+
             List<StudentDto> students = new List<StudentDto>();
-            var students1 = await _appDbContext.Students.ToListAsync();
+            var students1 = await _appDbContext.Students.Include(x=>x.GroupStudents).ThenInclude(x=>x.Group).ToListAsync();
             foreach(var student in students1)
             {
-                var studentOne = _mapper.Map<StudentDto>(student);
+                var a = student.GroupStudents.FirstOrDefault(x => x.StudentId == student.Id).Group.Name;
+                var studentOne = new StudentDto() {
+                    Id = student.Id,
+                    Name = student.Name,
+                    Surname = student.Surname,
+                    FathersName = student.FathersName,
+                    Email = student.Email,
+                    Fin = student.Fin,
+                    AverageGrade = student.AverageGrade,
+                    Status = (SMSDomain.Enums.Status)student.Status,
+                    Group = student.GroupStudents.FirstOrDefault(x => x.StudentId == student.Id).Group.Name,
+                    };
                 students.Add(studentOne);
             }
 
