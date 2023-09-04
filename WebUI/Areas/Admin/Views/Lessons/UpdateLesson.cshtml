@@ -126,18 +126,29 @@
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                    @foreach (var student in groups)
+
+                                                 @*   @foreach (var student in groups)
                                                     {
                                                         <tr>
 
                                                             <td>@student.Surname @student.Name @student.FathersName</td>
                                                        
-                                                            <td> attendance</td>
+                                                            <td> attendance </td>
+
+
+                                                        </tr>
+                                                    }*@
+                                                    @foreach(var attendance in Model.Attendances)
+                                                    {
+                                                        <tr>
+
+                                                            <td>@attendance.Student.Surname @attendance.Student.Name @attendance.Student.FathersName</td>
+
+                                                            <td> @attendance.Status </td>
 
 
                                                         </tr>
                                                     }
-
 
                                                 </tbody>
                                             </table>

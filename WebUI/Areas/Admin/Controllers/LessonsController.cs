@@ -194,15 +194,15 @@ namespace WebUI.Areas.Admin.Controllers
 				//var allStudentsResponse = await _httpClient.GetAsync($"{baseUrl}/Student/GetAll");
 				UpdateLesson editedLesson = new UpdateLesson();
                 var responseMessage = await _httpClient.GetAsync($"{baseUrl}/Lesson/GetById/{id}");
-				var studentsResponseMessage = await _httpClient.GetAsync($"{baseUrl}/Student/GetAll");
+				//var studentsResponseMessage = await _httpClient.GetAsync($"{baseUrl}/Student/GetAll");
 				if (responseMessage.IsSuccessStatusCode)
                 {
                     var lessonResponse = responseMessage.Content.ReadAsStringAsync().Result;
                     editedLesson = JsonConvert.DeserializeObject<UpdateLesson>(lessonResponse);
-					var studentResponse = studentsResponseMessage.Content.ReadAsStringAsync().Result;
-					groupStudents = JsonConvert.DeserializeObject<List<GetAllStudents>>(studentResponse);
-                    groupStudents = groupStudents.Where(x => x.Group == editedLesson.Group).ToList();
-                    ViewBag.Students = groupStudents;
+				//	var studentResponse = studentsResponseMessage.Content.ReadAsStringAsync().Result;
+				//	groupStudents = JsonConvert.DeserializeObject<List<GetAllStudents>>(studentResponse);
+                  //  groupStudents = groupStudents.Where(x => x.Group == editedLesson.Group).ToList();
+                 //   ViewBag.Students = groupStudents;
 					return View(editedLesson);
                    
 

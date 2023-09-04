@@ -2,6 +2,8 @@
 using Application.Lessons.Queries;
 using AutoMapper;
 using MediatR;
+using Microsoft.EntityFrameworkCore;
+using SMSDomain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,7 +25,16 @@ namespace Application.Lessons.Handlers
         public async Task<GetLessonByIdResponseCommand> Handle(GetLessonByIdRequestCommand request, CancellationToken cancellationToken)
         {
 
-            var lessonById = _appDbContext.Lessons.FirstOrDefault(x => x.Id == request.Id);
+            var lessonById = _appDbContext.Lessons.Include(x => x.Attendances).FirstOrDefault(x => x.Id == request.Id);
+
+            List<Attendance> attendances = new List<Attendance>();
+            List<Attendance> dbAttend = await _appDbContext.Attendances.Where(x => x.LessonId == request.Id).ToListAsync();
+            foreach(var attend in dbAttend)
+            {
+                attendances.Add(attend);
+            }
+
+
             return new GetLessonByIdResponseCommand()
             {
                 Id = lessonById.Id,
@@ -34,8 +45,12 @@ namespace Application.Lessons.Handlers
                 Notes = lessonById.Notes,
                 LessonDate = lessonById.LessonDate,
                 StartTime = lessonById.StartTime,
-                EndTime = lessonById.EndTime
+                EndTime = lessonById.EndTime,
+                Attendances = attendances,
             };
+
+
+
             throw new NotImplementedException();
         }
     }

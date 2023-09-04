@@ -3,6 +3,8 @@ using Application.Lessons.Commands;
 using AutoMapper;
 using MediatR;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using SMSDomain.Entities;
 using SMSDomain.Identity;
 using System;
 using System.Collections.Generic;
@@ -30,7 +32,9 @@ namespace Application.Lessons.Handlers
 
 		public async Task<CreateLessonResponseCommand> Handle(CreateLessonRequestCommand request, CancellationToken cancellationToken)
 		{
-		SMSDomain.Entities.Lesson newLesson = new SMSDomain.Entities.Lesson(){
+            List<Attendance> allLessonAttendances = new List<Attendance>();
+
+            SMSDomain.Entities.Lesson newLesson = new SMSDomain.Entities.Lesson(){
 				GroupId = request.Group != null
 				  ? _appDbContext.Groups.FirstOrDefault(x => x.Name == request.Group)?.Id
 				  : null,
@@ -44,10 +48,39 @@ namespace Application.Lessons.Handlers
 				LessonDate = request.LessonDate,
 				StartTime = request.StartTime,
 				EndTime = request.EndTime,	
+				
+			
 			};
 			await _appDbContext.Lessons.AddAsync(newLesson);
 			await _appDbContext.SaveChangesAsync(cancellationToken);
-			return new CreateLessonResponseCommand()
+
+			List<GroupStudent> groupStudent =await  _appDbContext.GroupStudent.Include(x => x.Student).Where(x => x.GroupId == newLesson.GroupId).ToListAsync();
+
+			foreach(var student in groupStudent)
+			{
+				
+                Attendance oneAttendance = new Attendance() { 
+					LessonId = newLesson.Id,
+					AttendanceDate = newLesson.StartTime,
+                    Status = false,
+					Student = student.Student,
+					StudentId = student.StudentId,
+            };
+
+                await _appDbContext.Attendances.AddAsync(oneAttendance);
+               
+
+                allLessonAttendances.Add(oneAttendance);
+            }
+
+
+            await _appDbContext.SaveChangesAsync(cancellationToken);
+
+
+
+
+
+            return new CreateLessonResponseCommand()
 			{
 				Id = newLesson.Id,
 				Group = newLesson.GroupId != null
@@ -64,6 +97,7 @@ namespace Application.Lessons.Handlers
                 LessonDate = newLesson.LessonDate,
                 StartTime = newLesson.StartTime,
                 EndTime = newLesson.EndTime,
+				Attendances = allLessonAttendances
             };
 		}
 	}

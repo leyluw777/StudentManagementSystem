@@ -24,6 +24,5 @@ namespace Application.Lessons.Commands
 		public DateTime EndTime { get; set; }
 
 		//public List<Homework>? Homeworks { get; set; }
-		//public List<Attendance>? Attendances { get; set; }
 	}
 }

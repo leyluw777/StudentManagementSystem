@@ -37,6 +37,8 @@ namespace Application.Students
 
         public string Group { get; set; } = null!;
 
+        public List<Attendance> Attendances { get; set; }
+
 
         public Status Status { get; set; }
 

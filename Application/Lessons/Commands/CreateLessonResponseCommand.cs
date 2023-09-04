@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SMSDomain.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,5 +20,7 @@ namespace Application.Lessons.Commands
         public DateTime LessonDate { get; set; }
         public DateTime StartTime { get; set; }
         public DateTime EndTime { get; set; }
+        public List<Attendance>? Attendances { get; set; }
+
     }
 }

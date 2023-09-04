@@ -53,6 +53,7 @@ namespace Application.Lessons.Handlers
                             request.StartTime.Hour, request.StartTime.Minute, 0);
                 updatedLesson.EndTime = new DateTime(updatedLesson.EndTime.Year, updatedLesson.EndTime.Month, updatedLesson.EndTime.Day,
                             request.EndTime.Hour, request.EndTime.Minute, 0);
+                updatedLesson.Attendances = request.Attendances;
 
                 await _dbContext.SaveChangesAsync();
 
