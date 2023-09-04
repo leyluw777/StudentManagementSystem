@@ -185,8 +185,8 @@ namespace WebUI.Areas.Admin.Controllers
         {
             var accessToken = HttpContext.Session.GetString("JWToken");
 
-
-            if (accessToken is not null)
+			List<GetAllStudents> groupStudents = new List<GetAllStudents>();
+			if (accessToken is not null)
             {
                 _httpClient.DefaultRequestHeaders.Authorization =
                 new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", accessToken);
@@ -194,15 +194,15 @@ namespace WebUI.Areas.Admin.Controllers
 				//var allStudentsResponse = await _httpClient.GetAsync($"{baseUrl}/Student/GetAll");
 				UpdateLesson editedLesson = new UpdateLesson();
                 var responseMessage = await _httpClient.GetAsync($"{baseUrl}/Lesson/GetById/{id}");
-                if (responseMessage.IsSuccessStatusCode)
+				var studentsResponseMessage = await _httpClient.GetAsync($"{baseUrl}/Student/GetAll");
+				if (responseMessage.IsSuccessStatusCode)
                 {
                     var lessonResponse = responseMessage.Content.ReadAsStringAsync().Result;
                     editedLesson = JsonConvert.DeserializeObject<UpdateLesson>(lessonResponse);
-					//var studentsResponse = responseMessage.Content.ReadAsStringAsync().Result;
-	
-     //               List<GetAllStudents> groupStudents = new List<GetAllStudents>();
-                 
-
+					var studentResponse = studentsResponseMessage.Content.ReadAsStringAsync().Result;
+					groupStudents = JsonConvert.DeserializeObject<List<GetAllStudents>>(studentResponse);
+                    groupStudents = groupStudents.Where(x => x.Group == editedLesson.Group).ToList();
+                    ViewBag.Students = groupStudents;
 					return View(editedLesson);
                    
 
