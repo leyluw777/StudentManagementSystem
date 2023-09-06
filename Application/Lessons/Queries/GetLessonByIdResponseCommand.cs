@@ -11,7 +11,7 @@ namespace Application.Lessons.Queries
     {
         public int Id { get; set; }
         public int? Module { get; set; }
-
+        
         public string? Name { get; set; } = null!;
 
         public string? Group { get; set; }

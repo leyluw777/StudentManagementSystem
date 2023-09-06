@@ -2,7 +2,7 @@
 
 @{
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
-    List<GetAllStudents> groups = ViewBag.Students as List<GetAllStudents>;
+    //List<GetAllStudents> groups = ViewBag.Students as List<GetAllStudents>;
 
 }
 
@@ -69,14 +69,14 @@
                         <div class="card-header">
                             <h4 class="card-title">Edit lesson</h4>
                         </div>
-            <form method="post" asp-action="UpdateLesson" asp-controller="Lessons">
+            <form method="post" asp-action="UpdateLesson" asp-controller="Lessons" id="updateLesson">
                         <div class="card-body">
                                 <div class="row">
 
                                     <div class="mb-3 col-md-6">
                                         <label class="form-label">Lesson Name</label>
-                                        <input type="hidden" name="lesson.Id" value="@Model.Id">
-                                        <input type="text" class="form-control" name="lesson.Name" value="@Model.Name">
+                                        <input type="hidden" name="lesson.Id" value="@Model.Id" id="lessonId">
+                                        <input type="text" class="form-control" name="lesson.Name" value="@Model.Name" id="lessonName">
                                     </div>
                                     <div class="mb-3 col-md-6">
                                         <label class="form-label">Group Name</label>
@@ -84,11 +84,11 @@
                                     </div>
                                     <div class="mb-3 col-md-6">
                                         <label class="form-label">Topics covered</label>
-                                        <input type="text" class="form-control" name="lesson.TopicsCovered" value="@Model.TopicsCovered">
+                                        <input type="text" class="form-control" name="lesson.TopicsCovered" id="lessonTopicsCovered" value="@Model.TopicsCovered">
                                     </div>
                                     <div class="mb-3 col-md-6">
                                         <label>Notes</label>
-                                        <input type="text" class="form-control" name="lesson.Notes" value="@Model.Notes">
+                                        <input type="text" class="form-control" name="lesson.Notes" value="@Model.Notes" id="lessonNotes">
                                     </div>
                                 </div>
 
@@ -99,14 +99,14 @@
                                 <div class="col-md-6 col-xl-6 col-xxl-6 mb-3">
                                     <label class="form-label">Start time of lesson</label>
                                     <div class="input-group clockpicker">
-                                            <input type="text" class="form-control" name="lesson.StartTime" value="@Model.StartTime.ToString(" HH:mm")"><span class="input-group-text"><i class="far fa-clock"></i></span>
+                                            <input type="text" class="form-control" name="lesson.StartTime" id="lessonStartTime" value="@Model.StartTime.ToString(" HH:mm")"><span class="input-group-text"><i class="far fa-clock"></i></span>
                                             
                                         </div>
                                 </div>
                                 <div class="col-md-6 col-xl-6 col-xxl-6 mb-3">
                                         <label class="form-label">End time of lesson</label>
                                         <div class="input-group clockpicker">
-                                            <input type="text" class="form-control" name="lesson.EndTime" value="@Model.EndTime.ToString(" HH:mm")"><span class="input-group-text"><i class="far fa-clock"></i></span>
+                                            <input type="text" class="form-control" name="lesson.EndTime" id="lessonEndTime" value="@Model.EndTime.ToString(" HH:mm")"><span class="input-group-text"><i class="far fa-clock"></i></span>
                                         </div>
                                     </div>
                               
@@ -122,7 +122,7 @@
                                                     <tr>
                                                         <th scope="col">Student Name</th>
                                                         
-                                                        <th scope="col">Attendance</th>
+                                                        <th scope="col">Absence</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -138,13 +138,31 @@
 
                                                         </tr>
                                                     }*@
+
                                                     @foreach(var attendance in Model.Attendances)
                                                     {
                                                         <tr>
 
                                                             <td>@attendance.Student.Surname @attendance.Student.Name @attendance.Student.FathersName</td>
 
-                                                            <td> @attendance.Status </td>
+
+                                                            <td>
+                                                                <div class="row" >
+                                                                <div class="col-xl-2 col-xxl-2 col-2">
+                                                                    <div class="form-check custom-checkbox mb-3 checkbox-info">
+                                                                            <input type="radio" class="form-check-input" id="customRadioBox3_@attendance.StudentId" name="optradioCustom_@attendance.StudentId">
+                                                                            <label class="form-check-label" for="customRadioBox3_@attendance.StudentId" name="@attendance.Status" value="true">Yes</label>
+                                                                    </div>
+                                                                </div>
+                                                                    <div class="col-xl-2 col-xxl-2 col-2">
+                                                                    <div class="form-check custom-checkbox mb-3 checkbox-danger">
+                                                                            <input type="radio" class="form-check-input" id="customRadioBox6_@attendance.StudentId" name="optradioCustom_@attendance.StudentId">
+                                                                            <label class="form-check-label" for="customRadioBox6_@attendance.StudentId" name="@attendance.Status" value="false">No</label>
+                                                                    </div>
+                                                                </div>
+
+                                                                </div>
+                                                              </td>
 
 
                                                         </tr>
@@ -155,7 +173,7 @@
                                         </div>
                                     </div>
 
-                                    <button type="submit" class="btn btn-primary">Update lesson</button>
+                                    <button type="submit" class="btn btn-primary" id="submitBtn">Update lesson</button>
                                 </div>
                         </div>
             </form>
@@ -211,6 +229,86 @@
 <script src="~/js/dlabnav-init.js"></script>
 <script src="~/js/demo.js"></script>
 <script src="~/js/styleSwitcher.js"></script>
+
+
+<script>
+        let submitform = document.getElementById('updateLesson');
+        let lessonId = document.getElementById('lessonId');
+        let lessonName = document.getElementById('lessonName');
+        let lessonTopicsCovered = document.getElementById('lessonTopicsCovered');
+        let lessonNotes = document.getElementById('lessonNotes');
+        let lessonStartTime = document.getElementById('lessonStartTime');
+        let lessonEndTime = document.getElementById('lessonEndTime');
+
+
+        submitform.addEventListener('submit', (e) => {
+
+            e.preventDefault(); // Prevent the default form submission
+
+            var radiosArray = document.querySelectorAll('input[type="radio"][class="form-check-input"]');
+            var checkedRadios = Array.from(radiosArray).filter(radio => radio.checked);
+            console.log(checkedRadios);
+
+
+            var studentAttends = [];
+            var attendancesData = @Html.Raw(Json.Serialize(Model.Attendances));
+            // Now you can work with the checked radio buttons
+            checkedRadios.map(checkedRadio => {
+                var label = checkedRadio.nextElementSibling.textContent.trim();
+                checkedRadio.value = label == 'Yes' ? false : true;
+                console.log(checkedRadio.value);
+                var studentId = checkedRadio.id.split('_')[1];
+                var student = attendancesData.find(x => x.StudentId == studentId); 
+                var studentData = {
+                    StudentId: studentId,
+                    Student: student ? student.Student : null,
+                    Status : checkedRadio.value,
+                    LessonId: `${@Model.Id}`,
+                    AttendanceDate: '@Model.StartTime',
+                    
+                };
+
+                //console.log(studentData);
+                //console.log(parseInt(/-?\d+/.exec(@Model.StartTime)[0]));
+
+                studentAttends.push(studentData);
+                
+            });
+
+
+            var dataToSend = {
+                Id : lessonId.value,
+                Name: lessonName.value,
+                Group: '@Model.Group',
+                Attendances: studentAttends,
+                LessonDate: lessonStartTime.value,
+                StartTime: lessonStartTime.value,
+                EndTime: lessonEndTime.value,
+                TopicsCovered: lessonTopicsCovered.value,
+                Notes: lessonNotes.value
+            }
+
+            console.log(dataToSend);
+            fetch('/Admin/Lessons/UpdateLesson', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(dataToSend)
+            })
+                .then(response => response.json())
+                .then(data => {
+
+                    window.location.href = `/Admin/Lessons/Get`;
+                  
+                })
+                .catch(error => {
+                    console.error('Error sending data:', error);
+                    // Handle errors here
+                });
+        })
+
+</script>
 </body>
 
 <!-- Mirrored from akademi.dexignlab.com/xhtml/form-pickers.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 20 Jul 2023 19:30:07 GMT -->

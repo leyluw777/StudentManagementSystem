@@ -61,10 +61,11 @@ namespace Application.Lessons.Handlers
 				
                 Attendance oneAttendance = new Attendance() { 
 					LessonId = newLesson.Id,
+					Lesson = newLesson,
 					AttendanceDate = newLesson.StartTime,
                     Status = false,
-					Student = student.Student,
 					StudentId = student.StudentId,
+					Student = student.Student,
             };
 
                 await _appDbContext.Attendances.AddAsync(oneAttendance);

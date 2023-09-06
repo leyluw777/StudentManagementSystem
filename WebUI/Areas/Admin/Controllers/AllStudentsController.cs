@@ -26,7 +26,6 @@ namespace WebUI.Areas.Admin.Controllers
 				{
 					var studentResponse = responseMessage.Content.ReadAsStringAsync().Result;
 					Students = JsonConvert.DeserializeObject<List<GetAllStudents>>(studentResponse);
-
 				}
 				return View(Students);
 			}

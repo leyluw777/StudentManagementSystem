@@ -2,10 +2,10 @@
 {
     public class Attendance
     {
-        public CreateLesson Lesson { get; set; }
+        public Lesson? Lesson { get; set; }
         public int? LessonId { get; set; }
 
-        public CreateStudent Student { get; set; }
+        public Student? Student { get; set; }
         public string? StudentId { get; set; }
         public string? SharedNotes { get; set; }
         public string? InternalNotes { get; set; }

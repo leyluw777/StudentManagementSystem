@@ -25,16 +25,14 @@ namespace Application.Lessons.Handlers
         public async Task<GetLessonByIdResponseCommand> Handle(GetLessonByIdRequestCommand request, CancellationToken cancellationToken)
         {
 
-            var lessonById = _appDbContext.Lessons.Include(x => x.Attendances).FirstOrDefault(x => x.Id == request.Id);
-
+            var lessonById = await _appDbContext.Lessons.Include(x => x.Attendances).AsNoTracking().FirstOrDefaultAsync(x => x.Id == request.Id);
             List<Attendance> attendances = new List<Attendance>();
-            List<Attendance> dbAttend = await _appDbContext.Attendances.Where(x => x.LessonId == request.Id).ToListAsync();
+        
+            List<Attendance> dbAttend = await _appDbContext.Attendances.Include(x => x.Student).AsNoTracking().Include(x => x.Lesson).AsNoTracking().Where(x => x.LessonId == request.Id).AsNoTracking().ToListAsync();
             foreach(var attend in dbAttend)
             {
                 attendances.Add(attend);
             }
-
-
             return new GetLessonByIdResponseCommand()
             {
                 Id = lessonById.Id,
@@ -46,12 +44,9 @@ namespace Application.Lessons.Handlers
                 LessonDate = lessonById.LessonDate,
                 StartTime = lessonById.StartTime,
                 EndTime = lessonById.EndTime,
-                Attendances = attendances,
+                Attendances = dbAttend,
             };
-
-
-
-            throw new NotImplementedException();
+           
         }
     }
 }

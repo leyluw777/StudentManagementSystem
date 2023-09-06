@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
+using System.Net.Http;
 using System.Text;
 using WebUI.Areas.Admin.Models;
 
@@ -193,18 +194,21 @@ namespace WebUI.Areas.Admin.Controllers
 				//List<CrudStudent> allStudents = new List<CrudStudent>();
 				//var allStudentsResponse = await _httpClient.GetAsync($"{baseUrl}/Student/GetAll");
 				UpdateLesson editedLesson = new UpdateLesson();
+                //StringContent content = new StringContent(jsonData, Encoding.UTF8, "application/json");
+                
                 var responseMessage = await _httpClient.GetAsync($"{baseUrl}/Lesson/GetById/{id}");
 				//var studentsResponseMessage = await _httpClient.GetAsync($"{baseUrl}/Student/GetAll");
 				if (responseMessage.IsSuccessStatusCode)
                 {
                     var lessonResponse = responseMessage.Content.ReadAsStringAsync().Result;
                     editedLesson = JsonConvert.DeserializeObject<UpdateLesson>(lessonResponse);
-				//	var studentResponse = studentsResponseMessage.Content.ReadAsStringAsync().Result;
-				//	groupStudents = JsonConvert.DeserializeObject<List<GetAllStudents>>(studentResponse);
-                  //  groupStudents = groupStudents.Where(x => x.Group == editedLesson.Group).ToList();
-                 //   ViewBag.Students = groupStudents;
-					return View(editedLesson);
+				   //var studentResponse = studentsResponseMessage.Content.ReadAsStringAsync().Result;
                    
+				   //groupStudents = JsonConvert.DeserializeObject<List<GetAllStudents>>(studentResponse);
+                   //groupStudents = groupStudents.Where(x => x.Group == editedLesson.Group).ToList();
+                   //ViewBag.Students = groupStudents;
+					return View(editedLesson);
+            
 
                 }
 
@@ -215,32 +219,35 @@ namespace WebUI.Areas.Admin.Controllers
 
 
         [HttpPost]
-        public async Task<IActionResult> UpdateLesson(UpdateLesson lesson)
+        public async Task<IActionResult> UpdateLesson([FromBody] object Data)
         {
 
             var accessToken = HttpContext.Session.GetString("JWToken");
             if (accessToken is not null)
             {
+                UpdateLesson lesson = JsonConvert.DeserializeObject<UpdateLesson>(Data.ToString());
+
                 _httpClient.DefaultRequestHeaders.Authorization =
                 new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", accessToken);
                 string jsonData = JsonConvert.SerializeObject(lesson);
                 StringContent content = new StringContent(jsonData, Encoding.UTF8, "application/json");
-                List<GetAllStudents> allStudents = new List<GetAllStudents>();
-                var responseMessage = await _httpClient.GetAsync($"{baseUrl}/Student/GetAll");
-                if (responseMessage.IsSuccessStatusCode)
-                    {
-                        var studentResponse = responseMessage.Content.ReadAsStringAsync().Result;
-                        allStudents = JsonConvert.DeserializeObject<List<GetAllStudents>>(studentResponse);
-                        var groupStudents = new List<GetAllStudents>();
-                        groupStudents = allStudents.Where(x => x.Group == lesson.Group).ToList();
-                        ViewBag.AllStudents = groupStudents;
+
+               // List<GetAllStudents> allStudents = new List<GetAllStudents>();
+                //var responseMessage = await _httpClient.GetAsync($"{baseUrl}/Student/GetAll");
+                //if (responseMessage.IsSuccessStatusCode)
+                //    {
+                //        var studentResponse = responseMessage.Content.ReadAsStringAsync().Result;
+                //        allStudents = JsonConvert.DeserializeObject<List<GetAllStudents>>(studentResponse);
+                //        var groupStudents = new List<GetAllStudents>();
+                //        groupStudents = allStudents.Where(x => x.Group == lesson.Group).ToList();
+                //        ViewBag.AllStudents = groupStudents;
                         
-                 }
+                // }
                 HttpResponseMessage response = await _httpClient.PutAsync($"{baseUrl}/Lesson/UpdateLesson/", content);
 
                 if (response.IsSuccessStatusCode)
                 {
-                    return RedirectToAction("Get", "Lessons");
+                    return Json("success");
 
                 }
 

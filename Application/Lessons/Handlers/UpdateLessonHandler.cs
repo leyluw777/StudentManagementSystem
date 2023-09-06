@@ -4,7 +4,9 @@ using Application.Lessons.Commands;
 using Application.Students.Commands;
 using AutoMapper;
 using MediatR;
+using Microsoft.EntityFrameworkCore;
 using SMSDomain.Entities;
+using SMSDomain.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,18 +28,12 @@ namespace Application.Lessons.Handlers
 
         public async Task<IDataResult<UpdateLessonRequestCommand>> Handle(UpdateLessonRequestCommand request, CancellationToken cancellationToken)
         {
-            var updatedLesson = _dbContext.Lessons.FirstOrDefault(x => x.Id == request.Id);
+            var updatedLesson = _dbContext.Lessons.Include(x => x.Attendances).FirstOrDefault(x => x.Id == request.Id);
             //var groupId = _dbContext.Groups.FirstOrDefault(x => x.Name == request.Group)?.Id;
             //var groupStudents = _dbContext.GroupStudent.Where(x => x.GroupId == groupId).ToList();
-            List<Attendance> allStudents = new List<Attendance>();
             
-            
-            
-            var lesson = _dbContext.Attendances.FirstOrDefault(x => x.LessonId == request.Id);
-
-            if (lesson is null) _dbContext.Attendances.AddRange(request.Attendances);
-
-            else  _dbContext.Attendances.UpdateRange(request.Attendances);
+            var lessons = await  _dbContext.Attendances.Include(x => x.Student).AsNoTracking().Include(x => x.Lesson).AsNoTracking().Where(x => x.LessonId == request.Id).ToListAsync();
+            //request.Attendances = await _dbContext.Attendances.Include(x => x.Student).AsNoTracking().Include(x => x.Lesson).AsNoTracking().Where(x => x.LessonId == request.Id).ToListAsync();
 
 
             if (updatedLesson != null)
@@ -47,15 +43,35 @@ namespace Application.Lessons.Handlers
                 updatedLesson.Name = request.Name;
                 updatedLesson.ModuleId = request.Module;
                 updatedLesson.GroupId = _dbContext.Groups.FirstOrDefault(x => x.Name == request.Group).Id;
-                updatedLesson.Attendances = request.Attendances;
+                
 
                 updatedLesson.StartTime = new DateTime(updatedLesson.StartTime.Year, updatedLesson.StartTime.Month, updatedLesson.StartTime.Day,
                             request.StartTime.Hour, request.StartTime.Minute, 0);
                 updatedLesson.EndTime = new DateTime(updatedLesson.EndTime.Year, updatedLesson.EndTime.Month, updatedLesson.EndTime.Day,
                             request.EndTime.Hour, request.EndTime.Minute, 0);
-                updatedLesson.Attendances = request.Attendances;
 
-                await _dbContext.SaveChangesAsync();
+
+
+                //List<Attendance> updatedAttend = new List<Attendance>();
+
+                //foreach (var attend in lessons)
+                //{
+                //    attend.Status = _dbContext.Attendances
+                //    Attendance newAttend = new Attendance()
+                //    {
+                //        Lesson = updatedLesson,
+                //        LessonId = updatedLesson.Id,
+                //        Student = attend.Student,
+                //        StudentId = attend.StudentId,
+                //        Status = attend.Status,
+                //        AttendanceDate = updatedLesson.StartTime
+                //    };
+                //    updatedAttend.Add(newAttend);
+                //}
+
+             
+                //_dbContext.Attendances.UpdateRange(updatedAttend);
+                //await _dbContext.SaveChangesAsync();
 
                 return new SuccessDataResult<UpdateLessonRequestCommand>(request, "Lesson update successfully");
             }
