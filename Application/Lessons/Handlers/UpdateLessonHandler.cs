@@ -32,10 +32,19 @@ namespace Application.Lessons.Handlers
             //var groupId = _dbContext.Groups.FirstOrDefault(x => x.Name == request.Group)?.Id;
             //var groupStudents = _dbContext.GroupStudent.Where(x => x.GroupId == groupId).ToList();
             
-            var lessons = await  _dbContext.Attendances.Include(x => x.Student).AsNoTracking().Include(x => x.Lesson).AsNoTracking().Where(x => x.LessonId == request.Id).ToListAsync();
+            var lessons = await  _dbContext.Attendances.Include(x => x.Student).Include(x => x.Lesson).Where(x => x.LessonId == request.Id).AsNoTracking().ToListAsync();
             //request.Attendances = await _dbContext.Attendances.Include(x => x.Student).AsNoTracking().Include(x => x.Lesson).AsNoTracking().Where(x => x.LessonId == request.Id).ToListAsync();
+            
+            foreach ( var lesson in lessons )
+            {
 
-
+                var reqAttend = request.Attendances.FirstOrDefault(x => x.StudentId == lesson.StudentId && x.LessonId == lesson.LessonId);
+                if (reqAttend != null)
+                {
+                    lesson.Status = reqAttend.Status;
+                }
+            }
+            
             if (updatedLesson != null)
             {
 
@@ -43,8 +52,9 @@ namespace Application.Lessons.Handlers
                 updatedLesson.Name = request.Name;
                 updatedLesson.ModuleId = request.Module;
                 updatedLesson.GroupId = _dbContext.Groups.FirstOrDefault(x => x.Name == request.Group).Id;
-                
-
+                updatedLesson.TopicsCovered = request.TopicsCovered;
+                updatedLesson.Notes = request.Notes;
+                updatedLesson.LessonDate = request.LessonDate;
                 updatedLesson.StartTime = new DateTime(updatedLesson.StartTime.Year, updatedLesson.StartTime.Month, updatedLesson.StartTime.Day,
                             request.StartTime.Hour, request.StartTime.Minute, 0);
                 updatedLesson.EndTime = new DateTime(updatedLesson.EndTime.Year, updatedLesson.EndTime.Month, updatedLesson.EndTime.Day,
@@ -69,8 +79,8 @@ namespace Application.Lessons.Handlers
                 //    updatedAttend.Add(newAttend);
                 //}
 
-             
-                //_dbContext.Attendances.UpdateRange(updatedAttend);
+
+                _dbContext.Attendances.UpdateRange(lessons);
                 //await _dbContext.SaveChangesAsync();
 
                 return new SuccessDataResult<UpdateLessonRequestCommand>(request, "Lesson update successfully");

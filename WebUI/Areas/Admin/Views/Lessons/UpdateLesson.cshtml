@@ -1,4 +1,5 @@
-﻿@using WebUI.Areas.Admin.Models;
+﻿@using System.Text.Json;
+@using WebUI.Areas.Admin.Models;
 
 @{
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
@@ -251,25 +252,23 @@
 
 
             var studentAttends = [];
-            var attendancesData = @Html.Raw(Json.Serialize(Model.Attendances));
+            var attendancesData = JSON.parse('@Html.Raw(JsonSerializer.Serialize(Model))');
+            //console.log(attendancesData.Attendances);
             // Now you can work with the checked radio buttons
             checkedRadios.map(checkedRadio => {
                 var label = checkedRadio.nextElementSibling.textContent.trim();
                 checkedRadio.value = label == 'Yes' ? false : true;
                 console.log(checkedRadio.value);
                 var studentId = checkedRadio.id.split('_')[1];
-                var student = attendancesData.find(x => x.StudentId == studentId); 
+                var student = attendancesData.Attendances.find(x => x.StudentId == studentId); 
                 var studentData = {
                     StudentId: studentId,
                     Student: student ? student.Student : null,
                     Status : checkedRadio.value,
                     LessonId: `${@Model.Id}`,
                     AttendanceDate: '@Model.StartTime',
-                    
+                    Lesson: attendancesData,
                 };
-
-                //console.log(studentData);
-                //console.log(parseInt(/-?\d+/.exec(@Model.StartTime)[0]));
 
                 studentAttends.push(studentData);
                 
@@ -295,17 +294,8 @@
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify(dataToSend)
-            })
-                .then(response => response.json())
-                .then(data => {
-
-                    window.location.href = `/Admin/Lessons/Get`;
-                  
-                })
-                .catch(error => {
-                    console.error('Error sending data:', error);
-                    // Handle errors here
-                });
+            });
+                
         })
 
 </script>

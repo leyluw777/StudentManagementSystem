@@ -58,3 +58,15 @@ C:\Users\leylani\Desktop\FinalProject\StudentManagementSystem\SMSDomain\obj\Debu
 C:\Users\leylani\Desktop\FinalProject\StudentManagementSystem\SMSDomain\obj\Debug\net7.0\refint\SMSDomain.dll
 C:\Users\leylani\Desktop\FinalProject\StudentManagementSystem\SMSDomain\obj\Debug\net7.0\SMSDomain.pdb
 C:\Users\leylani\Desktop\FinalProject\StudentManagementSystem\SMSDomain\obj\Debug\net7.0\ref\SMSDomain.dll
+C:\Users\leylani\Desktop\FinalProject\master\SMSDomain\bin\Debug\net7.0\SMSDomain.deps.json
+C:\Users\leylani\Desktop\FinalProject\master\SMSDomain\bin\Debug\net7.0\SMSDomain.dll
+C:\Users\leylani\Desktop\FinalProject\master\SMSDomain\bin\Debug\net7.0\SMSDomain.pdb
+C:\Users\leylani\Desktop\FinalProject\master\SMSDomain\obj\Debug\net7.0\SMSDomain.csproj.AssemblyReference.cache
+C:\Users\leylani\Desktop\FinalProject\master\SMSDomain\obj\Debug\net7.0\SMSDomain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\leylani\Desktop\FinalProject\master\SMSDomain\obj\Debug\net7.0\SMSDomain.AssemblyInfoInputs.cache
+C:\Users\leylani\Desktop\FinalProject\master\SMSDomain\obj\Debug\net7.0\SMSDomain.AssemblyInfo.cs
+C:\Users\leylani\Desktop\FinalProject\master\SMSDomain\obj\Debug\net7.0\SMSDomain.csproj.CoreCompileInputs.cache
+C:\Users\leylani\Desktop\FinalProject\master\SMSDomain\obj\Debug\net7.0\SMSDomain.dll
+C:\Users\leylani\Desktop\FinalProject\master\SMSDomain\obj\Debug\net7.0\refint\SMSDomain.dll
+C:\Users\leylani\Desktop\FinalProject\master\SMSDomain\obj\Debug\net7.0\SMSDomain.pdb
+C:\Users\leylani\Desktop\FinalProject\master\SMSDomain\obj\Debug\net7.0\ref\SMSDomain.dll

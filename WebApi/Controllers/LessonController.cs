@@ -12,7 +12,7 @@ using Application.Lessons.Queries;
 namespace WebApi.Controllers
 {
 	[Route("api/[controller]/[action]")]
-//	[Authorize(Roles = "Admin", AuthenticationSchemes = "Bearer")]
+	[Authorize(AuthenticationSchemes = "Bearer")]
 	[ApiController]
 	public class LessonController : Controller
 	{
@@ -25,9 +25,26 @@ namespace WebApi.Controllers
 
 
 		[HttpGet]
+   //     [Authorize(Roles = "Student", AuthenticationSchemes = "Bearer")]
 		public async Task<IActionResult> GetAll()
 		{
-            GetAllLessonsRequestQuery getAllLessonsQuery = new GetAllLessonsRequestQuery();
+
+            var id = User.Claims.ElementAt(0).Value;
+            var role = User.Claims.ElementAt(2).Value;
+            if (role == "Student")
+            {
+                GetLessonsByGroupRequest groupLessonsRequest = new GetLessonsByGroupRequest(id);
+                GetLessonsByGroupResponse groupLessonsResponse = await _mediator.Send(groupLessonsRequest);
+                return Ok(groupLessonsResponse.Lessons);
+
+
+			}
+			if (role == "Teacher")
+			{
+
+			}
+
+			GetAllLessonsRequestQuery getAllLessonsQuery = new GetAllLessonsRequestQuery();
             GetAllLessonsResponseQuery allLessons = await _mediator.Send(getAllLessonsQuery);
             return Ok(allLessons.Lessons);
         }
