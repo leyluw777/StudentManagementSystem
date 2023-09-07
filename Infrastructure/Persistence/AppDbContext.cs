@@ -44,7 +44,8 @@ namespace Infrastructure.Persistence
 
         public DbSet<CourseStudent> CourseStudent { get; set ; }
         public DbSet<GroupStudent> GroupStudent { get; set; }
-		public DbSet<FirstLogin> FirstLogins { get; set; }
+        public DbSet<GroupTeacher> GroupTeacher { get; set; }
+        public DbSet<FirstLogin> FirstLogins { get; set; }
         public DbSet<CourseTeacher> CourseTeacher { get; set; }
 
 

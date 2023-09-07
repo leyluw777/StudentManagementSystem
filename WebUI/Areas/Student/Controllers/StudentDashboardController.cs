@@ -15,7 +15,30 @@ namespace WebUI.Areas.Student.Controllers
 			_httpClient = httpClient;
 		}
 
-		public async Task<IActionResult> Index()
+
+        [HttpGet]
+        public async Task<IActionResult> Index()
+        {
+
+            var accessToken = HttpContext.Session.GetString("JWToken");
+            if (accessToken is not null)
+            {
+                _httpClient.DefaultRequestHeaders.Authorization =
+                new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", accessToken);
+                var responseMessage = await _httpClient.GetAsync($"{baseUrl}/Lesson/GetAll");
+                if (responseMessage.IsSuccessStatusCode)
+                {
+                    return View();
+                }
+            }
+            return RedirectToAction("Index", "Dashboard");
+        }
+
+
+
+        //kananAB5dgw76d
+        //bqdec0DU3!
+        public async Task<IActionResult> GetAllLessons()
         {
 			var accessToken = HttpContext.Session.GetString("JWToken");
 			List<GetAllLessons> lessons = new List<GetAllLessons>();

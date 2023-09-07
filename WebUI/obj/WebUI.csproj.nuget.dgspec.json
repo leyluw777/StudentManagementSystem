@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\leylani\\Desktop\\FinalProject\\master\\WebUI\\WebUI.csproj": {}
+    "C:\\Users\\leylani\\Desktop\\FinalProject2\\master\\WebUI\\WebUI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\leylani\\Desktop\\FinalProject\\master\\WebUI\\WebUI.csproj": {
+    "C:\\Users\\leylani\\Desktop\\FinalProject2\\master\\WebUI\\WebUI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\leylani\\Desktop\\FinalProject\\master\\WebUI\\WebUI.csproj",
+        "projectUniqueName": "C:\\Users\\leylani\\Desktop\\FinalProject2\\master\\WebUI\\WebUI.csproj",
         "projectName": "WebUI",
-        "projectPath": "C:\\Users\\leylani\\Desktop\\FinalProject\\master\\WebUI\\WebUI.csproj",
+        "projectPath": "C:\\Users\\leylani\\Desktop\\FinalProject2\\master\\WebUI\\WebUI.csproj",
         "packagesPath": "C:\\Users\\leylani\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\leylani\\Desktop\\FinalProject\\master\\WebUI\\obj\\",
+        "outputPath": "C:\\Users\\leylani\\Desktop\\FinalProject2\\master\\WebUI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

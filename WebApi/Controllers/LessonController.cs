@@ -36,13 +36,13 @@ namespace WebApi.Controllers
                 GetLessonsByGroupRequest groupLessonsRequest = new GetLessonsByGroupRequest(id);
                 GetLessonsByGroupResponse groupLessonsResponse = await _mediator.Send(groupLessonsRequest);
                 return Ok(groupLessonsResponse.Lessons);
-
-
 			}
 			if (role == "Teacher")
 			{
-
-			}
+                GetLessonsByGroupTeacherRequest groupTeacherRequest = new GetLessonsByGroupTeacherRequest(id);
+                GetLessonsByGroupTeacherResponse groupTeacherResponse = await _mediator.Send(groupTeacherRequest);
+                return Ok(groupTeacherResponse.Lessons);
+            }
 
 			GetAllLessonsRequestQuery getAllLessonsQuery = new GetAllLessonsRequestQuery();
             GetAllLessonsResponseQuery allLessons = await _mediator.Send(getAllLessonsQuery);

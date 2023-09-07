@@ -24,6 +24,7 @@ namespace SMSDomain.Entities
 
         public List<CourseTeacher>? courseTeachers { get; set; }
    
+        public List<GroupTeacher>? GroupTeachers { get; set; }
        
 
     }

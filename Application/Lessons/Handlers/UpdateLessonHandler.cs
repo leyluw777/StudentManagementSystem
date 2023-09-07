@@ -32,10 +32,10 @@ namespace Application.Lessons.Handlers
             //var groupId = _dbContext.Groups.FirstOrDefault(x => x.Name == request.Group)?.Id;
             //var groupStudents = _dbContext.GroupStudent.Where(x => x.GroupId == groupId).ToList();
             
-            var lessons = await  _dbContext.Attendances.Include(x => x.Student).Include(x => x.Lesson).Where(x => x.LessonId == request.Id).AsNoTracking().ToListAsync();
+            var dbAttendances = await  _dbContext.Attendances.Include(x => x.Student).Include(x => x.Lesson).Where(x => x.LessonId == request.Id).ToListAsync();
             //request.Attendances = await _dbContext.Attendances.Include(x => x.Student).AsNoTracking().Include(x => x.Lesson).AsNoTracking().Where(x => x.LessonId == request.Id).ToListAsync();
             
-            foreach ( var lesson in lessons )
+            foreach ( var lesson in dbAttendances)
             {
 
                 var reqAttend = request.Attendances.FirstOrDefault(x => x.StudentId == lesson.StudentId && x.LessonId == lesson.LessonId);
@@ -43,7 +43,9 @@ namespace Application.Lessons.Handlers
                 {
                     lesson.Status = reqAttend.Status;
                 }
+
             }
+
             
             if (updatedLesson != null)
             {
@@ -60,7 +62,7 @@ namespace Application.Lessons.Handlers
                 updatedLesson.EndTime = new DateTime(updatedLesson.EndTime.Year, updatedLesson.EndTime.Month, updatedLesson.EndTime.Day,
                             request.EndTime.Hour, request.EndTime.Minute, 0);
 
-
+                //updatedLesson.Attendances = dbAttendances;
 
                 //List<Attendance> updatedAttend = new List<Attendance>();
 
@@ -80,8 +82,8 @@ namespace Application.Lessons.Handlers
                 //}
 
 
-                _dbContext.Attendances.UpdateRange(lessons);
-                //await _dbContext.SaveChangesAsync();
+                //_dbContext.Attendances.UpdateRange(lessons);
+                await _dbContext.SaveChangesAsync();
 
                 return new SuccessDataResult<UpdateLessonRequestCommand>(request, "Lesson update successfully");
             }

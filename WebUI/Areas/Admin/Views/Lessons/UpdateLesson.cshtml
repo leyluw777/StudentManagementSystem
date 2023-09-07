@@ -294,8 +294,11 @@
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify(dataToSend)
-            });
-                
+            })
+            .then(data => data.json)
+            .then(response => {
+                    window.location.replace("/Admin/Lessons/Get")
+            })   
         })
 
 </script>

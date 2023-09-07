@@ -33,8 +33,10 @@ namespace Application.Common.Interfaces
         public DbSet<CourseTeacher> CourseTeacher { get; set; }
         public DbSet<CourseStudent> CourseStudent { get; set; }
         public DbSet<GroupStudent> GroupStudent { get; set; }
+        public DbSet<GroupTeacher> GroupTeacher { get; set; }
         public DbSet<FirstLogin> FirstLogins { get; set; }
       
+
         Task<int> SaveChangesAsync(CancellationToken cancellationToken = default);
     }
 }

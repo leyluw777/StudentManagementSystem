@@ -247,7 +247,7 @@ namespace WebUI.Areas.Admin.Controllers
 
                 if (response.IsSuccessStatusCode)
                 {
-                    return RedirectToAction("GetAllLessons", "Lessons");
+                    return Json("success");
 
                 }
 

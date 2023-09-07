@@ -9,7 +9,7 @@ namespace SMSDomain.Entities
 {
     public class Group : BaseAuditableEntity
     {
-        public string Name { get; set; }
+        public string? Name { get; set; }
         public string? Description { get; set; }
 
         public DateTime? StartDate { get; set; }
@@ -17,5 +17,6 @@ namespace SMSDomain.Entities
         public List<GroupStudent>? GroupStudents { get; set; } 
         public List<Lesson>? Lessons { get; set; }
 
+        List<GroupTeacher>? GroupTeachers { get; set; }
     }
 }
