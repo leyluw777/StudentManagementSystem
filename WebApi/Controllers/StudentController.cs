@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace WebApi.Controllers
 {
     [Route("api/[controller]/[action]")]
-    [Authorize( AuthenticationSchemes = "Bearer")]
+    [Authorize(Roles ="Admin", AuthenticationSchemes = "Bearer")]
     [ApiController]
     public class StudentController : ControllerBase
     {

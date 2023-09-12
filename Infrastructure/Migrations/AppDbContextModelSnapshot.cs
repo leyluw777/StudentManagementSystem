@@ -1430,7 +1430,6 @@ namespace Infrastructure.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Name")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime?>("StartDate")
@@ -1483,6 +1482,21 @@ namespace Infrastructure.Migrations
                     b.HasIndex("StudentId");
 
                     b.ToTable("GroupStudent");
+                });
+
+            modelBuilder.Entity("SMSDomain.Entities.GroupTeacher", b =>
+                {
+                    b.Property<int?>("GroupId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("TeacherId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("GroupId", "TeacherId");
+
+                    b.HasIndex("TeacherId");
+
+                    b.ToTable("GroupTeacher");
                 });
 
             modelBuilder.Entity("SMSDomain.Entities.Homework", b =>
@@ -2131,25 +2145,25 @@ namespace Infrastructure.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "45b40edc-b161-4a41-922c-4c369007d10a",
+                            Id = "4e58c35d-a420-4e26-95a5-b75824746613",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = "efb0f841-221f-42dd-bc50-9e1271107198",
+                            Id = "7b061efe-9de1-4aba-8b1e-48e062ba8adf",
                             Name = "Student",
                             NormalizedName = "STUDENT"
                         },
                         new
                         {
-                            Id = "8dfeb5bf-4e16-4f34-9bc6-17b1fe48c908",
+                            Id = "2601bd8e-1d0b-4b79-867d-7abc2b632e85",
                             Name = "Teacher",
                             NormalizedName = "TEACHER"
                         },
                         new
                         {
-                            Id = "c592345a-3271-4f79-92c1-2d05a0992672",
+                            Id = "1da37369-22f6-4b05-be8e-085d23e5ee2f",
                             Name = "Coordinator",
                             NormalizedName = "COORDINATOR"
                         });
@@ -2433,6 +2447,25 @@ namespace Infrastructure.Migrations
                     b.Navigation("Student");
                 });
 
+            modelBuilder.Entity("SMSDomain.Entities.GroupTeacher", b =>
+                {
+                    b.HasOne("SMSDomain.Entities.Group", "Group")
+                        .WithMany("GroupTeachers")
+                        .HasForeignKey("GroupId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("SMSDomain.Entities.Teacher", "Teacher")
+                        .WithMany("GroupTeachers")
+                        .HasForeignKey("TeacherId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Group");
+
+                    b.Navigation("Teacher");
+                });
+
             modelBuilder.Entity("SMSDomain.Entities.Homework", b =>
                 {
                     b.HasOne("SMSDomain.Entities.Lesson", "Lesson")
@@ -2638,6 +2671,8 @@ namespace Infrastructure.Migrations
                 {
                     b.Navigation("GroupStudents");
 
+                    b.Navigation("GroupTeachers");
+
                     b.Navigation("Lessons");
                 });
 
@@ -2706,6 +2741,8 @@ namespace Infrastructure.Migrations
             modelBuilder.Entity("SMSDomain.Entities.Teacher", b =>
                 {
                     b.Navigation("Address");
+
+                    b.Navigation("GroupTeachers");
 
                     b.Navigation("PhoneNumbers");
 

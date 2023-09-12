@@ -28,6 +28,7 @@ namespace WebUI
 			{
 				ServeUnknownFileTypes = true,
 			});
+
             app.UseSession();
             app.UseRouting();
 

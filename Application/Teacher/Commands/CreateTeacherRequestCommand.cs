@@ -39,6 +39,7 @@ namespace Application.Teacher.Commands
 
         public string? Course { get; set; }
 
-   
-    }
+
+		public string? Group { get; set; }
+	}
 }

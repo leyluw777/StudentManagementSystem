@@ -55,26 +55,25 @@ namespace WebUI.Areas.Admin.Controllers
         [HttpPost]
         public async Task<IActionResult> GetNewTeacher(CreateTeacher teacher)
         {
-            TeacherResponse teacherData = new TeacherResponse();
+            
             var accessToken = HttpContext.Session.GetString("JWToken");
             if (accessToken is not null)
-            {
+            {//son defe sonra restart tamam
                 _httpClient.DefaultRequestHeaders.Authorization =
                 new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", accessToken);
                 string jsonData = JsonConvert.SerializeObject(teacher);
                 StringContent content = new StringContent(jsonData, Encoding.UTF8, "application/json");
-
                 HttpResponseMessage response = await _httpClient.PostAsync($"{baseUrl}/Teacher/CreateTeacher", content);
                 if (response.IsSuccessStatusCode)
-                {
-                    var teacherResponse = response.Content.ReadAsStringAsync().Result;
+                {//easy girl aya
+					TeacherResponse teacherData = new TeacherResponse();
+					var teacherResponse = response.Content.ReadAsStringAsync().Result;
                     teacherData = JsonConvert.DeserializeObject<TeacherResponse>(teacherResponse);
-                   
-                    return View();
+                    return Json(teacherData);
                 }
-
+                //gorursuz onnna sonrakin hec oxumadi, amma bunnan evvel hec ora catmirdi
             }
-            return RedirectToAction("Index", "AllStudents");
+            return RedirectToAction("GetAll", "Teacher");
 
         }
 

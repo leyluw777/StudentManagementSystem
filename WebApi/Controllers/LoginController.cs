@@ -19,7 +19,7 @@ namespace WebApi.Controllers
         [HttpPost]
         public async Task<IActionResult> Login(LoginUserRequestCommand loginUserCommandRequest)
         {
-            LoginUserResponseCommand loginUser = await _mediator.Send(loginUserCommandRequest);
+            LoginUserResponseCommand loginUser = await _mediator.Send(loginUserCommandRequest); 
        
             return Ok(loginUser);
 

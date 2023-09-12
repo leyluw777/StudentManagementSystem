@@ -235,6 +235,22 @@ namespace Infrastructure.Persistence
 
 
 
+
+            builder.Entity<GroupTeacher>()
+              .HasKey(cs => new { cs.GroupId, cs.TeacherId });
+
+            // Configure the relationship between Course and CourseStudent
+            builder.Entity<GroupTeacher>()
+                .HasOne(cs => cs.Group)
+                .WithMany(c => c.GroupTeachers)
+                .HasForeignKey(cs => cs.GroupId);
+
+            // Configure the relationship between Student and CourseStudent
+            builder.Entity<GroupTeacher>()
+                .HasOne(cs => cs.Teacher)
+                .WithMany(s => s.GroupTeachers)
+                .HasForeignKey(cs => cs.TeacherId);
+
             //builder.Entity<Address>().HasOne(h => h.Country)  //burda
             //  .WithMany(x => x.Address)
             //  .HasForeignKey(h => h.CountryId)
@@ -261,8 +277,8 @@ namespace Infrastructure.Persistence
 
             //});
 
-           
-        builder.Entity<Group>().HasData(
+
+            builder.Entity<Group>().HasData(
            new Group
            {
                Id = 1,

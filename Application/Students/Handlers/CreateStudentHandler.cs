@@ -101,6 +101,7 @@ namespace Application.Students.Handlers
                     Surname = newStudent.Surname,
                     FathersName = newStudent.FathersName
                 };
+             
 
                 await _appDbContext.FirstLogins.AddAsync(firstLogin);
                 //await _userManager.AddPasswordAsync(newStudent, password);
@@ -108,7 +109,7 @@ namespace Application.Students.Handlers
 
 
 
-
+                
                 Address studentAddress = new Address()
                 {
                     StudentId = newStudent.Id,
@@ -161,7 +162,7 @@ namespace Application.Students.Handlers
                     await _appDbContext.SaveChangesAsync(cancellationToken);
 
 
-                }
+                } 
 
 
                 List<Group> groups = await _appDbContext.Groups.Where(c => c.Name == request.Group).ToListAsync();

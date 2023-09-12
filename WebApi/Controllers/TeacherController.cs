@@ -47,10 +47,10 @@ namespace WebApi.Controllers
 
         [HttpPost]
         public async Task<IActionResult> CreateTeacher(CreateTeacherRequestCommand request)
-        {
+        { //indi birazdan duwecek
             CreateTeacherResponseCommand createTeacherResponse = await _mediator.Send(request);
 
-            return Ok(createTeacherResponse);
+            return Ok(createTeacherResponse);//telesme login yazma
         }
 
 

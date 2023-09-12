@@ -18,7 +18,7 @@ namespace Application.Lessons.Handlers
 	{
 
 		private readonly IApplicationDbContext _appDbContext;
-		private readonly UserManager<SMSDomain.Identity.AppUser> _userManager;
+		
 		private readonly IMapper _mapper;
 
 
@@ -30,19 +30,19 @@ namespace Application.Lessons.Handlers
 
 		public async Task<GetLessonsByGroupResponse> Handle(GetLessonsByGroupRequest request, CancellationToken cancellationToken)
 		{
-			var groupstudents = _appDbContext.GroupStudent.Where(x => x.StudentId == request.StudentId).ToList();
+			var groupstudent = _appDbContext.GroupStudent.FirstOrDefault(x => x.StudentId == request.StudentId);
 			var groupLessons = new List<SMSDomain.Entities.Lesson>();
 
-			foreach( var student in groupstudents )
-			{
+				var allLessons = _appDbContext.Lessons.Where(x => x.GroupId == groupstudent.GroupId).ToList();
 
-				var oneLesson = await _appDbContext.Lessons.FirstOrDefaultAsync(x => x.GroupId == student.GroupId);
-				if ( oneLesson != null ) {
-					var mappedLesson = _mapper.Map<SMSDomain.Entities.Lesson>(oneLesson);
+				if ( allLessons != null ) {
+					foreach(var lesson in allLessons ) { 
+				
+					var mappedLesson = _mapper.Map<SMSDomain.Entities.Lesson>(lesson);
 					groupLessons.Add(mappedLesson);
 				}
-
-			}
+				}
+			
 		
 		
 			return new GetLessonsByGroupResponse()

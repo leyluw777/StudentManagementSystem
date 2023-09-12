@@ -53,8 +53,8 @@ namespace WebUI.Controllers
 				{
 					return RedirectToAction("ConfirmLogin", "AuthConfirm");
 				}
-				
-				
+				//men bu erroru acigi restartnan duzeldirdim
+				// api ise dusmemis login olanda ele olarda
 				var accessToken = HttpContext.Session.GetString("JWToken");
 				
 				_httpClient.DefaultRequestHeaders.Authorization =

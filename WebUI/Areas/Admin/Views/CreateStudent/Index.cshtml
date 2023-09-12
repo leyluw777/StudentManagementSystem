@@ -36,18 +36,18 @@
 
 	<!-- FAVICONS ICON -->
 	<link rel="shortcut icon" type="image/png" href="~/images/favicon.png">
-	<link href="~/vendor/wow-master/css/libs/animate.css" rel="stylesheet">
-	<link href="~/vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
+	<link href="../wwwroot/vendor/wow-master/css/libs/animate.css" rel="stylesheet">
+	<link href="../wwwroot/vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="~/vendor/jquery-nice-select/css/nice-select.css">
 
-	<link href="~/vendor/bootstrap-datepicker-master/css/bootstrap-datepicker.min.css" rel="stylesheet">
+	<link href="../wwwroot/vendor/bootstrap-datepicker-master/css/bootstrap-datepicker.min.css" rel="stylesheet">
+	
 
-
-	<link href="~/vendor/datatables/css/jquery.dataTables.min.css" rel="stylesheet">
+	<link href="../wwwroot/vendor/datatables/css/jquery.dataTables.min.css" rel="stylesheet">
 	<!--swiper-slider-->
 	<!-- Style css -->
-	<link href="~/https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
-	<link href="~/css/style.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+	<link href="../wwwroot/css/style.css" rel="stylesheet">
 
 </head>
 <body>
@@ -61,7 +61,7 @@
 						<div class="card-header">
 							<h5 class="mb-0">Student Details</h5>
 						</div>
-						<form method="post" asp-action="Index" asp-controller="EditStudent" id="createStudentform">
+						<form method="post" asp-action="Index" asp-controller="CreateStudent" id="createStudentform">
 							<div class="card-body">
 								<div class="row">
 									@* <div class="col-xl-3 col-lg-4">
@@ -88,20 +88,19 @@
 												</div>
 												<div class="mb-3">
 													<label class="form-label text-primary">Date of Birth<span class="required">*</span></label>
-													<div class="d-flex">
+													
 														<input type="text" class="form-control" placeholder="2017-06-04" id="datepicker" name="student.BirthDate" >
 														
 
-													</div>
 												</div>
 												<div class="row">
-													<div class="mb-3 col-xl-4 col-sm-4">
+													<div class="mb-3 col-xl-7 col-sm-7">
 														<label for="exampleFormControlInput3" class="form-label text-primary">Email<span class="required">*</span></label>
 														<input type="email" class="form-control" id="exampleFormControlInput3" placeholder="hello@example.com" name="student.Email" >
 													</div>
-													<div class="mb-3 col-xl-2 col-sm-2">
+													<div class="mb-3 col-xl-5 col-sm-5">
 														<label for="exampleFormControlInput3" class="form-label text-primary">Fin ID<span class="required">*</span></label>
-														<input type="text" class="form-control" id="exampleFormControlInput3" placeholder="7sxa8q28" name="student.Fin" >
+														<input type="text" class="form-control" id="exampleFormControlInput3" placeholder="7sxa8q2" name="student.Fin" >
 													</div>
 												</div>
 												<div class="mb-3">
@@ -124,19 +123,19 @@
 
 
 												<div class="row">
-													<div class="mb-3 col-md-4">
+													<div class="mb-3 col-md-3">
 														<label class="form-label">District</label>
 														<input type="text" class="form-control" name="student.District">
 													</div>
-													<div class="mb-3 col-md-4">
+													<div class="mb-3 col-md-3">
 														<label class="form-label">Street Address</label>
 														<input type="text" class="form-control" name="student.StreetAddress">
 													</div>
-													<div class="mb-3 col-md-2">
+													<div class="mb-3 col-md-3">
 														<label class="form-label">House No</label>
 														<input type="number" class="form-control" name="student.HouseNo" >
 													</div>
-													<div class="mb-3 col-md-2">
+													<div class="mb-3 col-md-3">
 														<label class="form-label">Zip</label>
 														<input type="number" class="form-control" name="student.ZipCode">
 													</div>
@@ -147,20 +146,15 @@
 												<div class="row">
 
 
-													<div class="col-xl-5 col-sm-5">
+													<div class="col-xl-6 col-sm-6">
 														@{
 															// var btnClicked = false;
 															//for (int i = 0; i < Model.Courses.Count; i++)
 															//{
 																<label for="exampleFormControlCourse" class="form-label text-primary">Course<span class="required">*</span></label>
-																<div class=" d-flex align-items-start justify-content-between w-100">
-
-																	<div class="card">
-
-																		<div class="card-body">
-																			<div class="basic-form">
-
-																				<div class="mb-3">
+																
+																			
+																				<div class="mb-3 ">
 																				<select class="default-select  form-control wide" name="student.Course" asp-for="Course">
 																					
 																					@foreach(var course in courses)
@@ -174,20 +168,19 @@
 																				</select>
 																				</div>
 
-																			</div>
-																		</div>
-																	</div>
-																</div>
-
+														
 
 															//}
 														}
 													</div>
 
-													<div class="col-xl-4 col-sm-4">
+													<div class="col-xl-3 col-sm-3">
 														<label for="exampleFormControlTextarea1" class="form-label text-primary">Group Name<span class="required">*</span></label>
 														<select class="default-select  form-control wide" name="student.Group" asp-for="student.Group">
-															<option value="FRONT102" selected="selected">  FRONT102		</option>
+															<option value="BACK100">BACK100</option>
+															<option value="MOBILE95">MOBILE95</option>
+															<option value="CYBER220">CYBER220</option>
+															<option value="FRONT102">FRONT102</option>
 
 														</select>
 
@@ -215,30 +208,17 @@
 													<label for="exampleFormControlInput5" class="form-label text-primary">Father's name<span class="required">*</span></label>
 													<input type="text" class="form-control" id="exampleFormControlInput5" placeholder="Mana William" name="student.FathersName">
 												</div>
-												<div>
-													@{
-
-														var btnClicked = false;
-			//for (int i = 0; i < Model.PhoneNumbers.Count; i++)
-			//{
+										
+												<div class="mb-3">
 														<label for="exampleFormControlInput6" class="form-label text-primary">Phone Number<span class="required">*</span></label>
-														<div class=" d-flex align-items-start justify-content-between w-100">
-
-															<div class=" " id="numberDiv" style="width: 90%">
-
+		
 																<input type="number" class="form-control mb-3" id="exampleFormControlInput6" placeholder="+123456789" name="student.PhoneNumber" >
-															</div>
-															<div class=" mx-2" style="width: 5%">
-																<button class="btn btn-primary shadow btn-xs sharp me-1 mt-2" id="addNewNum" type="button"><i class="fa-solid fa-plus"></i></button>
-															</div>
-														</div>
+													
+													
+													</div>
 
 
-														//}
-
-
-													}
-												</div>
+										
 												<div class="mb-3">
 													<label for="exampleFormControlTextarea1" class="form-label text-primary">City<span class="required">*</span></label>
 
@@ -303,7 +283,9 @@
 										</div>
 									</div>
 
-									
+								</div>
+							</div>
+
 						</form>
 					</div>
 				</div>
@@ -314,21 +296,7 @@
 		</div>
 	</div>
 
-	</div>
-	</div>
 
-
-	<script src="~/vendor/global/global.min.js"></script>
-	<script src="~/vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
-	<script src="~/vendor/moment/moment.min.js"></script>
-
-
-	<script src="~/vendor/bootstrap-datepicker-master/js/bootstrap-datepicker.min.js"></script>
-	<script src="~/vendor/wow-master/dist/wow.min.js"></script>
-	<script src="~/js/custom.min.js"></script>
-	<script src="~/js/dlabnav-init.js"></script>
-	<script src="~/js/demo.js"></script>
-	<script src="~/js/styleSwitcher.js"></script>
 	<script>
 		$("#createStudentform").submit(function (e) {
 			e.preventDefault(); // Prevent the default form submission
@@ -340,8 +308,8 @@
 				success: function (data) {
 					console.log(data);
 					// Update the modal content with response data
-					$("#modal-username").text(data.username);
-					$("#modal-password").text(data.password);
+					$("#modal-username").text(data.Username);
+					$("#modal-password").text(data.Password);
 
 					// Show the modal
 					$('#exampleModalCenter').modal('show');
@@ -352,6 +320,18 @@
 			});
 		});
 	</script>
+
+	<script src="../wwwroot/vendor/global/global.min.js"></script>
+	<script src="../wwwroot/vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+	<script src="../wwwroot/vendor/moment/moment.min.js"></script>
+				
+	<script src="../wwwroot/vendor/bootstrap-datepicker-master/js/bootstrap-datepicker.min.js"></script>
+	<script src="../wwwroot/vendor/wow-master/dist/wow.min.js"></script>
+	<script src="../wwwroot/js/custom.min.js"></script>
+	<script src="../wwwroot/js/dlabnav-init.js"></script>
+	<script src="../wwwroot/js/demo.js"></script>
+	<script src="../wwwroot/js/styleSwitcher.js"></script>
+
 
 </body>
 

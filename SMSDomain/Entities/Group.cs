@@ -15,8 +15,9 @@ namespace SMSDomain.Entities
         public DateTime? StartDate { get; set; }
         public DateTime? EndDate { get; set; }
         public List<GroupStudent>? GroupStudents { get; set; } 
+        public List<GroupTeacher>? GroupTeachers { get; set; }
+
         public List<Lesson>? Lessons { get; set; }
 
-        List<GroupTeacher>? GroupTeachers { get; set; }
     }
 }
