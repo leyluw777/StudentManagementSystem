@@ -155,7 +155,7 @@
 							</li>
 
 
-
+@*
 							<li class="nav-item bell-icon blink dropdown notification_dropdown">
 								<a class="nav-link  " href="~/javascript:void(0);" role="button" data-bs-toggle="dropdown">
 									<svg width="20" height="20" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -300,6 +300,12 @@
 										</div>
 									</div>
 								</div>
+							</li>*@
+
+
+							<li class="nav-item">
+
+								<button type="button" class="btn btn-primary btn-icon-sm" id="signOutBtn"><i class="fa-solid fa-right-from-bracket"></i></button>
 							</li>
 						</ul>
 					</div>
@@ -449,6 +455,27 @@
 
 
 	<script src="~/js/site.js" asp-append-version="true"></script>
+	<script>
+		var signOutBtn = document.getElementById("signOutBtn");
+		signOutBtn.addEventListener("click", function () {
+
+			$.ajax({
+				type: 'POST', // Use POST instead of GET
+				url: '/SignOut/Index', // Adjust the controller name as needed
+
+				success: function (data) {
+					console.log(data)
+					// Handle success, e.g., redirect the user to the sign-in page
+					window.location.href = data.redirectUrl;
+				},
+				error: function () {
+					console.log(Error.name)
+					// Handle error
+				}
+			});
+		});
+
+	</script>
 
 	@await RenderSectionAsync("Scripts", required: false)
 </body>

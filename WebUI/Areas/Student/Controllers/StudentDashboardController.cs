@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using System.Net.Http;
-using WebUI.Areas.Admin.Models;
+using WebUI.Areas.Student.Models;
 
 namespace WebUI.Areas.Student.Controllers
 {
@@ -36,8 +36,6 @@ namespace WebUI.Areas.Student.Controllers
 
 
 
-        //kananAB5dgw76d
-        //bqdec0DU3!
         public async Task<IActionResult> GetAllLessons()
         {
 			var accessToken = HttpContext.Session.GetString("JWToken");
@@ -69,5 +67,43 @@ namespace WebUI.Areas.Student.Controllers
 			}
 			return Json(false);
 		}
-    }
+
+
+
+		[HttpGet]
+		public async Task<IActionResult> GetLessonById(string id)
+		{
+			var accessToken = HttpContext.Session.GetString("JWToken");
+
+			
+			if (accessToken is not null)
+			{
+				_httpClient.DefaultRequestHeaders.Authorization =
+				new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", accessToken);
+				//List<CrudStudent> allStudents = new List<CrudStudent>();
+				//var allStudentsResponse = await _httpClient.GetAsync($"{baseUrl}/Student/GetAll");
+				GetLessonById editedLesson = new GetLessonById();
+				//StringContent content = new StringContent(jsonData, Encoding.UTF8, "application/json");
+
+				var responseMessage = await _httpClient.GetAsync($"{baseUrl}/Lesson/GetById/{id}");
+				//var studentsResponseMessage = await _httpClient.GetAsync($"{baseUrl}/Student/GetAll");
+				if (responseMessage.IsSuccessStatusCode)
+				{
+					var lessonResponse = responseMessage.Content.ReadAsStringAsync().Result;
+					editedLesson = JsonConvert.DeserializeObject<GetLessonById>(lessonResponse);
+					//var studentResponse = studentsResponseMessage.Content.ReadAsStringAsync().Result;
+
+					//groupStudents = JsonConvert.DeserializeObject<List<GetAllStudents>>(studentResponse);
+					//groupStudents = groupStudents.Where(x => x.Group == editedLesson.Group).ToList();
+					//ViewBag.Students = groupStudents;
+					return View(editedLesson);
+
+
+				}
+
+			}
+			return RedirectToAction("Index", "StudentDashboard");
+
+		}
+	}
 }

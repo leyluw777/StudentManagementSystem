@@ -1,4 +1,4 @@
-﻿@using WebUI.Areas.Admin.Models;
+﻿@using WebUI.Areas.Student.Models;
 @{
     Layout = "~/Areas/Student/Views/Shared/_Layout.cshtml";
    
@@ -179,7 +179,7 @@
                 eventClick: function(event){
                     console.log("Event clicked ", event.event.id);
                     //
-                                    window.location.href = `/Admin/Lessons/UpdateLesson/${event.event.id}`; // Change to the appropriate property
+                                    window.location.href = `/Student/StudentDashboard/GetLessonById/${event.event.id}`; // Change to the appropriate property
               
                 },
             
