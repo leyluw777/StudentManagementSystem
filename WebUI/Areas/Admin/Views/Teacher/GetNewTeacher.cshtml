@@ -317,7 +317,7 @@
 														<div class="modal-dialog modal-dialog-centered" role="document">
 															<div class="modal-content">
 																<div class="modal-header">
-																	<h5 class="modal-title">You have successfully created new student user!</h5>
+																	<h5 class="modal-title">You have successfully created new teacher user!</h5>
 																	<button type="button" class="btn-close" data-bs-dismiss="modal">
 																	</button>
 																</div>
@@ -369,8 +369,12 @@
 	<script src="../wwwroot/js/demo.js"></script>
 	<script src="../wwwroot/js/styleSwitcher.js"></script>
 	<script src="../wwwroot/js/styleSwitcher.js"></script>
+
+	@section Scripts {
+
+	
 	<script>
-		$("#createTeacherForm").submit(function (e) {
+			$("#createTeacherForm").submit(function (e) {
 			e.preventDefault(); // Prevent the default form submission
 
 			$.ajax({
@@ -392,7 +396,7 @@
 			});
 		});
 	</script>
-
+	}
 	
 </body>
 

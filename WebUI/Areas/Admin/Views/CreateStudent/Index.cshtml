@@ -271,7 +271,7 @@
 															
 																
 																<div class="modal-footer">
-																	@*<button type="button" class="btn btn-danger light" data-bs-dismiss="modal">Close</button>*@
+																	
 																	<button type="button" class="btn btn-primary"  data-bs-dismiss="modal">Close</button>
 																</div>
 															</div>
@@ -297,29 +297,6 @@
 	</div>
 
 
-	<script>
-		$("#createStudentform").submit(function (e) {
-			e.preventDefault(); // Prevent the default form submission
-
-			$.ajax({
-				type: "POST",
-				url: "@Url.Action("Index", "CreateStudent")", // Replace with your action and controller names
-				data: $(this).serialize(), // Serialize the form data
-				success: function (data) {
-					console.log(data);
-					// Update the modal content with response data
-					$("#modal-username").text(data.Username);
-					$("#modal-password").text(data.Password);
-
-					// Show the modal
-					$('#exampleModalCenter').modal('show');
-				},
-				error: function (xhr, status, error) {
-					// Handle errors if necessary
-				}
-			});
-		});
-	</script>
 
 	<script src="../wwwroot/vendor/global/global.min.js"></script>
 	<script src="../wwwroot/vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
@@ -332,7 +309,35 @@
 	<script src="../wwwroot/js/demo.js"></script>
 	<script src="../wwwroot/js/styleSwitcher.js"></script>
 
+@section Scripts {
 
+		<script>
+			//var inputs = document.querySelectorAll("input.form-control");
+			//console.log(inputs);
+			//var selects = document.querySelectorAll("select.form-control");
+			//console.log(selects)
+			$("#createStudentform").submit(function (e) {
+				e.preventDefault(); // Prevent the default form submission
+		
+				$.ajax({
+					type: "POST",
+					url: "@Url.Action("Index", "CreateStudent")", // Replace with your action and controller names
+					data: $(this).serialize(), // Serialize the form data
+					success: function (data) {
+						console.log(data);
+						// Update the modal content with response data
+						$("#modal-username").text(data.username);
+						$("#modal-password").text(data.password);
+						// Show the modal
+						$('#exampleModalCenter').modal('show');
+					},
+					error: function (xhr, status, error) {
+						// Handle errors if necessary
+					}
+				});
+			});
+		</script>
+}
 </body>
 
 <!-- Mirrored from akademi.dexignlab.com/xhtml/add-student.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 20 Jul 2023 19:29:26 GMT -->

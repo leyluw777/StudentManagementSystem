@@ -770,23 +770,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Hp\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\leylani\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Hp\\Desktop\\FinalProject2\\StudentManagementSystem\\SMSDomain\\SMSDomain.csproj",
+      "projectUniqueName": "C:\\Users\\leylani\\Desktop\\FinalProject2\\master\\SMSDomain\\SMSDomain.csproj",
       "projectName": "SMSDomain",
-      "projectPath": "C:\\Users\\Hp\\Desktop\\FinalProject2\\StudentManagementSystem\\SMSDomain\\SMSDomain.csproj",
-      "packagesPath": "C:\\Users\\Hp\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Hp\\Desktop\\FinalProject2\\StudentManagementSystem\\SMSDomain\\obj\\",
+      "projectPath": "C:\\Users\\leylani\\Desktop\\FinalProject2\\master\\SMSDomain\\SMSDomain.csproj",
+      "packagesPath": "C:\\Users\\leylani\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\leylani\\Desktop\\FinalProject2\\master\\SMSDomain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\leylani\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -841,7 +842,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   }

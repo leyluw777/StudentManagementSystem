@@ -58,20 +58,20 @@ namespace WebUI.Areas.Admin.Controllers
             
             var accessToken = HttpContext.Session.GetString("JWToken");
             if (accessToken is not null)
-            {//son defe sonra restart tamam
+            {
                 _httpClient.DefaultRequestHeaders.Authorization =
                 new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", accessToken);
                 string jsonData = JsonConvert.SerializeObject(teacher);
                 StringContent content = new StringContent(jsonData, Encoding.UTF8, "application/json");
                 HttpResponseMessage response = await _httpClient.PostAsync($"{baseUrl}/Teacher/CreateTeacher", content);
                 if (response.IsSuccessStatusCode)
-                {//easy girl aya
+                {
 					TeacherResponse teacherData = new TeacherResponse();
 					var teacherResponse = response.Content.ReadAsStringAsync().Result;
                     teacherData = JsonConvert.DeserializeObject<TeacherResponse>(teacherResponse);
-                    return Json(teacherData);
+                    return Ok(teacherData);
                 }
-                //gorursuz onnna sonrakin hec oxumadi, amma bunnan evvel hec ora catmirdi
+                
             }
             return RedirectToAction("GetAll", "Teacher");
 

@@ -4,6 +4,7 @@ using AutoMapper;
 using MediatR;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using SMSDomain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,18 +29,21 @@ namespace Application.Lessons.Handlers
 
         public async Task<GetLessonsByGroupTeacherResponse> Handle(GetLessonsByGroupTeacherRequest request, CancellationToken cancellationToken)
         {
-            var groupTeachers = _appDbContext.GroupTeacher.Where(x => x.TeacherId == request.TeacherId).ToList();
+            var groupTeacher = _appDbContext.GroupTeacher.FirstOrDefault(x => x.TeacherId == request.TeacherId);
             var groupLessons = new List<SMSDomain.Entities.Lesson>();
+            var allLessons = _appDbContext.Lessons.Where(x => x.GroupId == groupTeacher.GroupId).ToList();
 
-            foreach (var student in groupTeachers)
-            {
-
-                var oneLesson = await _appDbContext.Lessons.FirstOrDefaultAsync(x => x.GroupId == student.GroupId);
-                if (oneLesson != null)
+             
+                if (allLessons != null)
                 {
-                    var mappedLesson = _mapper.Map<SMSDomain.Entities.Lesson>(oneLesson);
-                    groupLessons.Add(mappedLesson);
-                }
+
+                foreach (var lesson in allLessons)
+                {
+
+
+                    groupLessons.Add(lesson);
+                
+            }
 
             }
 

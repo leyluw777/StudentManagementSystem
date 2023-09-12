@@ -58,9 +58,7 @@ namespace WebUI.Areas.Admin.Controllers
 					StudentResponse studentData = new StudentResponse();
 					var studentResponse = response.Content.ReadAsStringAsync().Result;
 					studentData = JsonConvert.DeserializeObject<StudentResponse>(studentResponse);
-					
-					
-                    return Json(studentData);
+					return Ok(studentData);
 				}
 				
 			}

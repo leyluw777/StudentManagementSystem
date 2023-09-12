@@ -27,7 +27,13 @@ namespace WebApi.Controllers
 				
 				return Ok();
 			}
-			return BadRequest();
+            if (User.IsInRole("Teacher"))
+            {
+
+                return Ok();
+            }
+
+            return BadRequest();
 		}
 
 		[HttpPost]

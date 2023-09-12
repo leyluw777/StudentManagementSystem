@@ -38,8 +38,8 @@ namespace Application.Lessons.Handlers
 				if ( allLessons != null ) {
 					foreach(var lesson in allLessons ) { 
 				
-					var mappedLesson = _mapper.Map<SMSDomain.Entities.Lesson>(lesson);
-					groupLessons.Add(mappedLesson);
+					
+					groupLessons.Add(lesson);
 				}
 				}
 			

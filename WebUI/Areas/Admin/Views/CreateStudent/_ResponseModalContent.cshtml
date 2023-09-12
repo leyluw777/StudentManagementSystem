@@ -8,5 +8,23 @@
 @model WebUI.Areas.Admin.Models.StudentResponse
 
 
-       <p> Student's username: @studentData.Username</p>
-       <p> Student's password: @studentData.Password</p>
+	<div class="modal-dialog modal-dialog-centered" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title">You have successfully created new student user!</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal">
+				</button>
+			</div>
+			<div class="modal-body">
+				<p> Student's username: <span id="modal-username">@Model.Username</span></p>
+				<p> Student's password: <span id="modal-password">@Model.Password</span></p>
+			</div>
+
+
+
+			<div class="modal-footer">
+				@*<button type="button" class="btn btn-danger light" data-bs-dismiss="modal">Close</button>*@
+				<button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>

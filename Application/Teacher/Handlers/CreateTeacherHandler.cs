@@ -139,7 +139,9 @@ namespace Application.Teacher.Handlers
 					CourseTeacher teacherCourse = new CourseTeacher()
 					{
 						TeacherId = newTeacher.Id,
-						CourseId = course.Id
+						CourseId = course.Id,
+						Teacher = newTeacher,
+						Course = course,
 
 					};
 					courseTeachers.Add(teacherCourse);
