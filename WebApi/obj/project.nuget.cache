@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/WZY3URkFn1BadIwGdu03ZdNkaRguzLXYV2Ruzbe4dYwMVdnsNviM6SkS5QYpogls/YRQrrzWbyHvS7F+pUlsg==",
+  "dgSpecHash": "Uqs1U4bkuWJAg90fIJ9nlLIP+3Wvy1INma5fRuq1/W+CLR/9NcnKL2s/UO/H0DlwoyrmBoQZSanu6rODZtv5qg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\leylani\\Desktop\\FinalProject2\\master\\WebApi\\WebApi.csproj",
+  "projectFilePath": "C:\\Users\\leylani\\Desktop\\finalproject\\StudentManagementSystem\\WebApi\\WebApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\leylani\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\leylani\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

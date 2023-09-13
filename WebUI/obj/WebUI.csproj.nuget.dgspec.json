@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\leylani\\Desktop\\FinalProject2\\master\\WebUI\\WebUI.csproj": {}
+    "C:\\Users\\leylani\\Desktop\\finalproject\\StudentManagementSystem\\WebUI\\WebUI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\leylani\\Desktop\\FinalProject2\\master\\WebUI\\WebUI.csproj": {
+    "C:\\Users\\leylani\\Desktop\\finalproject\\StudentManagementSystem\\WebUI\\WebUI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\leylani\\Desktop\\FinalProject2\\master\\WebUI\\WebUI.csproj",
+        "projectUniqueName": "C:\\Users\\leylani\\Desktop\\finalproject\\StudentManagementSystem\\WebUI\\WebUI.csproj",
         "projectName": "WebUI",
-        "projectPath": "C:\\Users\\leylani\\Desktop\\FinalProject2\\master\\WebUI\\WebUI.csproj",
+        "projectPath": "C:\\Users\\leylani\\Desktop\\finalproject\\StudentManagementSystem\\WebUI\\WebUI.csproj",
         "packagesPath": "C:\\Users\\leylani\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\leylani\\Desktop\\FinalProject2\\master\\WebUI\\obj\\",
+        "outputPath": "C:\\Users\\leylani\\Desktop\\finalproject\\StudentManagementSystem\\WebUI\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
           "C:\\Users\\leylani\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -72,7 +68,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

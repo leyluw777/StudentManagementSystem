@@ -237,7 +237,7 @@
 												<div class="mb-3">
 													<label for="exampleFormControlStatus" class="form-label text-primary">Current status<span class="required">*</span></label>
 
-													<select class="default-select  form-control wide" name="student.Status" asp-for="Status">
+													<select class="default-select  form-control wide " id="statusSelect" name="student.Status" asp-for="Status">
 
 														<option value="0"> Active	</option>
 														<option value="1" >   Left		</option>
@@ -366,15 +366,13 @@
 
 		<script>
 
-			console.log("fhfhfhfh:");
 
+	
 			$("#studentCountry").on("change", function () {
 				var selectedOption = $(this).val();
 				var studentCity = document.getElementById("studentCity");
-				console.log(selectedOption);
-				var dataToSend = {
-					name: dataToSend
-				}
+				
+			
 				// Make an AJAX request
 				$.ajax({
 					url: `/Admin/CreateStudent/GetCityByName?name=${selectedOption}`, // Replace with your server endpoint
@@ -383,12 +381,28 @@
 					success: function (response) {
 						// Handle the response from the server
 						console.log(response)
-						console.log(studentCity)
+						//console.log(studentCity)
+						var optionsArray = [];
+						var select = document.getElementById("studentCity");
+						var statusSelect = document.getElementById("statusSelect");
+
+						select.options.length = 0;
 						response.forEach(x=>{
-							var newOption = new Option(x.name, x.name);
-							studentCity.add(newOption)
-					
-						})
+							select.options[select.options.length] = new Option(x.name, x.name);
+							statusSelect.options[select.options.length] = new Option(x.name, x.name);
+							//var option = document.createElement("option");
+							//option.value = x.name;
+							//option.text = x.name;
+							
+							//optionsArray.push(option);
+
+							//var newOption = new Option(x.name, x.name);
+							//studentCity.add(newOption)
+							//studentCity.appendChild(option);
+						});
+						console.log(select);
+						console.log(statusSelect)
+						//$("#studentCity").html(optionsArray);
 			
 
 						// Update the options of the dynamic select
@@ -400,7 +414,7 @@
 					}
 				});
 			});
-
+			
 		</script>
 }
 </body>
