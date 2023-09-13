@@ -106,8 +106,9 @@
 												<div class="mb-3">
 													<label for="exampleFormControlTextarea1" class="form-label text-primary">Country<span class="required">*</span></label>
 
-													<select class="default-select  form-control wide" name="student.Country" asp-for="Country">
-														<option value="Azerbaijan" selected="selected">   Azerbaijan		</option>
+													<select class="default-select  form-control wide" name="student.Country" asp-for="Country" id="studentCountry">
+														<option selected>Select option</option>
+														<option value="Azerbaijan" >   Azerbaijan		</option>
 														<option value="Georgia">   Georgia			</option>
 														<option value="Israel">   Israel			</option>
 														<option value="Kazakhstan">   Kazakhstan		</option>
@@ -222,11 +223,11 @@
 												<div class="mb-3">
 													<label for="exampleFormControlTextarea1" class="form-label text-primary">City<span class="required">*</span></label>
 
-													<select class="default-select  form-control wide" name="student.City" asp-for="City">
+													<select class="dropdown-item default-select  form-control wide" id="studentCity" name="student.City" >
 
-														<option value="Baku" selected="selected"> Baku	</option>
-
+													
 													</select>
+													
 												</div>
 												<div class="mb-3">
 													<label for="exampleFormControlHomeNum5" class="form-label text-primary">Home number<span class="required">*</span></label>
@@ -309,9 +310,34 @@
 	<script src="../wwwroot/js/demo.js"></script>
 	<script src="../wwwroot/js/styleSwitcher.js"></script>
 
+
 @section Scripts {
 
 		<script>
+			//const i = 0;
+			//if(i >0)
+			//{$("#studentCountry").on("change", function () {
+			//	var selectedOption = $(this).val();
+			//	console.log(selectedOption)
+			//	// Make an AJAX request
+			//	$.ajax({
+			//		url: "/CreateStudent/GetCityById?name=" + selectedOption, // Replace with your server endpoint
+			//		method: "GET", // or "GET" depending on your server's API
+			//		success: function (response) {
+			//			// Handle the response from the server
+			//			console.log(response)
+
+			//			// Update the options of the dynamic select
+			//			//updateDynamicSelectOptions(selectedOption);
+			//		},
+			//		error: function (xhr, status, error) {
+			//			// Handle errors here
+			//			console.error(error);
+			//		}
+			//	});
+			//});}
+			//i++;
+
 			//var inputs = document.querySelectorAll("input.form-control");
 			//console.log(inputs);
 			//var selects = document.querySelectorAll("select.form-control");
@@ -336,6 +362,45 @@
 					}
 				});
 			});
+		</script>
+
+		<script>
+
+			console.log("fhfhfhfh:");
+
+			$("#studentCountry").on("change", function () {
+				var selectedOption = $(this).val();
+				var studentCity = document.getElementById("studentCity");
+				console.log(selectedOption);
+				var dataToSend = {
+					name: dataToSend
+				}
+				// Make an AJAX request
+				$.ajax({
+					url: `/Admin/CreateStudent/GetCityByName?name=${selectedOption}`, // Replace with your server endpoint
+					method: "GET", // or "GET" depending on your server's API
+					//data: selectedOption,
+					success: function (response) {
+						// Handle the response from the server
+						console.log(response)
+						console.log(studentCity)
+						response.forEach(x=>{
+							var newOption = new Option(x.name, x.name);
+							studentCity.add(newOption)
+					
+						})
+			
+
+						// Update the options of the dynamic select
+						//updateDynamicSelectOptions(selectedOption);
+					},
+					error: function (xhr, status, error) {
+						// Handle errors here
+						console.error(error);
+					}
+				});
+			});
+
 		</script>
 }
 </body>

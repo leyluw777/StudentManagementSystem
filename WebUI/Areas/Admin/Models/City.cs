@@ -12,8 +12,8 @@ namespace WebUI.Areas.Admin.Models
 		public int Id { get; set; }
 		//[NotMapped]
 		//  public ICollection<Address> Addresses { get; set; } = null!;
-		public Country? Country { get; set; } 
-        public int? CountryId { get; set; }
+		//public Country? Country { get; set; } 
+  //      public int? CountryId { get; set; }
         public string Name { get; set; } = null!;
      
        

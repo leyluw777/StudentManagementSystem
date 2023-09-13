@@ -62,8 +62,8 @@ href="
 				<div class="col-xl-12">
 					<div class="row">
 						<div class="col-xl-12">
-							<div class="page-title flex-wrap">
-								<div class="input-group search-area mb-md-0 mb-3">
+							<div class="page-title flex-wrap justify-content-end">
+								@*<div class="input-group search-area mb-md-0 mb-3">
 									<input type="text" class="form-control" placeholder="Search here...">
 									<span class="input-group-text">
 										<a href="~/javascript:void(0)">
@@ -72,7 +72,7 @@ href="
 											</svg>
 										</a>
 									</span>
-								</div>
+								</div>*@
 								<div>
 
 									<!-- Button trigger modal -->
@@ -90,9 +90,11 @@ href="
 								<table class="table-responsive-lg table display dataTablesCard student-tab dataTable no-footer" id="example-student">
 									<thead>
 										<tr>
-											<th>
-												<input type="checkbox" class="form-check-input" id="checkAll" required="">
-											</th>
+										
+													<th>
+														No
+													</th>
+											
 											<th>Name</th>
 											<th>Surname</th>
 											<th>FIN ID</th>
@@ -105,15 +107,14 @@ href="
 									</thead>
 									<tbody>
 
-										@foreach(var student in Model){
-											<tr>
+										
+										@{
+											foreach (var student in Model)
+											{
+												var i = 1;
+												<tr>
 												<td>
-													<div class="checkbox me-0 align-self-center">
-														<div class="custom-control custom-checkbox ">
-															<input type="checkbox" class="form-check-input" id="check8" required="">
-															<label class="custom-control-label" for="check8"></label>
-														</div>
-													</div>
+													i;
 												</td>
 													<td>
 											<div class="trans-list">
@@ -168,11 +169,10 @@ href="
 														@*<a href="@deleteStudent/Index/@student.Id" class="btn btn-danger shadow btn-xs sharp" asp-route-id="@student.Id"><i class="fa fa-trash"></i></a>*@
 													</div>
 												</td>
-											</tr>
-
-										}
-									
-
+												</tr>
+												i += 1;
+											}
+									}
 
 
 

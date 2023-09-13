@@ -10,5 +10,8 @@
         public string Email { get; set; }
         
         public string Experience { get; set; }
-    }
+		public bool ActiveStatus { get; set; }
+
+
+	}
 }

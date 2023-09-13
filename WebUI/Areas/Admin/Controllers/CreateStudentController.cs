@@ -9,6 +9,7 @@ namespace WebUI.Areas.Admin.Controllers
 {
 
 	[Area("Admin")]
+	//[Route("[controller]/[action]")]
 	public class CreateStudentController : Controller
 	{
 
@@ -25,19 +26,52 @@ namespace WebUI.Areas.Admin.Controllers
 		public async Task<IActionResult> Index()
 		{
 			var accessToken = HttpContext.Session.GetString("JWToken");
+
 			if (accessToken is not null)
 			{
 				_httpClient.DefaultRequestHeaders.Authorization =
 				new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", accessToken);
-			
 				var allcourses = _course.GetAll();
 				ViewBag.Course = allcourses;
+
+
 
 				return View();
 			}
 			return RedirectToAction("Index", "AllStudents");
 
 		}
+
+
+
+		[HttpGet]
+		public async Task<IActionResult> GetCityByName(string name)
+		{
+			var accessToken = HttpContext.Session.GetString("JWToken");
+
+			if (accessToken is not null)
+			{
+				_httpClient.DefaultRequestHeaders.Authorization =
+				new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", accessToken);
+				var responseMessage = await _httpClient.GetAsync($"{baseUrl}/City/GetAllByCountryName/{name}");
+
+
+				if (responseMessage.IsSuccessStatusCode)
+				{
+
+					var citiesResponse = responseMessage.Content.ReadAsStringAsync().Result;
+					List<City> citiesData = JsonConvert.DeserializeObject<List<City>>(citiesResponse);
+
+					return Json(citiesData);
+				}
+
+
+			}
+
+			return Json("Bad request");
+		}
+
+
 
 
 		[HttpPost]
@@ -49,10 +83,12 @@ namespace WebUI.Areas.Admin.Controllers
 			{
 				_httpClient.DefaultRequestHeaders.Authorization =
 				new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", accessToken);
+
 				string jsonData = JsonConvert.SerializeObject(student);
 				StringContent content = new StringContent(jsonData, Encoding.UTF8, "application/json");
 
 				HttpResponseMessage response = await _httpClient.PostAsync($"{baseUrl}/Student/CreateStudent/", content);
+
 				if (response.IsSuccessStatusCode)
 				{
 					StudentResponse studentData = new StudentResponse();
