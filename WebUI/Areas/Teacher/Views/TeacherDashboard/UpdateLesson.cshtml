@@ -1,0 +1,308 @@
+﻿@using System.Text.Json;
+@using WebUI.Areas.Teacher.Models;
+
+@{
+    Layout = "~/Areas/Teacher/Views/Shared/_Layout.cshtml";
+    //List<GetAllStudents> groups = ViewBag.Students as List<GetAllStudents>;
+
+}
+
+@model WebUI.Areas.Teacher.Models.UpdateLesson
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from akademi.dexignlab.com/xhtml/form-pickers.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 20 Jul 2023 19:30:02 GMT -->
+<head>
+
+    <!-- All Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="DexignLab">
+    <meta name="robots" content="">
+    <meta name="keywords" content="school, school admin, education, academy, admin dashboard, college, college management, education management, institute, school management, school management system, student management, teacher management, university, university management">
+    <meta name="description" content="Discover Akademi - the ultimate admin dashboard and Bootstrap 5 template. Specially designed for professionals, and for business. Akademi provides advanced features and an easy-to-use interface for creating a top-quality website with School and Education Dashboard">
+    <meta property="og:title" content="Akademi : School and Education Management Admin Dashboard Template">
+    <meta property="og:description" content="Akademi - the ultimate admin dashboard and Bootstrap 5 template. Specially designed for professionals, and for business. Akademi provides advanced features and an easy-to-use interface for creating a top-quality website with School and Education Dashboard">
+    <meta property="og:image" content="social-image.png">
+    <meta name="format-detection" content="telephone=no">
+
+    <!-- Mobile Specific -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Page Title Here -->
+    <title>Akademi : School and Education Management Admin Dashboard Template</title>
+
+    <!-- FAVICONS ICON -->
+    <link rel="shortcut icon" type="image/png" href="~/images/favicon.png">
+    <!-- Daterange picker -->
+    <link href="~/vendor/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+    <!-- Clockpicker -->
+    <link href="~/vendor/clockpicker/css/bootstrap-clockpicker.min.css" rel="stylesheet">
+    <!-- asColorpicker -->
+    <link href="~/vendor/jquery-asColorPicker/css/asColorPicker.min.css" rel="stylesheet">
+    <!-- Material color picker -->
+    <link href="~/vendor/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.css" rel="stylesheet">
+
+    <!-- Pick date -->
+    <link rel="stylesheet" href="~/vendor/pickadate/themes/default.css">
+    <link rel="stylesheet" href="~/vendor/pickadate/themes/default.date.css">
+    <link href="~/https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="~/vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
+    <!-- Custom Stylesheet -->
+    <link href="~/vendor/jquery-nice-select/css/nice-select.css" rel="stylesheet">
+    <link href="~/https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+    <link href="~/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+    <div class="content-body pe-0">
+        <div class="container-fluid">
+            <!-- row -->
+            <div class="row">
+
+
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title">Edit lesson</h4>
+                        </div>
+                        <form method="post" asp-action="UpdateLesson" asp-controller="Lessons" id="updateLesson">
+                            <div class="card-body">
+                                <div class="row">
+
+                                    <div class="mb-3 col-md-6">
+                                        <label class="form-label">Lesson Name</label>
+                                        <input type="hidden" name="lesson.Id" value="@Model.Id" id="lessonId">
+                                        <input type="text" class="form-control" name="lesson.Name" value="@Model.Name" id="lessonName">
+                                    </div>
+                                    <div class="mb-3 col-md-6">
+                                        <label class="form-label">Group Name</label>
+                                        <input type="text" class="form-control" name="lesson.Group" value="@Model.Group" readonly>
+                                    </div>
+                                    <div class="mb-3 col-md-6">
+                                        <label class="form-label">Topics covered</label>
+                                        <input type="text" class="form-control" name="lesson.TopicsCovered" id="lessonTopicsCovered" value="@Model.TopicsCovered">
+                                    </div>
+                                    <div class="mb-3 col-md-6">
+                                        <label>Notes</label>
+                                        <input type="text" class="form-control" name="lesson.Notes" value="@Model.Notes" id="lessonNotes">
+                                    </div>
+                                </div>
+
+
+
+
+                                <div class="row">
+                                    <div class="col-md-6 col-xl-6 col-xxl-6 mb-3">
+                                        <label class="form-label">Start time of lesson</label>
+                                        <div class="input-group clockpicker">
+                                            <input type="text" class="form-control" name="lesson.StartTime" id="lessonStartTime" value="@Model.StartTime.ToString(" HH:mm")"><span class="input-group-text"><i class="far fa-clock"></i></span>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-xl-6 col-xxl-6 mb-3">
+                                        <label class="form-label">End time of lesson</label>
+                                        <div class="input-group clockpicker">
+                                            <input type="text" class="form-control" name="lesson.EndTime" id="lessonEndTime" value="@Model.EndTime.ToString(" HH:mm")"><span class="input-group-text"><i class="far fa-clock"></i></span>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="row mt-5">
+                                    <h4> Attendances </h4>
+                                    <div class="col-xl-12 wow fadeInUp" data-wow-delay="1.5s">
+                                        <div class="table-responsive ">
+                                            <table class="table ">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">Student Name</th>
+
+                                                        <th scope="col">Presence</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+
+                                                    @*   @foreach (var student in groups)
+                                                    {
+                                                    <tr>
+
+                                                    <td>@student.Surname @student.Name @student.FathersName</td>
+
+                                                    <td> attendance </td>
+
+
+                                                    </tr>
+                                                    }*@
+
+                                                    @foreach (var attendance in Model.Attendances)
+                                                    {
+                                                        <tr>
+
+                                                            <td>@attendance.Student.Surname @attendance.Student.Name @attendance.Student.FathersName</td>
+
+
+                                                            <td>
+                                                                <div class="row">
+                                                                    <div class="col-xl-2 col-xxl-2 col-2">
+                                                                        <div class="form-check custom-checkbox mb-3 checkbox-info">
+                                                                            <input type="radio" class="form-check-input" id="customRadioBox3_@attendance.StudentId" name="optradioCustom_@attendance.StudentId">
+                                                                            <label class="form-check-label" for="customRadioBox3_@attendance.StudentId" name="@attendance.Status" value="true">Yes</label>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-xl-2 col-xxl-2 col-2">
+                                                                        <div class="form-check custom-checkbox mb-3 checkbox-danger">
+                                                                            <input type="radio" class="form-check-input" id="customRadioBox6_@attendance.StudentId" name="optradioCustom_@attendance.StudentId">
+                                                                            <label class="form-check-label" for="customRadioBox6_@attendance.StudentId" name="@attendance.Status" value="false">No</label>
+                                                                        </div>
+                                                                    </div>
+
+                                                                </div>
+                                                            </td>
+
+
+                                                        </tr>
+                                                    }
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+
+                                    <button type="submit" class="btn btn-primary" id="submitBtn">Update lesson</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Required vendors -->
+    <script src="~/vendor/global/global.min.js"></script>
+    <script src="~/vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+    <script src="~/vendor/chart.js/Chart.bundle.min.js"></script>
+    <!-- Apex Chart -->
+    <script src="~/vendor/apexchart/apexchart.js"></script>
+
+
+
+    <!-- Daterangepicker -->
+    <!-- momment js is must -->
+    <script src="~/vendor/moment/moment.min.js"></script>
+    <script src="~/vendor/bootstrap-daterangepicker/daterangepicker.js"></script>
+    <!-- clockpicker -->
+    <script src="~/vendor/clockpicker/js/bootstrap-clockpicker.min.js"></script>
+    <!-- asColorPicker -->
+    <script src="~/vendor/jquery-asColor/jquery-asColor.min.js"></script>
+    <script src="~/vendor/jquery-asGradient/jquery-asGradient.min.js"></script>
+    <script src="~/vendor/jquery-asColorPicker/js/jquery-asColorPicker.min.js"></script>
+    <!-- Material color picker -->
+    <script src="~/vendor/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker.js"></script>
+    <!-- pickdate -->
+    <script src="~/vendor/pickadate/picker.js"></script>
+    <script src="~/vendor/pickadate/picker.time.js"></script>
+    <script src="~/vendor/pickadate/picker.date.js"></script>
+
+    <!-- Daterangepicker -->
+    <script src="~/js/plugins-init/bs-daterange-picker-init.js"></script>
+    <!-- Clockpicker init -->
+    <script src="~/js/plugins-init/clock-picker-init.js"></script>
+    <!-- asColorPicker init -->
+    <script src="~/js/plugins-init/jquery-asColorPicker.init.js"></script>
+    <!-- Material color picker init -->
+    <script src="~/js/plugins-init/material-date-picker-init.js"></script>
+    <!-- Pickdate -->
+    <script src="~/js/plugins-init/pickadate-init.js"></script>
+    <script src="~/vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+    <script src="~/vendor/jquery-nice-select/js/jquery.nice-select.min.js"></script>
+
+    <script src="~/js/custom.min.js"></script>
+    <script src="~/js/dlabnav-init.js"></script>
+    <script src="~/js/demo.js"></script>
+    <script src="~/js/styleSwitcher.js"></script>
+
+
+    <script>
+        let submitform = document.getElementById('updateLesson');
+        let lessonId = document.getElementById('lessonId');
+        let lessonName = document.getElementById('lessonName');
+        let lessonTopicsCovered = document.getElementById('lessonTopicsCovered');
+        let lessonNotes = document.getElementById('lessonNotes');
+        let lessonStartTime = document.getElementById('lessonStartTime');
+        let lessonEndTime = document.getElementById('lessonEndTime');
+
+
+        submitform.addEventListener('submit', (e) => {
+
+            e.preventDefault(); // Prevent the default form submission
+
+            var radiosArray = document.querySelectorAll('input[type="radio"][class="form-check-input"]');
+            var checkedRadios = Array.from(radiosArray).filter(radio => radio.checked);
+            console.log(checkedRadios);
+
+
+            var studentAttends = [];
+            var attendancesData = JSON.parse('@Html.Raw(JsonSerializer.Serialize(Model))');
+            //console.log(attendancesData.Attendances);
+            // Now you can work with the checked radio buttons
+            checkedRadios.map(checkedRadio => {
+                var label = checkedRadio.nextElementSibling.textContent.trim();
+                checkedRadio.value = label == 'Yes' ? true : false;
+                console.log(checkedRadio.value);
+                var studentId = checkedRadio.id.split('_')[1];
+                var student = attendancesData.Attendances.find(x => x.StudentId == studentId);
+                var studentData = {
+                    StudentId: studentId,
+                    Student: student ? student.Student : null,
+                    Status: checkedRadio.value,
+                    LessonId: `${@Model.Id}`,
+                    AttendanceDate: '@Model.StartTime',
+                    Lesson: attendancesData,
+                };
+
+                studentAttends.push(studentData);
+
+            });
+
+
+            var dataToSend = {
+                Id: lessonId.value,
+                Name: lessonName.value,
+                Group: '@Model.Group',
+                Attendances: studentAttends,
+                LessonDate: lessonStartTime.value,
+                StartTime: lessonStartTime.value,
+                EndTime: lessonEndTime.value,
+                TopicsCovered: lessonTopicsCovered.value,
+                Notes: lessonNotes.value
+            }
+
+            console.log(dataToSend);
+            fetch('/Teacher/TeacherDashboard/UpdateLesson', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(dataToSend)
+            })
+                .then(data => data.json)
+                .then(response => {
+                    window.location.replace("/Teacher/TeacherDashboard/Index")
+                })
+        })
+
+    </script>
+</body>
+
+<!-- Mirrored from akademi.dexignlab.com/xhtml/form-pickers.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 20 Jul 2023 19:30:07 GMT -->
+</html>

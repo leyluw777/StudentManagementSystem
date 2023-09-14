@@ -27,7 +27,7 @@ namespace Application.Teacher.Handlers
         public async Task<GetTeacherByIdQueryResponse> Handle(GetTeacherByIdQueryRequest request, CancellationToken cancellationToken)
         {
 
-            var TeacherById = await _appDbContext.Teachers
+            var TeacherById = await _appDbContext.Teachers.Include(x => x.Address)
     
                    .FirstOrDefaultAsync(teacher => teacher.Id == request.Id);
             //var teacher = _mapper.Map<GetTeacherByIdQueryResponse>(TeacherById);
@@ -47,9 +47,11 @@ namespace Application.Teacher.Handlers
                 ActiveStatus = TeacherById.ActiveStatus,
                 Experience = TeacherById.Experience,
                 
-                Address = TeacherById.Address != null
-        ? TeacherById.Address.District + ' ' + TeacherById.Address.StreetAddress + ' ' + TeacherById.Address.HouseNo.ToString()
-        : string.Empty,
+                ZipCode = (int)TeacherById.Address.ZipCode,
+                HomeNumber = (int)TeacherById.Address.HomeNumber,
+                HouseNo = (int)TeacherById.Address.HouseNo,
+                District = TeacherById.Address.District,
+                StreetAddress = TeacherById.Address.StreetAddress
               
             };
 

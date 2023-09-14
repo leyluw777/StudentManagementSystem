@@ -2,6 +2,7 @@
 using Newtonsoft.Json;
 using System.Text;
 using WebUI.Areas.Admin.Models;
+using WebUI.Areas.Admin.Services;
 
 namespace WebUI.Areas.Admin.Controllers
 {
@@ -10,12 +11,15 @@ namespace WebUI.Areas.Admin.Controllers
     {
         private readonly HttpClient _httpClient;
         private const string baseUrl = "http://localhost:5269/api";
-        public TeacherController(HttpClient httpClient)
-        {
-            _httpClient = httpClient;
-        }
+		private readonly ICourse _course;
 
-        [HttpGet]
+		public TeacherController(HttpClient httpClient, ICourse course)
+		{
+			_httpClient = httpClient;
+			_course = course;
+		}
+
+		[HttpGet]
         public async Task<IActionResult> GetAll()
         {
             List<GetAllTeachers> teachers = new List<GetAllTeachers>();
@@ -91,8 +95,9 @@ namespace WebUI.Areas.Admin.Controllers
             {
                 var teacherResponse = responseMessage.Content.ReadAsStringAsync().Result;
                 editedTeacher = JsonConvert.DeserializeObject<GetTeacherById>(teacherResponse);
-
-                return View(editedTeacher);
+				var allcourses = _course.GetAll();
+				ViewBag.Course = allcourses;
+				return View(editedTeacher);
 
             }
 
@@ -117,7 +122,8 @@ namespace WebUI.Areas.Admin.Controllers
             HttpResponseMessage response = await _httpClient.PutAsync($"{baseUrl}/Teacher/UpdateTeacher/", content);
             if (response.IsSuccessStatusCode)
             {
-                return RedirectToAction("GetAll", "Teacher");
+					
+					return RedirectToAction("GetAll", "Teacher");
             }
 
         }

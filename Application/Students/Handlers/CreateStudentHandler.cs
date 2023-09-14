@@ -78,9 +78,13 @@ namespace Application.Students.Handlers
                     Gender = request.Gender,
                     Fin = request.Fin,
                     Status = (SMSDomain.Enums.Status)request.Status,
-                    CityId = _appDbContext.Cities.FirstOrDefault(x => x.Name == request.City).Id,
-                    CountryId =  _appDbContext.Countries.FirstOrDefault(c => c.Name == request.Country).Id,
-                    AverageGrade = 0.0,
+                    CityId = request.City != null
+				  ? _appDbContext.Cities.FirstOrDefault(x => x.Name == request.City)?.Id
+				  : null,
+					CountryId = request.Country != null
+				  ? _appDbContext.Countries.FirstOrDefault(x => x.Name == request.Country)?.Id
+				  : null,
+					AverageGrade = 0.0,
                     UserName = username,
                   
                 };

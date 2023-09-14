@@ -1,7 +1,7 @@
 ﻿@{
 	ViewData["Title"] = "Index";
 //	var dashboard = Url.Action("Index", "Dashboard", new { area = "Teacher" });
-	var allStudents = Url.Action("Index", "TeacherDashboarrd", new { area = "Teacher" });
+	var allStudents = Url.Action("Index", "TeacherDashboard", new { area = "Teacher" });
 	var students =  Url.Action("Index", "Students", new { area = "Teacher" });
 }
 
@@ -317,20 +317,20 @@
 			<div class="dlabnav-scroll">
 				<ul class="metismenu" id="menu">
 					<li>
-						<a href="" aria-expanded="false">
+						<a href="@allStudents" aria-expanded="false">
 							<i class="material-symbols-outlined">home</i>
 							<span class="nav-text">Dashboard</span>
 						</a>
 
 					</li>
-					<li>
-						<a class="has-arrow " href="@students" aria-expanded="false">
+				@*	<li>
+						<a class="" href="@students" aria-expanded="false">
 							<i class="material-symbols-outlined">school</i>
 							<span class="nav-text">Students</span>
 						</a>
 						
 
-					</li>
+					</li>*@
 	
 
 

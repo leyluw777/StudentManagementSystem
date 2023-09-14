@@ -73,11 +73,11 @@
                         </div>
                         <form >
                             <div class="card-body">
-                                <div class="row">
+                                <div class="row mb-3">
 
                                     <div class="mb-3 col-md-6">
                                         <label class="text-primary ">Lesson Name</label>
-                                        <p class="text-muted" type="hidden" name="lesson.Id" value="@Model.Id" id="lessonId">@Model.Id</p>
+                                        <p style="display:none;" name="lesson.Id" value="@Model.Id" id="lessonId">@Model.Id</p>
                                         <p class="text-muted" type="text" name="lesson.Name" value="@Model.Name" id="lessonName">@Model.Name</p>
                                     </div>
                                     <div class="mb-3 col-md-6">
@@ -97,18 +97,18 @@
 
 
 
-                                <div class="row">
+                                <div class="row mb-3">
                                     <div class="col-md-6 col-xl-6 col-xxl-6 mb-3">
                                         <label class="text-primary">Start time of lesson</label>
                                         <div class="input-group clockpicker">
-                                            <p class="text-muted" type="text" name="lesson.StartTime" id="lessonStartTime" value="@Model.StartTime.ToString(" HH:mm")"><span class="input-group-text"><i class="far fa-clock"></i></span>@Model.StartTime.ToString(" HH:mm")</p>
+                                            <p class="text-muted" type="text" name="lesson.StartTime" id="lessonStartTime" value="@Model.StartTime.ToString(" HH:mm")">@Model.StartTime.ToString(" HH:mm")</p>
 
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-xl-6 col-xxl-6 mb-3">
                                         <label class="text-primary">End time of lesson</label>
                                         <div class="input-group clockpicker">
-                                            <p class="text-muted" type="text" name="lesson.EndTime" id="lessonEndTime" value="@Model.EndTime.ToString(" HH:mm")"><span class="input-group-text"><i class="far fa-clock"></i></span>@Model.EndTime.ToString(" HH:mm")</p>
+                                            <p class="text-muted" type="text" name="lesson.EndTime" id="lessonEndTime" value="@Model.EndTime.ToString(" HH:mm")">@Model.EndTime.ToString(" HH:mm")</p>
                                         </div>
                                     </div>
 

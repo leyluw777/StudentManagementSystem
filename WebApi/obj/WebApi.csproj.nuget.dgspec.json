@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\leylani\\Desktop\\finalproject\\StudentManagementSystem\\WebApi\\WebApi.csproj": {}
+    "C:\\Users\\Hp\\Desktop\\FinalProject2\\StudentManagementSystem\\WebApi\\WebApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\leylani\\Desktop\\finalproject\\StudentManagementSystem\\Application\\Application.csproj": {
+    "C:\\Users\\Hp\\Desktop\\FinalProject2\\StudentManagementSystem\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\leylani\\Desktop\\finalproject\\StudentManagementSystem\\Application\\Application.csproj",
+        "projectUniqueName": "C:\\Users\\Hp\\Desktop\\FinalProject2\\StudentManagementSystem\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "C:\\Users\\leylani\\Desktop\\finalproject\\StudentManagementSystem\\Application\\Application.csproj",
-        "packagesPath": "C:\\Users\\leylani\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\leylani\\Desktop\\finalproject\\StudentManagementSystem\\Application\\obj\\",
+        "projectPath": "C:\\Users\\Hp\\Desktop\\FinalProject2\\StudentManagementSystem\\Application\\Application.csproj",
+        "packagesPath": "C:\\Users\\Hp\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Hp\\Desktop\\FinalProject2\\StudentManagementSystem\\Application\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\leylani\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +31,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\leylani\\Desktop\\finalproject\\StudentManagementSystem\\SMSDomain\\SMSDomain.csproj": {
-                "projectPath": "C:\\Users\\leylani\\Desktop\\finalproject\\StudentManagementSystem\\SMSDomain\\SMSDomain.csproj"
+              "C:\\Users\\Hp\\Desktop\\FinalProject2\\StudentManagementSystem\\SMSDomain\\SMSDomain.csproj": {
+                "projectPath": "C:\\Users\\Hp\\Desktop\\FinalProject2\\StudentManagementSystem\\SMSDomain\\SMSDomain.csproj"
               }
             }
           }
@@ -101,21 +104,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\leylani\\Desktop\\finalproject\\StudentManagementSystem\\Infrastructure\\Infrastructure.csproj": {
+    "C:\\Users\\Hp\\Desktop\\FinalProject2\\StudentManagementSystem\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\leylani\\Desktop\\finalproject\\StudentManagementSystem\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\Hp\\Desktop\\FinalProject2\\StudentManagementSystem\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "C:\\Users\\leylani\\Desktop\\finalproject\\StudentManagementSystem\\Infrastructure\\Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\leylani\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\leylani\\Desktop\\finalproject\\StudentManagementSystem\\Infrastructure\\obj\\",
+        "projectPath": "C:\\Users\\Hp\\Desktop\\FinalProject2\\StudentManagementSystem\\Infrastructure\\Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\Hp\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Hp\\Desktop\\FinalProject2\\StudentManagementSystem\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\leylani\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -129,8 +135,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\leylani\\Desktop\\finalproject\\StudentManagementSystem\\Application\\Application.csproj": {
-                "projectPath": "C:\\Users\\leylani\\Desktop\\finalproject\\StudentManagementSystem\\Application\\Application.csproj"
+              "C:\\Users\\Hp\\Desktop\\FinalProject2\\StudentManagementSystem\\Application\\Application.csproj": {
+                "projectPath": "C:\\Users\\Hp\\Desktop\\FinalProject2\\StudentManagementSystem\\Application\\Application.csproj"
               }
             }
           }
@@ -186,21 +192,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\leylani\\Desktop\\finalproject\\StudentManagementSystem\\SMSDomain\\SMSDomain.csproj": {
+    "C:\\Users\\Hp\\Desktop\\FinalProject2\\StudentManagementSystem\\SMSDomain\\SMSDomain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\leylani\\Desktop\\finalproject\\StudentManagementSystem\\SMSDomain\\SMSDomain.csproj",
+        "projectUniqueName": "C:\\Users\\Hp\\Desktop\\FinalProject2\\StudentManagementSystem\\SMSDomain\\SMSDomain.csproj",
         "projectName": "SMSDomain",
-        "projectPath": "C:\\Users\\leylani\\Desktop\\finalproject\\StudentManagementSystem\\SMSDomain\\SMSDomain.csproj",
-        "packagesPath": "C:\\Users\\leylani\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\leylani\\Desktop\\finalproject\\StudentManagementSystem\\SMSDomain\\obj\\",
+        "projectPath": "C:\\Users\\Hp\\Desktop\\FinalProject2\\StudentManagementSystem\\SMSDomain\\SMSDomain.csproj",
+        "packagesPath": "C:\\Users\\Hp\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Hp\\Desktop\\FinalProject2\\StudentManagementSystem\\SMSDomain\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\leylani\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -255,21 +264,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\leylani\\Desktop\\finalproject\\StudentManagementSystem\\WebApi\\WebApi.csproj": {
+    "C:\\Users\\Hp\\Desktop\\FinalProject2\\StudentManagementSystem\\WebApi\\WebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\leylani\\Desktop\\finalproject\\StudentManagementSystem\\WebApi\\WebApi.csproj",
+        "projectUniqueName": "C:\\Users\\Hp\\Desktop\\FinalProject2\\StudentManagementSystem\\WebApi\\WebApi.csproj",
         "projectName": "WebApi",
-        "projectPath": "C:\\Users\\leylani\\Desktop\\finalproject\\StudentManagementSystem\\WebApi\\WebApi.csproj",
-        "packagesPath": "C:\\Users\\leylani\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\leylani\\Desktop\\finalproject\\StudentManagementSystem\\WebApi\\obj\\",
+        "projectPath": "C:\\Users\\Hp\\Desktop\\FinalProject2\\StudentManagementSystem\\WebApi\\WebApi.csproj",
+        "packagesPath": "C:\\Users\\Hp\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Hp\\Desktop\\FinalProject2\\StudentManagementSystem\\WebApi\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\leylani\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -277,17 +289,18 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\sdk\\7.0.302\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\leylani\\Desktop\\finalproject\\StudentManagementSystem\\Application\\Application.csproj": {
-                "projectPath": "C:\\Users\\leylani\\Desktop\\finalproject\\StudentManagementSystem\\Application\\Application.csproj"
+              "C:\\Users\\Hp\\Desktop\\FinalProject2\\StudentManagementSystem\\Application\\Application.csproj": {
+                "projectPath": "C:\\Users\\Hp\\Desktop\\FinalProject2\\StudentManagementSystem\\Application\\Application.csproj"
               },
-              "C:\\Users\\leylani\\Desktop\\finalproject\\StudentManagementSystem\\Infrastructure\\Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\leylani\\Desktop\\finalproject\\StudentManagementSystem\\Infrastructure\\Infrastructure.csproj"
+              "C:\\Users\\Hp\\Desktop\\FinalProject2\\StudentManagementSystem\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\Hp\\Desktop\\FinalProject2\\StudentManagementSystem\\Infrastructure\\Infrastructure.csproj"
               }
             }
           }
@@ -346,7 +359,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }

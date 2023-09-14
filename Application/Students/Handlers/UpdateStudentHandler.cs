@@ -52,13 +52,17 @@ namespace Application.Students.Handlers
                 studentUpdate.Address.HouseNo = request.HouseNo;
                 studentUpdate.Address.ZipCode = request.ZipCode;
                 studentUpdate.Address.HomeNumber = request.HomeNumber;
-                studentUpdate.CountryId = _dbContext.Countries.FirstOrDefault(c => c.Name == request.Country).Id;
-                studentUpdate.CityId = _dbContext.Cities.FirstOrDefault(c => c.Name == request.City).Id;
-               
-                
+                studentUpdate.CountryId = request.Country != null
+                  ? _dbContext.Countries.FirstOrDefault(x => x.Name == request.Country)?.Id
+                  : null;
+                studentUpdate.CityId = request.City != null
+				  ? _dbContext.Cities.FirstOrDefault(x => x.Name == request.City)?.Id
+				  : null;
 
 
-                var phoneNumbers = new List<PhoneNumber>();
+
+
+				var phoneNumbers = new List<PhoneNumber>();
                 foreach (var number in request.Phonenumbers)
                 {
                    phoneNumbers.Add(new PhoneNumber { Number = number, StudentId = request.Id});

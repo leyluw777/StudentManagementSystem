@@ -2145,25 +2145,25 @@ namespace Infrastructure.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "478007de-83e9-4ec5-8d01-40c4df631631",
+                            Id = "e0fac40c-bd01-4e3d-a28b-5132fc52fd18",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = "2041cd4f-cb27-4cfe-a212-85dbba76f055",
+                            Id = "d8e0e2b5-a3ec-4580-8a36-0a381664e9fe",
                             Name = "Student",
                             NormalizedName = "STUDENT"
                         },
                         new
                         {
-                            Id = "369da0b7-d5e1-49be-8487-901068c7b6ad",
+                            Id = "0b5ed7d9-712b-449a-8088-a898b811e160",
                             Name = "Teacher",
                             NormalizedName = "TEACHER"
                         },
                         new
                         {
-                            Id = "3bec9f2e-e17e-4d25-9a41-4bf26171b3be",
+                            Id = "4b6a4f76-5abe-46eb-a63a-48c07c70e610",
                             Name = "Coordinator",
                             NormalizedName = "COORDINATOR"
                         });

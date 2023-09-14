@@ -3651,19 +3651,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\leylani\\.nuget\\packages\\": {}
+    "C:\\Users\\Hp\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\leylani\\Desktop\\finalproject\\StudentManagementSystem\\Infrastructure\\Infrastructure.csproj",
+      "projectUniqueName": "C:\\Users\\Hp\\Desktop\\FinalProject2\\StudentManagementSystem\\Infrastructure\\Infrastructure.csproj",
       "projectName": "Infrastructure",
-      "projectPath": "C:\\Users\\leylani\\Desktop\\finalproject\\StudentManagementSystem\\Infrastructure\\Infrastructure.csproj",
-      "packagesPath": "C:\\Users\\leylani\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\leylani\\Desktop\\finalproject\\StudentManagementSystem\\Infrastructure\\obj\\",
+      "projectPath": "C:\\Users\\Hp\\Desktop\\FinalProject2\\StudentManagementSystem\\Infrastructure\\Infrastructure.csproj",
+      "packagesPath": "C:\\Users\\Hp\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Hp\\Desktop\\FinalProject2\\StudentManagementSystem\\Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\leylani\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3677,8 +3681,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\leylani\\Desktop\\finalproject\\StudentManagementSystem\\Application\\Application.csproj": {
-              "projectPath": "C:\\Users\\leylani\\Desktop\\finalproject\\StudentManagementSystem\\Application\\Application.csproj"
+            "C:\\Users\\Hp\\Desktop\\FinalProject2\\StudentManagementSystem\\Application\\Application.csproj": {
+              "projectPath": "C:\\Users\\Hp\\Desktop\\FinalProject2\\StudentManagementSystem\\Application\\Application.csproj"
             }
           }
         }
@@ -3734,7 +3738,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }

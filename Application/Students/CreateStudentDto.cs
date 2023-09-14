@@ -27,8 +27,8 @@ namespace Application.Students
         //  public int AddressId { get; set; }
         public Address Address { get; set; }
 
-        public Country Country { get; set; }
-        public City City { get; set; }
+        public Country? Country { get; set; }
+        public City? City { get; set; }
         public List<PhoneNumber> PhoneNumbers { get; set; }
         public List<Course> Courses { get; set; }
 

@@ -69,8 +69,8 @@ href="
 				<div class="col-xl-12">
 					<div class="row">
 						<div class="col-xl-12">
-							<div class="page-title flex-wrap">
-								<div class="input-group search-area mb-md-0 mb-3">
+							<div class="page-title flex-wrap justify-content-end">
+							@*	<div class="input-group search-area mb-md-0 mb-3">
 									<input type="text" class="form-control" placeholder="Search here...">
 									<span class="input-group-text">
 										<a href="~/javascript:void(0)">
@@ -79,7 +79,7 @@ href="
 											</svg>
 										</a>
 									</span>
-								</div>
+								</div>*@
 								<div>
 
 									<!-- Button trigger modal -->
@@ -98,7 +98,7 @@ href="
 									<thead>
 										<tr>
 											<th>
-												<input type="checkbox" class="form-check-input" id="checkAll" required="">
+												No
 											</th>
 											<th>Name</th>
 											<th>Surname</th>
@@ -112,16 +112,14 @@ href="
 									</thead>
 									<tbody>
 
-										@foreach(var teacher in @Model){
-											<tr>
+										@{
+												var i = 1;
+											foreach(var teacher in @Model){
+												<tr>
 												<td>
-													<div class="checkbox me-0 align-self-center">
-														<div class="custom-control custom-checkbox ">
-															<input type="checkbox" class="form-check-input" id="check8" required="">
-															<label class="custom-control-label" for="check8"></label>
-														</div>
-													</div>
+														@i
 												</td>
+													
 													<td>
 											<div class="trans-list">
 											@*<img src="~/images/trans/1.jpg" alt="" class="avatar avatar-sm me-3">*@
@@ -151,35 +149,23 @@ href="
 														@Html.DisplayFor(modelItem => teacher.Experience)
 													</div>
 												</td>
-											@*	<td>
-													@if(student.Status == 0)
-													{
-														<span class="badge light badge-success">Active</span>
-													}
-													else if (student.Status == 1)
-													{
-														<span class="badge light badge-danger">Left</span>
-													}
-													else if (student.Status == 2)
-													{
-														<span class="badge light badge-warning">Temporary stopped</span>
-													}
-													else
-													{
-														<span class="badge light badge-dark">Graduated</span>
-													}
-												</td>*@
+										
 												<td>
 													<div class="d-flex justify-content-center">
 														<a href="@editTeacher/@teacher.Id" class="btn btn-primary shadow btn-xs sharp me-1" asp-route-id="@teacher.Id"><i class="fa fa-pencil"></i></a>
 														@*<a href="@deleteStudent/Index/@student.Id" class="btn btn-danger shadow btn-xs sharp" asp-route-id="@student.Id"><i class="fa fa-trash"></i></a>*@
 													</div>
 												</td>
-											</tr>
+												</tr>
 
-										}
+												
+													i++;
+												
+														
+													
+											}
 									
-
+										}
 
 
 

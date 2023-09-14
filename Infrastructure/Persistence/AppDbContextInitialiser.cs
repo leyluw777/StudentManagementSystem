@@ -69,7 +69,7 @@ namespace Infrastructure.Persistence
         public async Task TrySeedAsync()
         {
 
-            AppUser admin = new AppUser { Name = "Leila", Surname = "Imanova", UserName = "leila6x9k", Email = "leila.imanova.7@gmail.com", FathersName = "Namik", Fin = "6x9khje" };
+            AppUser admin = new AppUser { Name = "Leila", Surname = "Imanova", UserName = "admin123", Email = "leila.imanova.7@gmail.com", FathersName = "Namik", Fin = "6x9khje" };
 
 
 

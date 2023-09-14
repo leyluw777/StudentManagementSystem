@@ -114,16 +114,16 @@
                             </div>
 
                           
-                                <div class="row">
-
+                                <div class="row mt-5">
+                                    <h4> Attendances </h4>
                                     <div class="col-xl-12 wow fadeInUp" data-wow-delay="1.5s">
                                         <div class="table-responsive ">
-                                            <table class="table  ">
-                                                <thead class="thead-primary">
+                                            <table class="table ">
+                                                <thead >
                                                     <tr>
                                                         <th scope="col">Student Name</th>
                                                         
-                                                        <th scope="col">Absence</th>
+                                                        <th scope="col">Presence</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -257,7 +257,7 @@
             // Now you can work with the checked radio buttons
             checkedRadios.map(checkedRadio => {
                 var label = checkedRadio.nextElementSibling.textContent.trim();
-                checkedRadio.value = label == 'Yes' ? false : true;
+                checkedRadio.value = label == 'Yes' ? true : false;
                 console.log(checkedRadio.value);
                 var studentId = checkedRadio.id.split('_')[1];
                 var student = attendancesData.Attendances.find(x => x.StudentId == studentId); 

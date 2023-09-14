@@ -47,6 +47,10 @@
 	<!--swiper-slider-->
 	<!-- Style css -->
 	<link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2-bootstrap-theme/0.1.0-beta.10/select2-bootstrap.min.css" integrity="sha512-kq3FES+RuuGoBW3a9R2ELYKRywUEQv0wvPTItv3DSGqjpbNtGWVdvT8qwdKkqvPzT93jp8tSF4+oN4IeTEIlQA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
 	<link href="../wwwroot/css/style.css" rel="stylesheet">
 
 </head>
@@ -100,10 +104,10 @@
 													</div>
 													<div class="mb-3 col-xl-5 col-sm-5">
 														<label for="exampleFormControlInput3" class="form-label text-primary">Fin ID<span class="required">*</span></label>
-														<input type="text" class="form-control" id="exampleFormControlInput3" placeholder="7sxa8q2" name="student.Fin" >
+														<input type="text" class="form-control" id="exampleFormControlInput3" placeholder="7sxa8q2" maxlength="7" name="student.Fin" >
 													</div>
 												</div>
-												<div class="mb-3">
+												@*<div class="mb-3">
 													<label for="exampleFormControlTextarea1" class="form-label text-primary">Country<span class="required">*</span></label>
 
 													<select class="default-select  form-control wide" name="student.Country" asp-for="Country" id="studentCountry">
@@ -120,7 +124,7 @@
 														<option value="Uzbekistan">   Uzbekistan		</option>
 
 													</select>
-												</div>
+												</div>*@
 
 
 												<div class="row">
@@ -178,10 +182,10 @@
 													<div class="col-xl-3 col-sm-3">
 														<label for="exampleFormControlTextarea1" class="form-label text-primary">Group Name<span class="required">*</span></label>
 														<select class="default-select  form-control wide" name="student.Group" asp-for="student.Group">
+															<option value="FRONT102">FRONT102</option>
 															<option value="BACK100">BACK100</option>
 															<option value="MOBILE95">MOBILE95</option>
 															<option value="CYBER220">CYBER220</option>
-															<option value="FRONT102">FRONT102</option>
 
 														</select>
 
@@ -213,25 +217,25 @@
 												<div class="mb-3">
 														<label for="exampleFormControlInput6" class="form-label text-primary">Phone Number<span class="required">*</span></label>
 		
-																<input type="number" class="form-control mb-3" id="exampleFormControlInput6" placeholder="+123456789" name="student.PhoneNumber" >
+																<input type="number" class="form-control mb-3" id="exampleFormControlInput6" placeholder="+994 70 555 55 55" name="student.PhoneNumber" >
 													
 													
 													</div>
 
 
 										
-												<div class="mb-3">
+												@*<div class="mb-3">
 													<label for="exampleFormControlTextarea1" class="form-label text-primary">City<span class="required">*</span></label>
 
-													<select class="dropdown-item default-select  form-control wide" id="studentCity" name="student.City" >
+													<select class=" default-select  form-control wide" id="studentCity" >
 
 													
 													</select>
 													
-												</div>
+												</div>*@
 												<div class="mb-3">
 													<label for="exampleFormControlHomeNum5" class="form-label text-primary">Home number<span class="required">*</span></label>
-													<input type="number" class="form-control" id="exampleFormControlHomeNum5" name="student.HomeNumber">
+													<input type="number" class="form-control" id="exampleFormControlHomeNum5" name="student.HomeNumber" placeholder="455 55 55">
 												</div>
 
 												<div class="mb-3">
@@ -297,6 +301,36 @@
 		</div>
 	</div>
 
+	@section Scripts {
+
+
+		<script>
+
+
+
+			$("#createStudentform").submit(function (e) {
+				e.preventDefault(); // Prevent the default form submission
+
+				$.ajax({
+					type: "POST",
+					url: "@Url.Action("Index", "CreateStudent")", // Replace with your action and controller names
+					data: $(this).serialize(), // Serialize the form data
+					success: function (data) {
+
+						// Update the modal content with response data
+						$("#modal-username").text(data.username);
+						$("#modal-password").text(data.password);
+
+						// Show the modal
+						$('#exampleModalCenter').modal('show');
+					},
+					error: function (xhr, status, error) {
+						// Handle errors if necessary
+					}
+				});
+			});
+		</script>
+	}
 
 
 	<script src="../wwwroot/vendor/global/global.min.js"></script>
@@ -309,104 +343,44 @@
 	<script src="../wwwroot/js/dlabnav-init.js"></script>
 	<script src="../wwwroot/js/demo.js"></script>
 	<script src="../wwwroot/js/styleSwitcher.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js" defer></script>
 
 
-@section Scripts {
-
-		<script>
-			//const i = 0;
-			//if(i >0)
-			//{$("#studentCountry").on("change", function () {
-			//	var selectedOption = $(this).val();
-			//	console.log(selectedOption)
-			//	// Make an AJAX request
-			//	$.ajax({
-			//		url: "/CreateStudent/GetCityById?name=" + selectedOption, // Replace with your server endpoint
-			//		method: "GET", // or "GET" depending on your server's API
-			//		success: function (response) {
-			//			// Handle the response from the server
-			//			console.log(response)
-
-			//			// Update the options of the dynamic select
-			//			//updateDynamicSelectOptions(selectedOption);
-			//		},
-			//		error: function (xhr, status, error) {
-			//			// Handle errors here
-			//			console.error(error);
-			//		}
-			//	});
-			//});}
-			//i++;
-
-			//var inputs = document.querySelectorAll("input.form-control");
-			//console.log(inputs);
-			//var selects = document.querySelectorAll("select.form-control");
-			//console.log(selects)
-			$("#createStudentform").submit(function (e) {
-				e.preventDefault(); // Prevent the default form submission
-		
-				$.ajax({
-					type: "POST",
-					url: "@Url.Action("Index", "CreateStudent")", // Replace with your action and controller names
-					data: $(this).serialize(), // Serialize the form data
-					success: function (data) {
-						console.log(data);
-						// Update the modal content with response data
-						$("#modal-username").text(data.username);
-						$("#modal-password").text(data.password);
-						// Show the modal
-						$('#exampleModalCenter').modal('show');
-					},
-					error: function (xhr, status, error) {
-						// Handle errors if necessary
-					}
-				});
-			});
-		</script>
-
-		<script>
+@*		<script>
 
 
 	
 			$("#studentCountry").on("change", function () {
 				var selectedOption = $(this).val();
 				var studentCity = document.getElementById("studentCity");
+				var select2 = document.getElementById("select2-container");
+				var selectBtn = document.querySelector("button[data-id='studentCity']");
+				//select2.setAttribute("class", "form-control wide")
+				var cityData = document.getElementById("select2-studentCity-container");
 				
-			
 				// Make an AJAX request
 				$.ajax({
 					url: `/Admin/CreateStudent/GetCityByName?name=${selectedOption}`, // Replace with your server endpoint
 					method: "GET", // or "GET" depending on your server's API
 					//data: selectedOption,
 					success: function (response) {
-						// Handle the response from the server
-						console.log(response)
-						//console.log(studentCity)
+						$("#studentCity").empty();
 						var optionsArray = [];
-						var select = document.getElementById("studentCity");
-						var statusSelect = document.getElementById("statusSelect");
-
-						select.options.length = 0;
 						response.forEach(x=>{
-							select.options[select.options.length] = new Option(x.name, x.name);
-							statusSelect.options[select.options.length] = new Option(x.name, x.name);
-							//var option = document.createElement("option");
-							//option.value = x.name;
-							//option.text = x.name;
-							
-							//optionsArray.push(option);
-
-							//var newOption = new Option(x.name, x.name);
-							//studentCity.add(newOption)
-							//studentCity.appendChild(option);
+							x.text = x.name;
+							optionsArray.push(x);
 						});
-						console.log(select);
-						console.log(statusSelect)
-						//$("#studentCity").html(optionsArray);
+						console.log(optionsArray);
+						$("#studentCity").select2({
+							data: optionsArray
+
+						});
+						$("#studentCity").select2({
+							theme: "bootstrap"
+						});
+						selectBtn.style.display = "none";
 			
 
-						// Update the options of the dynamic select
-						//updateDynamicSelectOptions(selectedOption);
 					},
 					error: function (xhr, status, error) {
 						// Handle errors here
@@ -415,8 +389,8 @@
 				});
 			});
 			
-		</script>
-}
+		</script>*@
+
 </body>
 
 <!-- Mirrored from akademi.dexignlab.com/xhtml/add-student.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 20 Jul 2023 19:29:26 GMT -->

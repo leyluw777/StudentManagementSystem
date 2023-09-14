@@ -770,19 +770,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\leylani\\.nuget\\packages\\": {}
+    "C:\\Users\\Hp\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\leylani\\Desktop\\finalproject\\StudentManagementSystem\\SMSDomain\\SMSDomain.csproj",
+      "projectUniqueName": "C:\\Users\\Hp\\Desktop\\FinalProject2\\StudentManagementSystem\\SMSDomain\\SMSDomain.csproj",
       "projectName": "SMSDomain",
-      "projectPath": "C:\\Users\\leylani\\Desktop\\finalproject\\StudentManagementSystem\\SMSDomain\\SMSDomain.csproj",
-      "packagesPath": "C:\\Users\\leylani\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\leylani\\Desktop\\finalproject\\StudentManagementSystem\\SMSDomain\\obj\\",
+      "projectPath": "C:\\Users\\Hp\\Desktop\\FinalProject2\\StudentManagementSystem\\SMSDomain\\SMSDomain.csproj",
+      "packagesPath": "C:\\Users\\Hp\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Hp\\Desktop\\FinalProject2\\StudentManagementSystem\\SMSDomain\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\leylani\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -837,7 +841,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }

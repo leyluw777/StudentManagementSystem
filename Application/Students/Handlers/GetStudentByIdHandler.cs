@@ -45,9 +45,11 @@ namespace Application.Students.Handlers
                 Image = StudentById.Image,
                 Fin = StudentById.Fin,
                 AverageGrade = StudentById.AverageGrade,
-                Address = StudentById.Address != null   
-        ? StudentById.Address.District + ' ' + StudentById.Address.StreetAddress + ' ' + StudentById.Address.HouseNo.ToString()
-        : string.Empty,
+                District = StudentById.Address.District,
+                StreetAddress = StudentById.Address.StreetAddress,
+                ZipCode = (int)StudentById.Address.ZipCode,
+                HomeNumber = (int)StudentById.Address.HomeNumber,
+                HouseNo = (int)StudentById.Address.HouseNo,
                 Country = StudentById.Country != null ? StudentById.Country.Name : string.Empty,
                 City = StudentById.City != null ? StudentById.City.Name : string.Empty
 

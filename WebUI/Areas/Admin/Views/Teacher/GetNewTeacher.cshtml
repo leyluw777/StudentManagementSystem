@@ -84,7 +84,7 @@
 										
 													<div class="mb-3 col-xl-5 col-sm-5">
 														<label for="exampleFormControlInput3" class="form-label text-primary">Fin ID<span class="required">*</span></label>
-														<input type="text" class="form-control" id="exampleFormControlInput3" placeholder="7sxa8q2" name="teacher.Fin" >
+														<input type="text" class="form-control" id="exampleFormControlInput3" placeholder="7sxa8q2" maxlength="7" name="teacher.Fin" >
 													</div>
 													<div class="mb-3 col-xl-7 col-sm-7" id="numberDiv">
 														<label for="exampleFormControlNumber" class="form-label text-primary">Phone number<span class="required">*</span></label>
@@ -125,7 +125,7 @@
 														<input type="number" class="form-control" name="teacher.HouseNo">
 													</div>
 													<div class="mb-3 col-md-2">
-														<label class="form-label">Zip</label>
+														<label class="form-label text-primary">Zip</label>
 														<input type="number" class="form-control" name="teacher.ZipCode">
 													</div>
 												</div>
@@ -140,10 +140,10 @@
 															// var btnClicked = false;
 															//for (int i = 0; i < Model.Courses.Count; i++)
 															//{
-															<label for="exampleFormControlCourse" class="form-label text-primary">Course<span class="required">*</span></label>
+															<label for="exampleFormControlCourse" class="form-label text-primary" >Course<span class="required">*</span></label>
 															
 																<div class="mb-3">
-																	<select class="default-select form-control wide mb-3 form-control" name="teacher.Course" >
+																<select class="default-select form-control wide mb-3 form-control"  name="teacher.Courses[0]" asp-for="Courses[0]">
 																		<option value="Front-end development">Front-end development</option>
 																		<option value="Back-end development">Back-end development</option>
 																		<option value="Data Science">Data Science</option>
@@ -181,10 +181,10 @@
 
 															<div class="mb-3">
 																<select class="default-select form-control wide mb-3 form-control" name="teacher.Group">
+																	<option value="FRONT102">FRONT102</option>
 																	<option value="BACK100">BACK100</option>
 																	<option value="MOBILE95">MOBILE95</option>
 																	<option value="CYBER220">CYBER220</option>
-																	<option value="FRONT102">FRONT102</option>
 																
 
 																</select>

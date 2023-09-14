@@ -2,6 +2,7 @@
 using Newtonsoft.Json;
 using System.Text;
 using WebUI.Areas.Admin.Models;
+using WebUI.Areas.Admin.Services;
 
 namespace WebUI.Areas.Admin.Controllers
 {
@@ -10,9 +11,12 @@ namespace WebUI.Areas.Admin.Controllers
 	{
 		private readonly HttpClient _httpClient;
 		private const string baseUrl = "http://localhost:5269/api";
-		public EditStudentController(HttpClient httpClient)
+		private readonly ICourse _course;
+
+		public EditStudentController(HttpClient httpClient, ICourse course)
 		{
 			_httpClient = httpClient;
+			_course = course;
 		}
 
 		[HttpGet]
@@ -29,6 +33,9 @@ namespace WebUI.Areas.Admin.Controllers
 				{
 					var studentResponse = responseMessage.Content.ReadAsStringAsync().Result;
 					editedStudent = JsonConvert.DeserializeObject<CrudStudent>(studentResponse);
+					var allcourses = _course.GetAll();
+					ViewBag.Course = allcourses;
+
 
 					return View(editedStudent);
 

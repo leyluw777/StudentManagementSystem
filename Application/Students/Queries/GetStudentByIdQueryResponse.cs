@@ -27,10 +27,16 @@ namespace Application.Students.Queries
 
 
         //  public int AddressId { get; set; }
-        public string? Address { get; set; }
+      //  public string? Address { get; set; }
 
-       
-        public string? Country { get; set; }
+		public string District { get; set; }
+		public string StreetAddress { get; set; }
+		public int HouseNo { get; set; }
+		public int ZipCode { get; set; }
+
+		public int HomeNumber { get; set; }
+
+		public string? Country { get; set; }
         public string? City { get; set; }
         public List<string> PhoneNumbers { get; set; }
         public List<string> Courses { get; set; }

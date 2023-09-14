@@ -36,8 +36,8 @@ namespace Application.Students.Commands
 
         public int HomeNumber { get; set; }
 
-        public string Country { get; set; }
-        public string City { get; set; }
+        public string? Country { get; set; }
+        public string? City { get; set; }
         public List<string> Phonenumber { get; set; }
      
 

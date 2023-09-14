@@ -1,8 +1,11 @@
-﻿@*
+﻿@using WebUI.Areas.Admin.Models;
+@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
 	Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+	List<GetAllCourses> courses = ViewBag.Course.Result as List<GetAllCourses>;
+
 
 }
 @model WebUI.Areas.Admin.Models.CrudStudent
@@ -33,24 +36,24 @@
 
 	<!-- FAVICONS ICON -->
 	<link rel="shortcut icon" type="image/png" href="~/images/favicon.png">
-	<link href="~/vendor/wow-master/css/libs/animate.css" rel="stylesheet">
-	<link href="~/vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="~/vendor/jquery-nice-select/css/nice-select.css">
+	<link href="../wwwroot/vendor/wow-master/css/libs/animate.css" rel="stylesheet">
+	<link href="../wwwroot/vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
+	<link rel="sylesheet" href="~/vendor/jquery-nice-select/css/nice-select.css">
 
-	<link href="~/vendor/bootstrap-datepicker-master/css/bootstrap-datepicker.min.css" rel="stylesheet">
+	<link href="../wwwroot/vendor/bootstrap-datepicker-master/css/bootstrap-datepicker.min.css" rel="stylesheet">
 
 
-	<link href="~/vendor/datatables/css/jquery.dataTables.min.css" rel="stylesheet">
-	<!--swiper-slider-->
-	<!-- Style css -->
-	<link href="~/https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
-	<link href="~/css/style.css" rel="stylesheet">
+	<link href="../wwwroot/vendor/datatables/css/jquery.dataTables.min.css" rel="stylesheet">
+	<!--swiper-s../wwwrootider-->
+	<!-- Style c../wwwroots -->
+	<link href="../wwwroot/https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+	<link href="../wwwroot/css/style.css" rel="stylesheet">
 
 </head>
 <body>
 
 
-<div class="content-body">
+<div class="content-body pe-0">
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-xl-12">
@@ -92,16 +95,16 @@
 											</div>
 										</div>
 										<div class="row"> 
-											<div class="mb-3 col-xl-4 col-sm-4">
+											<div class="mb-3 col-xl-7 col-sm-7">
 												<label for="exampleFormControlInput3" class="form-label text-primary">Email<span class="required">*</span></label>
 														<input type="email" class="form-control" id="exampleFormControlInput3" placeholder="hello@example.com" name="student.Email" value="@Model.Email">
 											</div>
-													<div class="mb-3 col-xl-2 col-sm-2">
+													<div class="mb-3 col-xl-5 col-sm-5">
 														<label for="exampleFormControlInput3" class="form-label text-primary">Fin ID<span class="required">*</span></label>
 														<input type="text" class="form-control" id="exampleFormControlInput3" placeholder="7sxa8q28" name="student.Fin" value="@Model.Fin">
 													</div>
 										</div>
-										<div class="mb-3">
+								@*		<div class="mb-3">
 											<label for="exampleFormControlTextarea1" class="form-label text-primary">Country<span class="required">*</span></label>
 													
 													<select class="default-select  form-control wide" name="student.Country" asp-for="Country">
@@ -117,7 +120,7 @@
 														<option value="Uzbekistan">   Uzbekistan		</option>
 													
 													</select>
-										</div>
+										</div>*@
 
 
 												<div class="row">
@@ -145,44 +148,32 @@
 
 									
 												<div class="col-xl-5 col-sm-5">
-													@{
-														// var btnClicked = false;
-														for (int i = 0; i < Model.Courses.Count; i++)
-														{
-															<label for="exampleFormControlCourse" class="form-label text-primary">Course<span class="required">*</span></label>
-															<div class=" d-flex align-items-start justify-content-between w-100">
+														<label for="exampleFormControlCourse" class="form-label text-primary">Course<span class="required">*</span></label>
 
-																<div class="card">
+
+														<div class="mb-3 ">
+															<select class="default-select  form-control wide" name="student.Courses[0]" asp-for="Courses[0]">
+
+																@foreach (var course in courses)
+																{
 																	
-																	<div class="card-body">
-																		<div class="basic-form">
+																	<option value="@course.Name"> @course.Name	</option>
 
-																			<div class="mb-3">
-																				<div class="form-check mb-2">
-																					<input type="checkbox" class="form-check-input" id="check1" value="@Model.Courses[0]" name="student.Courses[0]">
-																					<label class="form-check-label" for="check1">Front-end development</label>
-																				</div>
-																				<div class="form-check mb-2">
-																					<input type="checkbox" class="form-check-input" id="check2" value="" name="">
-																					<label class="form-check-label" for="check2">Back-end development</label>
-																				</div>
-
-																			</div>
-
-																		</div>
-																	</div>
-																</div>
-															</div>
+																}
 
 
-														}
-													}
-												</div>
+															</select>
+														</div>
+													</div>
 											
 												<div class="col-xl-4 col-sm-4">
 													<label for="exampleFormControlTextarea1" class="form-label text-primary">Group Name<span class="required">*</span></label>
 													<select class="default-select  form-control wide" name="student.Groups[0]" asp-for="student.Groups[0]">
-														<option value="@Model.Groups[0]" selected="selected">  FRONT102		</option>
+														@*<option value="@Model.Groups[0]" selected="selected">  FRONT102		</option>*@
+															<option value="BACK100">BACK100</option>
+															<option value="MOBILE95">MOBILE95</option>
+															<option value="CYBER220">CYBER220</option>
+															<option value="FRONT102">FRONT102</option>
 
 													</select>
 
@@ -211,30 +202,20 @@
 													<input type="text" class="form-control" id="exampleFormControlInput5" placeholder="Mana William" name="student.FathersName" value="@Model.FathersName">
 										</div>
 												<div >
-													@{
-
-														var btnClicked = false;
-														for (int i = 0; i < Model.PhoneNumbers.Count; i++)
-														{
+						
 															<label for="exampleFormControlInput6" class="form-label text-primary">Phone Number<span class="required">*</span></label>
-															<div class=" d-flex align-items-start justify-content-between w-100">
+															
+																<div class=" " id="numberDiv" >
 
-																<div class=" " id="numberDiv" style="width: 90%">
-
-																	<input type="number" class="form-control mb-3" id="exampleFormControlInput6" placeholder="+123456789" name="student.PhoneNumbers[@i]" value="@Model.PhoneNumbers[@i]">
+																	<input type="number" class="form-control mb-3" id="exampleFormControlInput6" placeholder="+123456789" name="student.PhoneNumbers[0]" value="@Model.PhoneNumbers[0]">
 																</div>
-																<div class=" mx-2" style="width: 5%">
-																	<button class="btn btn-primary shadow btn-xs sharp me-1 mt-2" id="addNewNum" type="button"><i class="fa-solid fa-plus"></i></button>
-																</div>
-															</div>
+																
+														
 
 
-														}
-
-
-													}
+									
 												</div>
-												<div class="mb-3">
+										@*		<div class="mb-3">
 													<label for="exampleFormControlTextarea1" class="form-label text-primary">City<span class="required">*</span></label>
 
 													<select class="default-select  form-control wide" name="student.City" asp-for="City">
@@ -242,7 +223,7 @@
 														<option value="@Model.City" selected="selected"> Baku	</option>
 
 													</select>
-												</div>
+												</div>*@
 												<div class="mb-3">
 													<label for="exampleFormControlHomeNum5" class="form-label text-primary">Home number<span class="required">*</span></label>
 													<input type="number" class="form-control" id="exampleFormControlHomeNum5" name="student.HomeNumber" value="@Model.HomeNumber">
@@ -330,17 +311,16 @@
 
 	</script>
 
-	<script src="~/vendor/global/global.min.js"></script>
-	<script src="~/vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
-	<script src="~/vendor/moment/moment.min.js"></script>
-
-
-	<script src="~/vendor/bootstrap-datepicker-master/js/bootstrap-datepicker.min.js"></script>
-	<script src="~/vendor/wow-master/dist/wow.min.js"></script>
-	<script src="~/js/custom.min.js"></script>
-	<script src="~/js/dlabnav-init.js"></script>
-	<script src="~/js/demo.js"></script>
-	<script src="~/js/styleSwitcher.js"></script>
+	<script src="../wwwroot/vendor/global/global.min.js"></script>
+	<script src="../wwwroot/vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+	<script src="../wwwroot/vendor/moment/moment.min.js"></script>
+				 
+	<script src="../wwwroot/vendor/bootstrap-datepicker-master/js/bootstrap-datepicker.min.js"></script>
+	<script src="../wwwroot/vendor/wow-master/dist/wow.min.js"></script>
+	<script src="../wwwroot/js/custom.min.js"></script>
+	<script src="../wwwroot/js/dlabnav-init.js"></script>
+	<script src="../wwwroot/js/demo.js"></script>
+	<script src="../wwwroot/js/styleSwitcher.js"></script>
 </body>
 
 <!-- Mirrored from akademi.dexignlab.com/xhtml/add-student.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 20 Jul 2023 19:29:26 GMT -->

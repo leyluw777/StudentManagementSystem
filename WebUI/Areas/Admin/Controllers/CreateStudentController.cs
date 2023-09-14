@@ -44,32 +44,32 @@ namespace WebUI.Areas.Admin.Controllers
 
 
 
-		[HttpGet]
-		public async Task<IActionResult> GetCityByName(string name)
-		{
-			var accessToken = HttpContext.Session.GetString("JWToken");
+		//[HttpGet]
+		//public async Task<IActionResult> GetCityByName(string name)
+		//{
+		//	var accessToken = HttpContext.Session.GetString("JWToken");
 
-			if (accessToken is not null)
-			{
-				_httpClient.DefaultRequestHeaders.Authorization =
-				new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", accessToken);
-				var responseMessage = await _httpClient.GetAsync($"{baseUrl}/City/GetAllByCountryName/{name}");
-
-
-				if (responseMessage.IsSuccessStatusCode)
-				{
-
-					var citiesResponse = responseMessage.Content.ReadAsStringAsync().Result;
-					List<City> citiesData = JsonConvert.DeserializeObject<List<City>>(citiesResponse);
-
-					return Json(citiesData);
-				}
+		//	if (accessToken is not null)
+		//	{
+		//		_httpClient.DefaultRequestHeaders.Authorization =
+		//		new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", accessToken);
+		//		var responseMessage = await _httpClient.GetAsync($"{baseUrl}/City/GetAllByCountryName/{name}");
 
 
-			}
+		//		if (responseMessage.IsSuccessStatusCode)
+		//		{
 
-			return Json("Bad request");
-		}
+		//			var citiesResponse = responseMessage.Content.ReadAsStringAsync().Result;
+		//			List<City> citiesData = JsonConvert.DeserializeObject<List<City>>(citiesResponse);
+
+		//			return Json(citiesData);
+		//		}
+
+
+		//	}
+
+		//	return Json("Bad request");
+		//}
 
 
 

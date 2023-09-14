@@ -24,12 +24,18 @@ namespace Application.Teacher.Queries
         public string? Fin { get; set; } = null!;
 
 
-        //  public int AddressId { get; set; }
-        public string? Address { get; set; }
+		//  public int AddressId { get; set; }
+		// public string? Address { get; set; }
 
 
 
-        public string? Description { get; set; }
+		public string? District { get; set; }
+		public string? StreetAddress { get; set; }
+		public int HouseNo { get; set; }
+		public int ZipCode { get; set; }
+
+		public int HomeNumber { get; set; }
+		public string? Description { get; set; }
         public string? Experience { get; set; }
 
         public bool? ActiveStatus { get; set; }

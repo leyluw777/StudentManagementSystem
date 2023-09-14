@@ -68,9 +68,9 @@
                                     }
                                 </div>
 
-                                <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#add-category" class="btn btn-primary btn-event w-100">
+                            @*    <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#add-category" class="btn btn-primary btn-event w-100">
                                     <span class="align-middle"><i class="ti-plus me-2"></i></span> Create New
-                                </a>
+                                </a>*@
                             </div>
                         </div>
                     </div>
@@ -198,7 +198,7 @@
             },
                 locale: 'az',
                 eventReceive: function (event) {
-                    let start = event.event.start; 
+                    let start =  event.event.start; 
                     let end = event.event.end;
                     let groupNme = document.querySelector(".groupName").innerHTML;
                     //let startTime = `${start.getHours()}:${start.getMinutes()}:${start.getSeconds()}`;
@@ -208,6 +208,7 @@
 
                         return date;
                     };
+                    console.log(start);
                     let endTime = new Date(start);
                     endTime.setHours(endTime.getHours() + 1);
                     let requestData = {

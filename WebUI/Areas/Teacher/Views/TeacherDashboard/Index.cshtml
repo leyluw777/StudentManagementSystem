@@ -53,29 +53,8 @@
             <!-- row -->
 
             <div class="row">
-                <div class="col-lg-3 col-xl-3 col-xxl-3">
-                    <div class="card">
-                        <div class="card-body">
-                            <h4 class="card-intro-title">Calendar</h4>
-
-                            <div class="">
-                                <div id="external-events" class="my-3">
-                                    <p>Drag and drop your event or click in the calendar</p>
-                                    @foreach (var group in groups)
-                                    {
-
-                                        <div class="external-event btn-primary light" id="draggableEl" data-class="bg-primary"><i class="fa fa-move"></i><span >@group.Name</span></div>
-                                    }
-                                </div>
-
-                                <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#add-category" class="btn btn-primary btn-event w-100">
-                                    <span class="align-middle"><i class="ti-plus me-2"></i></span> Create New
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-9 col-xl-9 col-xxl-9">
+           
+                <div class="col-lg-12 col-xl-12 col-xxl-12">
                     <div class="card">
                         <div class="card-body">
                             <div id="calendar" class="app-fullcalendar "></div>
@@ -190,45 +169,15 @@
                     //  method: "GET",
                     // });
 
-                }
-                    
-                   
-
-
-                    
-                           
-                ,
-                locale: 'az',
-                eventReceive: function (event) {
-                    let start = event.event.start; 
-                    let end = event.event.end;
-                    //let startTime = `${start.getHours()}:${start.getMinutes()}:${start.getSeconds()}`;
-                    //let endTime = `${end.getHours()}:${end.getMinutes()}:${end.getSeconds()}`;
-                    function addOneDay(date = new Date()) {
-                        date.setDate(date.getDate() + 1);
-
-                        return date;
-                    }
-                    let requestData = {
-                        Module: 2,
-                        Name: 'NewLesson',
-                        Group: 'FRONT102',
-                        StartTime: addOneDay(start),
-                      
-                    };
-
-                    $.ajax({
-                        type: 'POST',
-                        url: '/Admin/Lessons/CreateLesson',
-
-                        data: JSON.stringify(requestData),
-                        contentType: 'application/json',
-                        success: function (response) {
-                               console.log("event added")
-
-                        },
-                    });
                 },
+                eventClick: function (event) {
+                    console.log("Event clicked ", event.event.id);
+              
+                    window.location.href = `/Teacher/TeacherDashboard/UpdateLesson/${event.event.id}`; // Change to the appropriate property
+
+                },
+                locale: 'az',
+             
             });
          
 

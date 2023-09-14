@@ -109,13 +109,17 @@ href="
 
 										
 										@{
+											var i = 1;
 											foreach (var student in Model)
 											{
-												var i = 1;
+												
 												<tr>
 												<td>
-													i;
+													@i
 												</td>
+													@{
+														i++;
+													}
 													<td>
 											<div class="trans-list">
 											@*<img src="~/images/trans/1.jpg" alt="" class="avatar avatar-sm me-3">*@
@@ -170,7 +174,7 @@ href="
 													</div>
 												</td>
 												</tr>
-												i += 1;
+												
 											}
 									}
 
